@@ -4,10 +4,10 @@ const Header = () => {
 
     const menuItem = ( 
         <>
-            <li><a>Projects</a></li>    
-            <li><a>Awards</a></li>
-            <li><a>Education & Courses</a></li>
-            <li><a>Contact</a></li>
+            <li className="hover:bg-primary rounded-lg font-semibold "><a>Projects</a></li>    
+            <li className="hover:bg-primary rounded-lg font-semibold "><a>Awards</a></li>
+            <li className="hover:bg-primary rounded-lg font-semibold "><a>Education & Courses</a></li>
+            <li className="hover:bg-primary rounded-lg font-semibold "><a>Contact</a></li>
         </>
     );
 
@@ -22,7 +22,7 @@ const Header = () => {
                 class="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="#0f172a"
               >
                 <path
                   stroke-linecap="round"
@@ -34,22 +34,22 @@ const Header = () => {
             </label>
             <ul
               tabindex="0"
-              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              class="menu menu-compact dropdown-content rounded-lg border-0 text-accent shadow bg-base-100  w-full"
             >
              {menuItem}
              
             </ul>
-            <a class="btn btn-ghost normal-case text-xl">Developer Sadik</a>
+            <a class="btn btn-ghost bg-base-100 hover:bg-base-100 font-extrabold text-accent normal-case text-xl">SadikDev</a>
           </div>
         </div>
         <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal p-0">
+          <ul class="menu menu-horizontal p-0 text-accent  ">
            {menuItem}
           </ul>
         </div>
 
         <div class="navbar-end">
-          <a class="btn btn-primary">Get started</a>
+          <a class="btn btn-primary text-accent hover:btn-secondary hover:text-white">Download resume</a>
         </div>
       </div>
     </div>
