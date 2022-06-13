@@ -39,7 +39,7 @@ const Header = () => {
              {menuItem}
              
             </ul>
-            <a class="btn btn-ghost bg-base-100 hover:bg-base-100 font-extrabold text-accent normal-case text-xl">SadikDev</a>
+            <a class="btn btn-ghost bg-base-100 hover:bg-base-100 font-extrabold text-accent normal-case text-xl">SadikDev<span className=" font-extrabold text-primary text-4xl mb-3">.</span></a>
           </div>
         </div>
         <div class="navbar-center hidden lg:flex">

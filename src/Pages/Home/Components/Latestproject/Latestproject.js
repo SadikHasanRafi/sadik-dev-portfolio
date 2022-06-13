@@ -24,8 +24,8 @@ const Latestproject = () => {
               <h2 class="card-title">Site name</h2>
               <p><span className=" bg-slate-200 p-1 font-semibold  ">Tools & Technologies:</span> <p>Reactjs, Tailwind, HTML, CSS, JS, Expressjs, Mongodb, firebase</p></p>
               <div class="card-actions justify-center w-full">
-                <a href="https://www.youtube.com"><button class="btn btn-primary">Go to site</button></a> 
-                <a href="https://www.facebook.com"><button class="btn btn-primary">Source code</button></a> 
+                <a href="https://www.youtube.com" target="_blank"><button class="btn btn-primary">Go to site</button></a> 
+                <a href="https://www.facebook.com" target="_blank"><button class="btn btn-primary">Source code</button></a> 
               </div>
             </div>
           </div>
@@ -43,8 +43,8 @@ const Latestproject = () => {
               <h2 class="card-title">Site name</h2>
               <p><span className=" bg-slate-200 p-1 font-semibold  ">Tools & Technologies:</span> <p>Reactjs, Tailwind, HTML, CSS, JS, Expressjs, Mongodb, firebase</p></p>
               <div class="card-actions justify-center w-full">
-                <a href="https://www.youtube.com"><button class="btn btn-primary">Go to site</button></a> 
-                <a href="https://www.facebook.com"><button class="btn btn-primary">Source code</button></a> 
+                <a href="https://www.youtube.com" target="_blank"><button class="btn btn-primary">Go to site</button></a> 
+                <a href="https://www.facebook.com" target="_blank"><button class="btn btn-primary">Source code</button></a> 
               </div>
             </div>
           </div>
@@ -62,8 +62,8 @@ const Latestproject = () => {
               <h2 class="card-title">Site name</h2>
               <p><span className=" bg-slate-200 p-1 font-semibold  ">Tools & Technologies:</span> <p>Reactjs, Tailwind, HTML, CSS, JS, Expressjs, Mongodb, firebase</p></p>
               <div class="card-actions justify-center w-full">
-                <a href="https://www.youtube.com"><button class="btn btn-primary">Go to site</button></a> 
-                <a href="https://www.facebook.com"><button class="btn btn-primary">Source code</button></a> 
+                <a href="https://www.youtube.com" target="_blank"><button class="btn btn-primary">Go to site</button></a> 
+                <a href="https://www.facebook.com" target="_blank"><button class="btn btn-primary">Source code</button></a> 
               </div>
             </div>
           </div>
