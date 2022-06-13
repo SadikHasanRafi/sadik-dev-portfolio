@@ -8,7 +8,7 @@ const Latestproject = () => {
   return (
     <div className="my-52 flex justify-center">
       <div>
-        <h1 className="mb-8 text-2xl">Latest Project</h1>
+        <h1 className="mb-12 text-accent font-bold text-3xl">Latest Project</h1>
         <div className="flex justify-between w-[70vw]">
 
           
