@@ -1,33 +1,51 @@
 import React from 'react';
+import { useForm } from "react-hook-form";
 
 const ContactWithMe = () => {
+
+  const { register, handleSubmit } = useForm();
+  const onSubmit = data => console.log(data);
+
     return (
         <div>
-            <div class="hero min-h-screen bg-base-200">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    <div class="text-center lg:text-left">
-      <h1 class="text-5xl font-bold">Login now!</h1>
-      <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div class="hero min-h-screen  bg-white">
+  <div class="hero-content flex-col lg:flex-row">
+    <div class="text-center text-accent lg:text-left">
+      <h1 class="text-5xl font-bold">Ask me</h1>
+      <p class="py-6">Ask me if you have any querries. You will be answered via email.</p>
     </div>
     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <div class="card-body">
+        
+
+
+        {/* dummy forms start */}
+
+        <form action='' onSubmit={handleSubmit(onSubmit)}>
+        </form>
+
+
+      {/* dummy form finish  */}
+
+
+
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Email</span>
+            <span class="label-text text-accent">Email</span>
           </label>
-          <input type="text" placeholder="email" class="input input-bordered" />
+          <input type="email" placeholder="email"  {...register("email")} class="input  focus:shadow focus:shadow-yellow-200 focus:border-0 input-bordered shadow" />
         </div>
+        
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Password</span>
+            <span class="label-text text-accent">Question</span>
           </label>
-          <input type="text" placeholder="password" class="input input-bordered" />
-          <label class="label">
-            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+          <input type="text" placeholder='Ask me' class="input  focus:shadow focus:shadow-yellow-200 focus:border-0 h-20 input-bordered shadow" {...register("askme")}/>         
         </div>
         <div class="form-control mt-6">
-          <button class="btn btn-primary">Login</button>
+         <input class="btn btn-primary shadow-md" type="submit" value='submit'/>
+
+          
         </div>
       </div>
     </div>
