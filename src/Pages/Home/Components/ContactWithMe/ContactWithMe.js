@@ -1,21 +1,67 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
+import swal from "sweetalert";
 
 
 const ContactWithMe = () => {
+
+    let emailAck = ''
     const form = useRef();
+    let flag = false
+    const emailAckChecking = emailAck => {
+        if (emailAck === 'OK') {
+            swal({
+                text:"Thanks for email. I will reply you soon 😃😃",
+                title: "Thanks You...!",
+                icon: "success",
+                button: "Close"
+            });
+            console.log("mew")
+            return true
+        }
+        else{
+            swal({
+                title:"Unable to send",
+                text:"Email send failed. Please try again later. Or Try to reach via linkedin or other social media. Social media links are given down below.",
+                icon: "error",
+                buttons: "close"
+            });
+            return false
+        }
+    }
+
     const sendEmail= e => {
         e.preventDefault();
 
-        
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-        emailjs.sendForm('service_xhzu6e3', 'template_p00advj', form.current, '5BO_HLz973nk7zuz6')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+        if(e.target.email.value.match(regexEmail)){
+            emailjs.sendForm('service_xhzu6e3', 'template_p00advj', form.current, '5BO_HLz973nk7zuz6')
+            .then((result) => {
+                console.log(result.text);
+                flag = emailAckChecking(result.text)
+                if (flag == true) {
+                    e.target.email.value = ""
+                    e.target.quarries.value = ""
+                }
+            }, (error) => {
+                console.log(error.text);
+                flag = emailAckChecking(error.text)
+            });    
+        }
+        else{
+            return swal({
+                title: "Invalid email...!",
+                text: "Check your email address again.",
+                icon: "warning",
+                button: "Close",
+              });
 
+        }
+
+       
+
+       
         console.log(e.target)
     }
 
@@ -24,7 +70,8 @@ const ContactWithMe = () => {
   return (
     <div>
       <div class="hero min-h-screen  bg-white">
-        <div class="hero-content flex-col lg:flex-row">
+        <div class="hero-content gap-20 flex-col lg:flex-row">
+
           <div class="text-center text-accent lg:text-left">
             <h1 class="text-5xl font-bold">Ask me</h1>
             <p class="py-6">
