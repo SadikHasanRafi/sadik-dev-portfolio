@@ -9,7 +9,7 @@ const Latestproject = () => {
     <div className="my-52 flex justify-center">
       <div>
         <h1 className="mb-12 text-accent font-bold text-3xl">Latest Project</h1>
-        <div className="flex justify-between w-[70vw]">
+        <div className="flex gap-14 w-[70vw]">
 
           
             {/* project 1  */}
