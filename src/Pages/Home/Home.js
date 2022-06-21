@@ -10,7 +10,9 @@ import Latestproject from "./Components/Latestproject/Latestproject";
 const Home = () => {
   return (
     <div>
-      <Header></Header>
+     
+        <Header></Header>
+     
       <Banner></Banner>
       <Latestproject></Latestproject>
       <EducationAwardCarousel></EducationAwardCarousel>

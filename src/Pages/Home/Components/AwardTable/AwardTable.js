@@ -9,9 +9,9 @@ const AwardTable = () => {
             <p className="text-accent font-extrabold text-center text-5xl m-10 ">Education & Certifications</p>
         </div>
 
-      <div class="overflow-x-auto w-full ">
-        <div class="overflow-x-auto">
-          <table class="table w-full hover:shadow-lg shadow-md rounded-2xl my-8 text-center">
+      <div class=" w-full table-normal">
+        <div class="">
+          <table class="w-full  hover:shadow-lg shadow-md rounded-2xl my-8 text-center">
             <thead >
               <tr >
                 <th  className=" bg-primary text-accent font-extrabold text-lg normal-case" >Year</th>
