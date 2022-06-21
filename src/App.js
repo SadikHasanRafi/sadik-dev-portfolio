@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Home></Home>
-      
+      <p>me wmew mew</p>
     </div>
   );
 }
