@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-container": "#ab8ffd", "surface-container": "#efeded", "on-error": "#ffffff", "on-surface": "#1b1c1c", "on-tertiary-fixed-variant": "#474556", "outline": "#747878", "on-secondary-fixed-variant": "#4f319b", "on-tertiary-container": "#858195", "on-primary-fixed-variant": "#474646", "surface-tint": "#5f5e5e", "surface-container-low": "#f5f3f3", "secondary-fixed": "#e8ddff", "error": "#ba1a1a", "tertiary-fixed-dim": "#c8c4d9", "on-tertiary-fixed": "#1b1a29", "inverse-on-surface": "#f2f0f0", "on-primary-fixed": "#1c1b1b", "primary-container": "#1c1b1b", "surface-dim": "#dbdad9", "tertiary-fixed": "#e5e0f6", "on-background": "#1b1c1c", "surface-variant": "#e4e2e2", "on-primary": "#ffffff", "primary-fixed": "#e5e2e1", "error-container": "#ffdad6", "surface-container-highest": "#e4e2e2", "surface-bright": "#fbf9f8", "on-secondary-container": "#3f1e8b", "background": "#fbf9f8", "on-error-container": "#93000a", "primary": "#000000", "on-tertiary": "#ffffff", "on-secondary-fixed": "#21005e", "inverse-primary": "#c8c6c5", "on-secondary": "#ffffff", "outline-variant": "#c4c7c7", "secondary": "#674bb4", "secondary-fixed-dim": "#cebdff", "on-primary-container": "#858383", "tertiary-container": "#1b1a29", "surface-container-high": "#e9e8e7", "inverse-surface": "#303031", "on-surface-variant": "#444748", "surface": "#fbf9f8", "tertiary": "#000000", "primary-fixed-dim": "#c8c6c5", "surface-container-lowest": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "2rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-xxl": "6rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-desktop": "4rem", "margin": "1.25rem", "gutter-desktop": "2.5rem", "space-xl": "3.5rem" }, fontFamily: { "body-lg": ["Geist"], "display-lg-mobile": ["Playfair Display"], "label-caps": ["Geist"], "body-md": ["Geist"], "display-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-sm": ["Geist"], "headline-md": ["Playfair Display"], "code-sm": ["Geist"], "headline-lg": ["Playfair Display"], "headline-emphasis": ["Playfair Display"] }, fontSize: { "body-lg": ["1.125rem", { lineHeight: "1.7", fontWeight: "400" }], "display-lg-mobile": ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.01em", fontWeight: "400" }], "label-caps": ["0.6875rem", { lineHeight: "1", letterSpacing: "0.15em", fontWeight: "600" }], "body-md": ["0.9375rem", { lineHeight: "1.6", fontWeight: "400" }], "display-md": ["3.25rem", { lineHeight: "1.15", letterSpacing: "-0.015em", fontWeight: "400" }], "display-lg": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em", fontWeight: "400" }], "body-sm": ["0.8125rem", { lineHeight: "1.5", fontWeight: "400" }], "headline-md": ["1.75rem", { lineHeight: "1.3", fontWeight: "500" }], "code-sm": ["0.8125rem", { lineHeight: "1.4", fontWeight: "400" }], "headline-lg": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "500" }], "headline-emphasis": ["1.75rem", { lineHeight: "1.3", fontWeight: "400" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors -ml-space-xs" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col"><span class="font-label-caps text-[10px] text-outline uppercase tracking-[0.15em]">System Dossier</span><h1 class="font-headline-md text-[1.125rem] font-medium tracking-tight text-on-surface leading-none truncate max-w-[210px]">System Detail</h1></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface px-margin"><div class="flex flex-col w-full pb-12">
+<!-- Article Header Meta & Taxonomy -->
+<section class="flex flex-col pt-4 pb-6 space-y-4">
+<div class="flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 font-label-caps text-label-caps text-secondary hover:text-on-surface transition-colors py-1" href="#">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span>
+<span>BACK TO ALL ESSAYS</span>
+</a>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest bg-surface-container px-2 py-0.5 rounded-sm">
+        REV 4.2 // PROD
+      </span>
+</div>
+<!-- Category Hierarchy Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="bg-surface-container text-on-surface font-label-caps text-label-caps uppercase px-2.5 py-1 tracking-wider rounded-sm">
+        FINTECH ARCHITECTURE
+      </span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps uppercase px-2.5 py-1 tracking-wider rounded-sm font-semibold">
+        RELIABILITY &amp; CONCURRENCY
+      </span>
+</div>
+<!-- Eyebrow Metadata -->
+<div class="font-label-caps text-label-caps text-outline uppercase tracking-wider leading-relaxed">
+      PUBLISHED: OCT 14, 2025 · 12 MIN READ · 4,500 WORDS · HARDENED
+    </div>
+<!-- Headline -->
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight tracking-tight">
+      Designing Idempotent Payment Webhooks That Never Double-Charge Under <span class="italic text-secondary font-headline-emphasis">Burst Failures</span>.
+    </h1>
+<!-- Subtitle -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      An in-depth breakdown of distributed Redis locks, atomic database upserts, and payload fingerprinting safeguarding multi-gateway transaction webhooks under 4,500 simultaneous burst events.
+    </p>
+<!-- Author Profile Block -->
+<div class="bg-surface-container-low p-4 rounded-lg flex flex-col space-y-3 mt-1">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Monochrome professional architectural portrait of Sadik Hasan Rafi, a lead backend engineer in technical apparel with soft cinematic rim lighting against a minimalist structural studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHBM0UCSukrEf3YTt-nXOKH16o2Xc-AtIAm8XIUw-VS4gdLy2ShrfjRLqcsuJUoXq4431T_OihLXqX4qAvoiPvPmYdG1r7_VBWMC-dhvFmdPyhGzCQXFRGM0KB6M6ybDUT4TsS95tqbdCrUoN9qY036449xOZJjpAvktZXq9YlQFtxear56AIVPxWb7NP_Uj_XLYjYcG5LBu3fe0DkzGM8Gh4A9g_WGrtdokoNG-UPyr96QzZwKwoyZA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md font-semibold text-on-surface truncate">SR // Sadik Hasan Rafi</span>
+<span class="inline-flex items-center text-[10px] font-label-caps bg-surface-container text-secondary px-1.5 py-0.2 rounded font-semibold tracking-wider">PGP SIGNED</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline truncate">Lead Backend &amp; Distributed Systems Architect</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-9 px-3 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-1.5 hover:bg-surface-variant transition-colors active:scale-[0.98]" id="copy-citation-btn" onclick="copyCitation()">
+<span class="material-symbols-outlined text-[16px]">format_quote</span>
+<span id="citation-label">COPY CITATION</span>
+</button>
+<button class="h-9 px-3 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center justify-center gap-1.5 hover:bg-surface-variant transition-colors active:scale-[0.98]" id="clone-repo-btn" onclick="cloneRepo()">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span id="clone-label">CLONE REPO</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Key Architectural Performance Metrics Strip -->
+<section class="py-4">
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">DEDUP WINDOW</span>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface block leading-none">3,600s</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight block mt-1">Strict Redis TTL</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">LEAK RATE</span>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md font-semibold text-secondary block leading-none">0.000%</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight block mt-1">18.4M Webhooks</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">INGRESS LATENCY</span>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface block leading-none">14.2ms</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight block mt-1">P99 Mutex Ingress</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Collapsible Table of Contents & Stack Chips -->
+<section class="py-3">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleToc()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_tree</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">ENGINEERING INDEX &amp; TOC</span>
+</div>
+<span class="material-symbols-outlined text-on-surface transition-transform duration-200" id="toc-chevron">expand_more</span>
+</div>
+<div class="flex flex-col space-y-2 mt-3 pt-3" id="toc-drawer">
+<a class="font-body-sm text-body-sm text-on-surface hover:text-secondary flex items-center justify-between py-1 transition-colors" href="#sec-01">
+<span>01 // The Burst Failure Vulnerability</span>
+<span class="font-label-caps text-outline">SEC-01</span>
+</a>
+<a class="font-body-sm text-body-sm text-on-surface hover:text-secondary flex items-center justify-between py-1 transition-colors" href="#sec-02">
+<span>02 // Deterministic Payload Fingerprinting</span>
+<span class="font-label-caps text-outline">SEC-02</span>
+</a>
+<a class="font-body-sm text-body-sm text-on-surface hover:text-secondary flex items-center justify-between py-1 transition-colors" href="#sec-03">
+<span>03 // Distributed Mutex Implementation</span>
+<span class="font-label-caps text-outline">SEC-03</span>
+</a>
+<a class="font-body-sm text-body-sm text-on-surface hover:text-secondary flex items-center justify-between py-1 transition-colors" href="#sec-04">
+<span>04 // Repeatable Read ACID Isolation</span>
+<span class="font-label-caps text-outline">SEC-04</span>
+</a>
+<a class="font-body-sm text-body-sm text-on-surface hover:text-secondary flex items-center justify-between py-1 transition-colors" href="#sec-05">
+<span>05 // Empirical Proof &amp; Benchmarks</span>
+<span class="font-label-caps text-outline">SEC-05</span>
+</a>
+<a class="font-body-sm text-body-sm text-on-surface hover:text-secondary flex items-center justify-between py-1 transition-colors" href="#sec-06">
+<span>06 // DLQ &amp; Pager Alerts</span>
+<span class="font-label-caps text-outline">SEC-06</span>
+</a>
+<!-- Runtime Stack Chips -->
+<div class="pt-3 mt-1 flex flex-wrap gap-1.5">
+<span class="font-label-caps text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">Node.js 22 LTS</span>
+<span class="font-label-caps text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">TypeScript 5.6</span>
+<span class="font-label-caps text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">PostgreSQL 16.4</span>
+<span class="font-label-caps text-[10px] bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded font-semibold">Redis 7.2 Cluster</span>
+<span class="font-label-caps text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">BullMQ Pro</span>
+<span class="font-label-caps text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">k6 Engine</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Section 01: The Vulnerability -->
+<section class="pt-8 pb-4 flex flex-col space-y-3" id="sec-01">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">SECTION 01</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">RACE CONDITIONS</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium leading-snug">
+      The Burst Failure Vulnerability in Multi-Gateway Settlement
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      In modern financial rails (Stripe, Adyen, Razorpay), network timeouts are inevitable. When a gateway sends an HTTP webhook notification of a captured charge and receives an ephemeral <code class="font-code-sm text-code-sm bg-surface-container px-1 py-0.5 rounded text-on-surface">504 Gateway Timeout</code> from an intermediate proxy, its automated exponential backoff triggers an immediate retry.
+    </p>
+<!-- Incident Vector Callout Box -->
+<div class="bg-surface-container-low p-4 rounded-lg my-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col space-y-1">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">PRODUCTION CRITICAL INCIDENT VECTOR</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            If two worker threads pull identical webhook payloads concurrently, both query the payment ledger before either commits. Finding no ledger entry, both dispatch fulfillment and credit the merchant balance twice.
+          </p>
+</div>
+</div>
+</div>
+<!-- Architectural Visualizer -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden my-2 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Technical architectural diagram depicting concurrent distributed webhook worker threads colliding at a database ledger barrier, rendered in elegant blueprint line art with muted plum, obsidian, and ivory accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpUqigbmnSM1AvdYGOPAxPjWW4lGW_V1rsmGeeiSR3QP60l9nprpSxI-eL_vTSU88CqWf3uSoOJXu85LOvQrPftLRDNXOh5kJTLJ_CALX9FiQkjT9powmVRJqfogLJZo-8DlIPouwF0qK-tCK2rGZRdlae2EQo6kC3oxSWiWO_n200Uba_veph1J6iqAm4qSY7PJuPKeW_5inlB82qIdL0xgSPViKV1Nwyu5HyjqefChI5nRB78nwnWw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-3">
+<span class="font-label-caps text-label-caps text-on-primary uppercase tracking-widest">FIG 1.0 // Unsynchronized Ingress Race Condition</span>
+</div>
+</div>
+</section>
+<!-- Editorial Section 02: Deterministic Identity -->
+<section class="pt-8 pb-4 flex flex-col space-y-3" id="sec-02">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">SECTION 02</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">CRYPTOGRAPHIC IDENTITY</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium leading-snug">
+      Deterministic Payload Fingerprinting via SHA-256 HMAC
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Relying strictly on provider-supplied event IDs invites security hazards: cross-tenant collisions, malformed replay payloads, or provider re-indexing. Our ingress pipeline derives an immutable compound identity using canonical JSON canonicalization.
+    </p>
+<!-- Structural Flow Diagram (Inline SVG & Architectural Cards) -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm space-y-3 my-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider font-semibold">IDEMPOTENT PIPELINE LIFECYCLE</span>
+<span class="font-code-sm text-[11px] text-secondary font-semibold">SHA256(canon_payload + salt)</span>
+</div>
+<!-- Linear pipeline stages -->
+<div class="space-y-2">
+<div class="flex items-center gap-3 p-2.5 bg-surface-container-low rounded">
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-label-caps text-[11px] font-bold">1</div>
+<div class="flex-1 min-w-0">
+<span class="font-body-sm font-semibold text-on-surface block leading-tight">Payment Ingress Event</span>
+<span class="font-body-sm text-[12px] text-outline truncate block">Raw payload normalized &amp; cryptographically hashed</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">verified</span>
+</div>
+<div class="flex items-center justify-center -my-1">
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_downward</span>
+</div>
+<div class="flex items-center gap-3 p-2.5 bg-secondary-fixed text-on-secondary-fixed rounded">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-caps text-[11px] font-bold">2</div>
+<div class="flex-1 min-w-0">
+<span class="font-body-sm font-semibold block leading-tight">Redis SET NX PX Distributed Lock</span>
+<span class="font-body-sm text-[12px] opacity-90 truncate block">Acquires atomic lock with 60s fail-safe window</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="flex items-center justify-center -my-1">
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_downward</span>
+</div>
+<div class="flex items-center gap-3 p-2.5 bg-surface-container-low rounded">
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-label-caps text-[11px] font-bold">3</div>
+<div class="flex-1 min-w-0">
+<span class="font-body-sm font-semibold text-on-surface block leading-tight">PostgreSQL Atomic Upsert</span>
+<span class="font-body-sm text-[12px] text-outline truncate block">REPEATABLE READ transaction ledger entry</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">database</span>
+</div>
+<div class="flex items-center justify-center -my-1">
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_downward</span>
+</div>
+<div class="flex items-center gap-3 p-2.5 bg-surface-container-low rounded">
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-label-caps text-[11px] font-bold">4</div>
+<div class="flex-1 min-w-0">
+<span class="font-body-sm font-semibold text-on-surface block leading-tight">Gateway Response: 200 OK</span>
+<span class="font-body-sm text-[12px] text-outline truncate block">Async dispatch to downstream fulfillment BullMQ</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">check_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Section 03: Implementation & Code -->
+<section class="pt-8 pb-4 flex flex-col space-y-3" id="sec-03">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">SECTION 03</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">IMPLEMENTATION</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium leading-snug">
+      Distributed Mutex via Redis SET NX PX &amp; PostgreSQL Upsert
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Below is the core TypeScript implementation running inside Rafi’s transaction orchestration services. It treats concurrency as an absolute inevitability rather than an edge-case anomaly.
+    </p>
+<!-- Syntax-Highlighted Dark Mobile Code Block -->
+<div class="bg-primary text-on-primary rounded-xl overflow-hidden shadow-lg my-2">
+<div class="bg-surface-container-highest/20 px-3 py-2 flex items-center justify-between text-on-primary/80">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline inline-block"></span>
+<span class="font-code-sm text-[11px] text-on-primary-container font-mono ml-2">idempotent-worker.ts</span>
+</div>
+<button class="text-on-primary/70 hover:text-on-primary font-label-caps text-[10px] tracking-wider uppercase flex items-center gap-1" onclick="copySnippet()">
+<span class="material-symbols-outlined text-[13px]">content_copy</span>
+<span id="copy-snippet-label">COPY</span>
+</button>
+</div>
+<div class="p-3.5 overflow-x-auto font-code-sm text-[12px] leading-relaxed font-mono">
+<span class="text-outline">// 1. Atomic Distributed Lock Acquisition</span><br/>
+<span class="text-secondary-fixed">const</span> lockKey = <span class="text-secondary-container">`lock:webhook:${fingerprint}`</span>;<br/>
+<span class="text-secondary-fixed">const</span> acquired = <span class="text-secondary-fixed">await</span> redis.<span class="text-primary-fixed">set</span>(<br/>
+          lockKey, workerId, <span class="text-secondary-container">'PX'</span>, <span class="text-on-tertiary-container">60000</span>, <span class="text-secondary-container">'NX'</span><br/>
+        );<br/><br/>
+<span class="text-secondary-fixed">if</span> (!acquired) {<br/>
+          <span class="text-outline">// Another worker is already processing this exact event</span><br/>
+          <span class="text-secondary-fixed">return</span> { status: <span class="text-secondary-container">'CONCURRENT_SKIP'</span>, ack: <span class="text-secondary-fixed">true</span> };<br/>
+        }<br/><br/>
+<span class="text-outline">// 2. PostgreSQL REPEATABLE READ Guard</span><br/>
+<span class="text-secondary-fixed">try</span> {<br/>
+          <span class="text-secondary-fixed">await</span> db.<span class="text-primary-fixed">transaction</span>({<br/>
+            isolationLevel: <span class="text-secondary-container">'REPEATABLE READ'</span><br/>
+          }, <span class="text-secondary-fixed">async</span> (tx) =&gt; {<br/>
+            <span class="text-secondary-fixed">const</span> existing = <span class="text-secondary-fixed">await</span> tx.idempotencyLedger.<span class="text-primary-fixed">findUnique</span>({<br/>
+              where: { hash: fingerprint }<br/>
+            });<br/>
+            <span class="text-secondary-fixed">if</span> (existing) <span class="text-secondary-fixed">return</span>;<br/><br/>
+            <span class="text-secondary-fixed">await</span> tx.idempotencyLedger.<span class="text-primary-fixed">create</span>({<br/>
+              data: { hash: fingerprint, status: <span class="text-secondary-container">'COMMITTED'</span> }<br/>
+            });<br/>
+            <span class="text-secondary-fixed">await</span> creditMerchantBalance(tx, payload);<br/>
+          });<br/>
+        } <span class="text-secondary-fixed">finally</span> {<br/>
+          <span class="text-outline">// Safe release via Lua script comparison</span><br/>
+          <span class="text-secondary-fixed">await</span> releaseSafeRedisLock(redis, lockKey, workerId);<br/>
+        }
+      </div>
+</div>
+</section>
+<!-- Editorial Section 04: ACID Enforcement -->
+<section class="pt-8 pb-4 flex flex-col space-y-3" id="sec-04">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">SECTION 04</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">DATA INTEGRITY</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium leading-snug">
+      Preventing Phantom Reads Under Repeatable Read Isolation
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Standard <code class="font-code-sm text-code-sm bg-surface-container px-1 py-0.5 rounded text-on-surface">READ COMMITTED</code> is inadequate for asynchronous payment processors. If worker A performs an upsert check while worker B is midway through writing a balance credit, phantom reads allow both to succeed.
+    </p>
+<div class="p-4 bg-surface-container-low rounded-lg space-y-2">
+<div class="flex items-center gap-2 text-on-surface font-semibold text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span>The Double-Tiered Invariant Guarantee</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        PostgreSQL enforces unique constraints on the primary hash key at engine level. If an overlap passes through Redis lock degradation (e.g. cluster node rollover), the database throws error code <code class="font-code-sm text-code-sm bg-surface-container px-1 py-0.5 rounded text-on-surface">23505</code> (unique_violation), aborting the secondary transaction safely with 0 side-effects.
+      </p>
+</div>
+</section>
+<!-- Editorial Section 05: Empirical Proof & Benchmarks -->
+<section class="pt-8 pb-4 flex flex-col space-y-3" id="sec-05">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">SECTION 05</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">EMPIRICAL PROOF</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium leading-snug">
+      Stress-Test Benchmarks: 4,500 Simultaneous Burst Events
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      We orchestrated an open-source k6 cluster generating 4,500 synchronous requests targeting the exact same transaction identifier within a 250ms burst window.
+    </p>
+<!-- Side-by-Side Mobile Benchmark Cards -->
+<div class="space-y-3 my-2">
+<!-- Naive Standard Architecture -->
+<div class="bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-caps text-label-caps text-error uppercase font-semibold">NAIVE READ-COMMITTED ARCH</span>
+<span class="font-label-caps text-[11px] text-outline">CONTROL GROUP</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div>
+<span class="font-body-sm text-[11px] text-outline block">Duplicate Leaks</span>
+<span class="font-headline-md text-headline-md text-error font-semibold">24</span>
+</div>
+<div>
+<span class="font-body-sm text-[11px] text-outline block">P95 Latency</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">184ms</span>
+</div>
+<div>
+<span class="font-body-sm text-[11px] text-outline block">Integrity</span>
+<span class="font-headline-md text-headline-md text-error font-semibold">Failed</span>
+</div>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-2 pt-2">
+          $3,420 erroneously duplicated across double-charged balance records during simulation.
+        </p>
+</div>
+<!-- Rafi Dual-Layer Engine -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">RAFI DUAL-LAYER ENGINE</span>
+<span class="font-label-caps text-[11px] bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded font-semibold">ZERO COMPROMISE</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div>
+<span class="font-body-sm text-[11px] text-secondary block">Duplicate Leaks</span>
+<span class="font-headline-md text-headline-md text-secondary font-semibold">0.000%</span>
+</div>
+<div>
+<span class="font-body-sm text-[11px] text-outline block">P95 Latency</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">11.6ms</span>
+</div>
+<div>
+<span class="font-body-sm text-[11px] text-outline block">Success Rate</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">100.0%</span>
+</div>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-2 pt-2">
+          4,499 burst collisions cleanly neutralized in memory via Redis SET NX. 1 single transaction committed to PostgreSQL.
+        </p>
+</div>
+</div>
+</section>
+<!-- Editorial Section 06: DLQ & Resilience -->
+<section class="pt-8 pb-4 flex flex-col space-y-3" id="sec-06">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">SECTION 06</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">OPERATIONAL RESILIENCE</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium leading-snug">
+      Dead-Letter Queues (DLQ) &amp; Automated Pager Alerts
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Whenever an unrecoverable exception or gateway protocol discrepancy occurs, the transaction payload drops into a BullMQ Dead-Letter Queue. PagerDuty and Slack webhooks ingest the failure within 1.2s with full payload replay capability.
+    </p>
+<!-- Axiom Quote Callout Card -->
+<div class="bg-secondary-fixed/50 p-5 rounded-xl my-3">
+<div class="flex flex-col space-y-2">
+<span class="material-symbols-outlined text-secondary text-[26px]">format_quote</span>
+<blockquote class="font-headline-emphasis text-headline-emphasis italic text-on-surface leading-snug">
+          "A payment endpoint that isn't idempotent by default is simply a production incident waiting for telecom packet drops."
+        </blockquote>
+<span class="font-label-caps text-label-caps text-on-secondary-fixed-variant uppercase tracking-wider font-semibold pt-1">
+          — Sadik Hasan Rafi, Lead Systems Architect
+        </span>
+</div>
+</div>
+<!-- Hardening Deployment Checklist -->
+<div class="bg-surface-container-low p-4 rounded-xl space-y-3 my-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">HARDENING DEPLOYMENT CHECKLIST</span>
+<span class="font-label-caps text-secondary text-[11px] font-semibold">4/4 VERIFIED</span>
+</div>
+<div class="space-y-2.5">
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-default" disabled="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Payload fingerprinting via deterministic SHA-256 HMAC</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-default" disabled="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Redis SET NX PX distributed lock with Lua atomic release</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-default" disabled="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">PostgreSQL Repeatable Read isolation with unique constraint</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-default" disabled="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Async BullMQ offload for downstream non-blocking fulfillment</span>
+</label>
+</div>
+</div>
+</section>
+<!-- Author Editorial Bio Card -->
+<section class="py-6">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col space-y-4">
+<div class="flex items-center gap-3.5">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up architectural portrait of Sadik Hasan Rafi wearing glasses and technical black sweater in a high tech design lab with ambient violet monitors in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFO3dnitZ5pawA6HXydv3RgXCpDyUpUcZwn_0EmZQnqkdzG7JTwrykNeGK_66C-mGCJvzcE0b0D-Xx7QxH_SUYJzVVAE1lScLsAb5Z8QsPsi6LBbBfe7pYfZchLbJUyldTGAqdbnkQ2ybb8LUZyeb176jHjRtvneBLtKw5PDznzSiOO_Nq35TkjPe-Z0VekDotsOfMn9lGTLqthpDB3hMzeU-Lbf16OFbqNCioTDoGhffR1uKaZ566zg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-[1.2rem] font-semibold text-on-surface leading-tight">Sadik Hasan Rafi</span>
+<span class="font-body-sm text-body-sm text-secondary">Lead Backend &amp; Distributed Systems Architect</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider mt-0.5">HELSINKI / STOCKHOLM UTC+2</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Designs high-throughput settlement systems, distributed consensus architectures, and high-availability database infrastructure handling billions in quarterly gross transaction volume.
+      </p>
+<div class="flex items-center gap-2 pt-1">
+<a class="px-3 py-1.5 bg-surface-container font-label-caps text-label-caps uppercase tracking-wider text-on-surface rounded hover:bg-surface-variant transition-colors" href="#">GitHub</a>
+<a class="px-3 py-1.5 bg-surface-container font-label-caps text-label-caps uppercase tracking-wider text-on-surface rounded hover:bg-surface-variant transition-colors" href="#">LinkedIn</a>
+<a class="px-3 py-1.5 bg-surface-container font-label-caps text-label-caps uppercase tracking-wider text-on-surface rounded hover:bg-surface-variant transition-colors" href="#">ReadCV</a>
+<a class="px-3 py-1.5 bg-surface-container font-label-caps text-label-caps uppercase tracking-wider text-on-surface rounded hover:bg-surface-variant transition-colors" href="#">PGP Key</a>
+</div>
+</div>
+</section>
+<!-- Architectural Consultation CTA -->
+<section class="py-4">
+<div class="bg-secondary-fixed p-5 rounded-xl flex flex-col space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[20px]">architecture</span>
+<span class="font-label-caps text-label-caps text-on-secondary-fixed uppercase tracking-wider font-semibold">ADVISORY ENGAGEMENT</span>
+</div>
+<h3 class="font-headline-md text-[1.35rem] font-medium text-on-secondary-fixed leading-tight">
+        Have an API or Fintech Architecture to Harden?
+      </h3>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant leading-relaxed">
+        I conduct rigorous production concurrency audits, database scaling reviews, and low-latency distributed pipeline implementations.
+      </p>
+<a class="h-11 px-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest flex items-center justify-between rounded hover:bg-surface-container-highest/80 transition-colors" href="#">
+<span>SCHEDULE ARCHITECTURE AUDIT</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Pagination / Adjacent Essay Navigation Cards -->
+<section class="pt-6 pb-4">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider font-semibold">SYSTEM ESSAYS ARCHIVE</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">INDEX 2025</span>
+</div>
+<div class="space-y-3">
+<!-- Previous Essay -->
+<a class="block p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">PREVIOUS ESSAY</span>
+<span class="material-symbols-outlined text-outline text-[16px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+</div>
+<div class="font-headline-md text-[1.1rem] text-on-surface font-medium mt-1 leading-snug group-hover:text-secondary transition-colors">
+          Migrating 220M Records from MongoDB to PostgreSQL pgvector Without Scheduled Downtime
+        </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-caps text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">DATABASE INTERNALS</span>
+<span class="font-body-sm text-[11px] text-outline">SEP 2025</span>
+</div>
+</a>
+<!-- Next Essay -->
+<a class="block p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">NEXT ESSAY</span>
+<span class="material-symbols-outlined text-outline text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<div class="font-headline-md text-[1.1rem] text-on-surface font-medium mt-1 leading-snug group-hover:text-secondary transition-colors">
+          Eliminating N+1 Prisma Query Bottlenecks in Multi-Tenant Microservices
+        </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-caps text-[10px] bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">PERFORMANCE TUNING</span>
+<span class="font-body-sm text-[11px] text-outline">NOV 2025</span>
+</div>
+</a>
+</div>
+</section>
+</div>
+<script>
+  function toggleToc() {
+    const drawer = document.getElementById('toc-drawer');
+    const chevron = document.getElementById('toc-chevron');
+    if (drawer.classList.contains('hidden')) {
+      drawer.classList.remove('hidden');
+      chevron.style.transform = 'rotate(0deg)';
+    } else {
+      drawer.classList.add('hidden');
+      chevron.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  function copyCitation() {
+    const text = 'Rafi, S. H. (2025). Designing Idempotent Payment Webhooks That Never Double-Charge Under Burst Failures. Systems Engineering Dossiers.';
+    navigator.clipboard?.writeText(text);
+    const label = document.getElementById('citation-label');
+    const prev = label.innerText;
+    label.innerText = 'COPIED TO CLIPBOARD';
+    setTimeout(() => { label.innerText = prev; }, 2000);
+  }
+
+  function cloneRepo() {
+    const text = 'git clone https://github.com/shrafi/idempotent-payment-engine.git';
+    navigator.clipboard?.writeText(text);
+    const label = document.getElementById('clone-label');
+    const prev = label.innerText;
+    label.innerText = 'COMMAND COPIED';
+    setTimeout(() => { label.innerText = prev; }, 2000);
+  }
+
+  function copySnippet() {
+    const code = `const lockKey = \`lock:webhook:\${fingerprint}\`;
+const acquired = await redis.set(lockKey, workerId, 'PX', 60000, 'NX');
+if (!acquired) return { status: 'CONCURRENT_SKIP', ack: true };
+await db.transaction({ isolationLevel: 'REPEATABLE READ' }, async (tx) => {
+  const existing = await tx.idempotencyLedger.findUnique({ where: { hash: fingerprint } });
+  if (existing) return;
+  await tx.idempotencyLedger.create({ data: { hash: fingerprint, status: 'COMMITTED' } });
+  await creditMerchantBalance(tx, payload);
+});`;
+    navigator.clipboard?.writeText(code);
+    const label = document.getElementById('copy-snippet-label');
+    const prev = label.innerText;
+    label.innerText = 'COPIED';
+    setTimeout(() => { label.innerText = prev; }, 2000);
+  }
+</script></main></body></html>

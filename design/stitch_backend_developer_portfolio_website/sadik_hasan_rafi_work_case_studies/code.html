@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Sadik Hasan Rafi — Backend Developer</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-fixed-variant":"#474556","inverse-on-surface":"#f2f0f0","on-secondary-fixed-variant":"#4f319b","inverse-surface":"#303031","on-secondary-fixed":"#21005e","surface-container-low":"#f5f3f3","secondary-fixed-dim":"#cebdff","secondary-container":"#ab8ffd","on-secondary":"#ffffff","on-error":"#ffffff","primary-fixed":"#e5e2e1","primary":"#000000","on-tertiary-container":"#858195","secondary":"#674bb4","on-primary-fixed":"#1c1b1b","secondary-fixed":"#e8ddff","surface-container":"#efeded","surface-container-highest":"#e4e2e2","tertiary-container":"#1b1a29","surface-container-high":"#e9e8e7","on-primary":"#ffffff","surface-container-lowest":"#ffffff","on-error-container":"#93000a","error-container":"#ffdad6","tertiary-fixed":"#e5e0f6","surface-dim":"#dbdad9","tertiary":"#000000","tertiary-fixed-dim":"#c8c4d9","on-surface-variant":"#444748","surface-tint":"#5f5e5e","error":"#ba1a1a","surface":"#fbf9f8","background":"#fbf9f8","on-background":"#1b1c1c","outline":"#747878","primary-fixed-dim":"#c8c6c5","on-surface":"#1b1c1c","outline-variant":"#c4c7c7","on-primary-container":"#858383","surface-variant":"#e4e2e2","primary-container":"#1c1b1b","on-secondary-container":"#3f1e8b","on-tertiary-fixed":"#1b1a29","inverse-primary":"#c8c6c5","on-tertiary":"#ffffff","on-primary-fixed-variant":"#474646","surface-bright":"#fbf9f8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"4rem","space-sm":"0.5rem","space-xl":"3.5rem","gutter":"1.5rem","space-xxl":"6rem","space-lg":"2rem","margin":"1.25rem","space-xs":"0.25rem","space-md":"1rem","gutter-desktop":"2.5rem"},"fontFamily":{"headline-lg":["Playfair Display"],"headline-emphasis":["Playfair Display"],"body-md":["Geist"],"body-lg":["Geist"],"display-lg":["Playfair Display"],"code-sm":["Geist"],"display-md":["Playfair Display"],"label-caps":["Geist"],"body-sm":["Geist"],"display-lg-mobile":["Playfair Display"],"headline-md":["Playfair Display"]},"fontSize":{"headline-lg":["2.25rem",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-emphasis":["1.75rem",{"lineHeight":"1.3","fontWeight":"400"}],"body-md":["0.9375rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.7","fontWeight":"400"}],"display-lg":["4.5rem",{"lineHeight":"1.05","letterSpacing":"-0.02em","fontWeight":"400"}],"code-sm":["0.8125rem",{"lineHeight":"1.4","fontWeight":"400"}],"display-md":["3.25rem",{"lineHeight":"1.15","letterSpacing":"-0.015em","fontWeight":"400"}],"label-caps":["0.6875rem",{"lineHeight":"1","letterSpacing":"0.15em","fontWeight":"600"}],"body-sm":["0.8125rem",{"lineHeight":"1.5","fontWeight":"400"}],"display-lg-mobile":["2.75rem",{"lineHeight":"1.1","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"1.3","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant"><div class="h-16 max-w-[1360px] mx-auto px-margin md:px-margin-desktop flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><div class="w-8 h-8 border border-primary flex items-center justify-center"><span class="font-headline-md text-headline-md font-bold text-primary group-hover:text-secondary transition-colors">SR</span></div><div class="flex flex-col"><span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest font-semibold">Sadik Hasan Rafi</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Backend Developer</span></div></a><nav class="hidden lg:flex items-center gap-space-lg h-full" data-active-classes="text-primary border-b-2 border-secondary"><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a aria-current="page" class="h-full flex items-center font-label-caps uppercase transition-colors text-primary border-b-2 border-secondary" data-path="work" href="#">Work</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="blog" href="#">Blog</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-xs font-label-caps text-label-caps uppercase transition-colors group" data-path="contact" href="#"><span>Let's Talk</span><span class="ml-space-sm transform group-hover:translate-x-1 transition-transform">→</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Top Intro Section -->
+<section class="w-full bg-surface py-space-xl md:py-space-xxl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop">
+<div class="flex flex-col max-w-4xl">
+<div class="inline-flex items-center gap-space-xs mb-space-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest font-semibold">FEATURED ARCHITECTURE</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight mb-space-md">
+          Systems Engineered for Scale, <br/>
+          Reliability &amp; <span class="italic font-display-lg text-secondary font-normal">High Stakes.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-space-xl">
+          A curated selection of production backend systems, multi-tenant POS platforms, and financial transaction engines designed for fault-tolerance and predictable low latency.
+        </p>
+<!-- Dynamic Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-xs" id="filter-container">
+<button class="filter-btn px-space-md py-space-xs bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest transition-all shadow-sm" data-filter="all" type="button">
+            ALL WORK (4)
+          </button>
+<button class="filter-btn px-space-md py-space-xs bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-caps text-label-caps uppercase tracking-widest transition-all" data-filter="fintech" type="button">
+            FINTECH &amp; PAYMENTS
+          </button>
+<button class="filter-btn px-space-md py-space-xs bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-caps text-label-caps uppercase tracking-widest transition-all" data-filter="pos" type="button">
+            ERP &amp; POS
+          </button>
+<button class="filter-btn px-space-md py-space-xs bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-caps text-label-caps uppercase tracking-widest transition-all" data-filter="ai" type="button">
+            AI &amp; AUTOMATION
+          </button>
+<button class="filter-btn px-space-md py-space-xs bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-caps text-label-caps uppercase tracking-widest transition-all" data-filter="distributed" type="button">
+            DISTRIBUTED SYSTEMS
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep-Dive Case Study Cards -->
+<section class="w-full bg-surface-container-low py-space-xl md:py-space-xxl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop flex flex-col gap-space-xxl">
+<!-- Project 1: LIGUNI POS -->
+<article class="project-card grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest shadow-md transition-all duration-300" data-category="pos distributed">
+<!-- Visual & Architectural Topology (Dark Slate Frame) -->
+<div class="lg:col-span-6 bg-tertiary-container text-on-primary p-space-lg md:p-space-xl flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-md z-10">
+<span class="font-code-sm text-code-sm text-secondary-fixed tracking-widest uppercase">CASE // 01 · DEPLOYED</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-secondary-fixed">LIVE CLUSTER</span>
+</div>
+</div>
+<!-- Architecture Telemetry Visual -->
+<div class="my-space-lg flex flex-col gap-space-md z-10">
+<div class="p-space-md bg-primary-container shadow-inner flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-tertiary-container font-code-sm text-code-sm">
+<span>INSPECTOR: REALTIME REPLICATION BUS</span>
+<span>WS / PORT 8443</span>
+</div>
+<!-- Topology diagram -->
+<div class="grid grid-cols-3 gap-space-sm text-center py-space-xs">
+<div class="p-space-xs bg-tertiary text-on-primary">
+<span class="block font-code-sm text-code-sm text-secondary-fixed">120+ Edge Nodes</span>
+<span class="font-label-caps text-label-caps text-on-tertiary-container">SQLite In-Store</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">sync_alt</span>
+<span class="font-code-sm text-code-sm text-secondary-fixed-dim">Delta Sync</span>
+</div>
+<div class="p-space-xs bg-tertiary text-on-primary">
+<span class="block font-code-sm text-code-sm text-secondary-fixed">Core Cluster</span>
+<span class="font-label-caps text-label-caps text-on-tertiary-container">PostgreSQL Multi-AZ</span>
+</div>
+</div>
+</div>
+<!-- Terminal log mockup -->
+<div class="p-space-sm bg-tertiary/80 font-code-sm text-code-sm text-on-tertiary-container leading-relaxed">
+<p class="text-secondary-fixed">&gt; [SYNC_WORKER] Processed 1,420 delta batches from Node-087.</p>
+<p>&gt; Conflict resolution algorithm: Last-Write-Wins with Ledger Checksum verified.</p>
+<p class="text-on-primary">&gt; Current P99 latency: <span class="text-secondary-fixed">38.4ms</span></p>
+</div>
+</div>
+<!-- Technical Specs Ribbon -->
+<div class="pt-space-md flex flex-wrap items-center gap-space-xs z-10">
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">Node.js</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">TypeScript</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">PostgreSQL</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">Redis Pub/Sub</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">Docker Swarm</span>
+</div>
+</div>
+<!-- Content & System Metrics -->
+<div class="lg:col-span-6 p-space-lg md:p-space-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest">ENTERPRISE POS SERVER</span>
+<span class="text-outline-variant font-code-sm">/</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">OFFLINE-FIRST SYNC</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              LIGUNI POS — <span class="italic font-normal text-secondary">Zero-Downtime</span> Multi-Outlet Sync
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg">
+              Engineered an offline-first transactional POS framework capable of maintaining full point-of-sale functionality during metropolitan network outages. Outlets record orders on a local embedded SQLite replica and stream bidirectional sync snapshots to an AWS PostgreSQL cluster via WebSockets as soon as connectivity resumes.
+            </p>
+<div class="bg-surface-container-low p-space-md mb-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-widest block mb-space-xs">ARCHITECTURAL CHALLENGE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Preventing concurrent stock collision across dispersed checkout terminals when physical inventory is sold simultaneously online and offline. Handled via vector clocks and dynamic deterministic delta merges.
+              </p>
+</div>
+</div>
+<!-- Measured Outcomes -->
+<div class="grid grid-cols-2 gap-space-md pt-space-md">
+<div>
+<span class="font-display-md text-display-md text-primary font-normal block leading-none mb-space-xs">99.99%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Continuous Sync Uptime</span>
+<p class="font-code-sm text-code-sm text-secondary mt-1">Across 120+ retail sites</p>
+</div>
+<div>
+<span class="font-display-md text-display-md text-secondary font-normal block leading-none mb-space-xs">&lt;45ms</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Transaction Latency</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">P95 Redis cached query</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: VILLAGE AGRO FARM -->
+<article class="project-card grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest shadow-md transition-all duration-300" data-category="distributed ai">
+<!-- Content & System Metrics (Left on desktop) -->
+<div class="lg:col-span-6 p-space-lg md:p-space-xl flex flex-col justify-between order-2 lg:order-1">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest">SUPPLY LOGISTICS BACKEND</span>
+<span class="text-outline-variant font-code-sm">/</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">IOT INGESTION ENGINE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              VILLAGE AGRO FARM — Cold-Chain <span class="italic font-normal text-secondary">Telemetric Engine</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg">
+              Designed and deployed an event-driven logistics dispatch server handling fresh agricultural yield distribution. Integrated live cellular IoT temperature sensor packets, calculated cold-chain deviation alerts in sub-second intervals, and balanced batch dispatch allocations across 8 regional refrigerated transit hubs.
+            </p>
+<div class="bg-surface-container-low p-space-md mb-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-widest block mb-space-xs">DATA INTEGRITY STRATEGY</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Utilized BullMQ job queues to isolate batch inventory computations from real-time GPS telemetry streams, preventing queue starvation during morning intake peaks.
+              </p>
+</div>
+</div>
+<!-- Measured Outcomes -->
+<div class="grid grid-cols-2 gap-space-md pt-space-md">
+<div>
+<span class="font-display-md text-display-md text-primary font-normal block leading-none mb-space-xs">14.2 T</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Daily Yield Ingestion</span>
+<p class="font-code-sm text-code-sm text-secondary mt-1">Processed without backlog</p>
+</div>
+<div>
+<span class="font-display-md text-display-md text-secondary font-normal block leading-none mb-space-xs">0.00%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Stock Ledger Drift</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">Over 18 straight months</p>
+</div>
+</div>
+</div>
+<!-- Visual / Architecture Mockup (Right on desktop) -->
+<div class="lg:col-span-6 bg-tertiary-container text-on-primary p-space-lg md:p-space-xl flex flex-col justify-between relative overflow-hidden order-1 lg:order-2">
+<div class="absolute -left-16 -bottom-16 w-64 h-64 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-md z-10">
+<span class="font-code-sm text-code-sm text-secondary-fixed tracking-widest uppercase">CASE // 02 · PRODUCTION</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-secondary-fixed">BULLMQ QUEUE ACTIVE</span>
+</div>
+</div>
+<!-- Telemetry & Sensor Stream Display -->
+<div class="my-space-lg flex flex-col gap-space-md z-10">
+<div class="p-space-md bg-primary-container shadow-inner">
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-tertiary-container mb-space-sm">
+<span>INGESTION PIPELINE: TELEMETRY_STREAM</span>
+<span class="text-secondary-fixed">RATE: 412 PKTS/SEC</span>
+</div>
+<!-- Sparkline SVG -->
+<div class="w-full h-16 bg-tertiary p-space-xs flex items-end">
+<svg class="w-full h-full text-secondary" preserveaspectratio="none" viewbox="0 0 300 40">
+<path d="M0,35 Q30,10 60,25 T120,15 T180,30 T240,8 T300,20" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path d="M0,35 Q30,10 60,25 T120,15 T180,30 T240,8 T300,20 L300,40 L0,40 Z" fill="currentColor" fill-opacity="0.15"></path>
+</svg>
+</div>
+<div class="flex justify-between items-center mt-space-xs font-code-sm text-code-sm text-on-tertiary-container">
+<span>T-Min: 2.1°C (Optimal)</span>
+<span>T-Max: 4.8°C (Safe)</span>
+<span class="text-secondary-fixed font-semibold">Zero Spoilage Alerts</span>
+</div>
+</div>
+<!-- Pipeline status snippet -->
+<div class="p-space-sm bg-tertiary/80 font-code-sm text-code-sm text-on-tertiary-container leading-relaxed">
+<p>&gt; [TELEMETRY_WORKER] Payload parsed: Hub 04 → Van #19 (4.2°C ambient).</p>
+<p class="text-secondary-fixed">&gt; Rebalancing route vectors: Fuel variance -8.4%.</p>
+<p>&gt; Storage synched to AWS S3 Object lock archive.</p>
+</div>
+</div>
+<div class="pt-space-md flex flex-wrap items-center gap-space-xs z-10">
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">NestJS</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">MongoDB</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">BullMQ</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">AWS S3</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">Grafana</span>
+</div>
+</div>
+</article>
+<!-- Project 3: PHARMACY POS & COMPLIANCE -->
+<article class="project-card grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest shadow-md transition-all duration-300" data-category="pos fintech">
+<!-- Visual & Architectural Topology -->
+<div class="lg:col-span-6 bg-tertiary-container text-on-primary p-space-lg md:p-space-xl flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-md z-10">
+<span class="font-code-sm text-code-sm text-secondary-fixed tracking-widest uppercase">CASE // 03 · AUDITED</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-secondary-fixed">RBAC PROTECTED</span>
+</div>
+</div>
+<!-- Ledger & Batch Security Visual -->
+<div class="my-space-lg flex flex-col gap-space-md z-10">
+<div class="p-space-md bg-primary-container shadow-inner">
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-tertiary-container mb-space-sm">
+<span>AUDIT RECORD: CHAIN_VERIFY_HMAC</span>
+<span class="text-secondary-fixed">SHA-256 SIGNED</span>
+</div>
+<div class="flex flex-col gap-space-xs font-code-sm text-code-sm">
+<div class="flex justify-between p-space-xs bg-tertiary">
+<span class="text-on-tertiary-container">TX_ID: #892841-MED</span>
+<span class="text-secondary-fixed font-semibold">BATCH EXP: 2028-11-04</span>
+</div>
+<div class="flex justify-between p-space-xs bg-tertiary">
+<span class="text-on-tertiary-container">PHARMACIST_KEY: ID_4409</span>
+<span class="text-secondary-fixed">SIG: 9f8a...3b21 VALID</span>
+</div>
+<div class="flex justify-between p-space-xs bg-tertiary">
+<span class="text-on-tertiary-container">REGULATORY SNAPSHOT: DGDA</span>
+<span class="text-secondary-fixed font-semibold">COMPLIANT (P0)</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-tertiary/80 font-code-sm text-code-sm text-on-tertiary-container leading-relaxed">
+<p>&gt; [SECURITY_GUARD] Automated batch expiry quarantine triggered.</p>
+<p class="text-secondary-fixed">&gt; Dispense attempt for batch #EXP-09 rejected by DB constraint.</p>
+<p>&gt; Immutability log checkpoint flushed to AWS RDS read replica.</p>
+</div>
+</div>
+<div class="pt-space-md flex flex-wrap items-center gap-space-xs z-10">
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">TypeScript</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">TypeORM</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">MySQL 8.0</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">AWS RDS</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">Docker</span>
+</div>
+</div>
+<!-- Content & System Metrics -->
+<div class="lg:col-span-6 p-space-lg md:p-space-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest">MULTI-TENANT SAAS</span>
+<span class="text-outline-variant font-code-sm">/</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">HEALTHCARE COMPLIANCE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              PHARMACY POS — Audited <span class="italic font-normal text-secondary">Multi-Tenant</span> Architecture
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg">
+              Engineered a multi-tenant pharmacy SaaS platform serving chained apothecaries. Implemented batch-level drug expiration tracking, automated regulatory compliance reports, granular RBAC (role-based access control), and write-ahead cryptographic audit trails.
+            </p>
+<div class="bg-surface-container-low p-space-md mb-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-widest block mb-space-xs">SECURITY DIRECTIVE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Zero data leakage between tenants guaranteed at the database layer via automated schema isolation and row-level tenant authorization middleware.
+              </p>
+</div>
+</div>
+<!-- Measured Outcomes -->
+<div class="grid grid-cols-2 gap-space-md pt-space-md">
+<div>
+<span class="font-display-md text-display-md text-primary font-normal block leading-none mb-space-xs">62</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Active Store Deployments</span>
+<p class="font-code-sm text-code-sm text-secondary mt-1">Multi-tenant isolation</p>
+</div>
+<div>
+<span class="font-display-md text-display-md text-secondary font-normal block leading-none mb-space-xs">2.4M</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Audited Transactions</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">Tamper-evident logs</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 4: EXAM PREP & MCQ ENGINE -->
+<article class="project-card grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest shadow-md transition-all duration-300" data-category="distributed fintech">
+<!-- Content & System Metrics (Left on desktop) -->
+<div class="lg:col-span-6 p-space-lg md:p-space-xl flex flex-col justify-between order-2 lg:order-1">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest">HIGH-CONCURRENCY PIPELINE</span>
+<span class="text-outline-variant font-code-sm">/</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">ASYNC QUEUES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              EXAM PREP &amp; MCQ — Live Spike <span class="italic font-normal text-secondary">Testing Platform</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg">
+              Architected a backend engine designed to withstand massive sudden traffic surges when thousands of competitive exam students submit test responses in the exact same closing seconds. An asynchronous queue decouples live responses from heavy statistical percentile calculation.
+            </p>
+<div class="bg-surface-container-low p-space-md mb-space-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-widest block mb-space-xs">THROUGHPUT PROTECTION</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Replaced traditional synchronous REST write queries with an in-memory Redis ingest buffer and Socket.io acknowledgments, reducing the database blast radius to zero.
+              </p>
+</div>
+</div>
+<!-- Measured Outcomes -->
+<div class="grid grid-cols-2 gap-space-md pt-space-md">
+<div>
+<span class="font-display-md text-display-md text-primary font-normal block leading-none mb-space-xs">15k+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Simultaneous Submissions</span>
+<p class="font-code-sm text-code-sm text-secondary mt-1">Single-minute exam window</p>
+</div>
+<div>
+<span class="font-display-md text-display-md text-secondary font-normal block leading-none mb-space-xs">0%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Dropped Answers</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">Buffered in write queues</p>
+</div>
+</div>
+</div>
+<!-- Visual / Architecture Mockup (Right on desktop) -->
+<div class="lg:col-span-6 bg-tertiary-container text-on-primary p-space-lg md:p-space-xl flex flex-col justify-between relative overflow-hidden order-1 lg:order-2">
+<div class="absolute -left-16 -top-16 w-64 h-64 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-md z-10">
+<span class="font-code-sm text-code-sm text-secondary-fixed tracking-widest uppercase">CASE // 04 · HIGH LOAD</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-secondary-fixed">SPIKE TOLERANT</span>
+</div>
+</div>
+<!-- Live Spike Flow Display -->
+<div class="my-space-lg flex flex-col gap-space-md z-10">
+<div class="p-space-md bg-primary-container shadow-inner">
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-tertiary-container mb-space-sm">
+<span>CONCURRENCY PRESSURE TEST</span>
+<span class="text-secondary-fixed">SOCKET.IO WORKERS</span>
+</div>
+<!-- Bar gauge visualization -->
+<div class="space-y-space-xs font-code-sm text-code-sm text-on-tertiary-container">
+<div class="flex justify-between items-center text-secondary-fixed">
+<span>FastAPI HTTP / Ingestion Layer</span>
+<span>100% HEALTH</span>
+</div>
+<div class="w-full bg-tertiary h-2 overflow-hidden">
+<div class="bg-secondary h-full w-[98%]"></div>
+</div>
+<div class="flex justify-between items-center pt-space-xs text-secondary-fixed">
+<span>Redis Write Stream Queue</span>
+<span>15,400 MSGS</span>
+</div>
+<div class="w-full bg-tertiary h-2 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full w-[85%]"></div>
+</div>
+<div class="flex justify-between items-center pt-space-xs text-secondary-fixed">
+<span>Worker Consumer Pool (Drain Rate)</span>
+<span>3,850/sec</span>
+</div>
+<div class="w-full bg-tertiary h-2 overflow-hidden">
+<div class="bg-secondary h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-tertiary/80 font-code-sm text-code-sm text-on-tertiary-container leading-relaxed">
+<p>&gt; [SPIKE_HANDLER] Window closed. Received 15,280 payload blobs.</p>
+<p class="text-secondary-fixed">&gt; Calculated weighted standard deviation &amp; percentiles in 4.1s.</p>
+<p>&gt; Zero HTTP 504 timeouts logged across all availability zones.</p>
+</div>
+</div>
+<div class="pt-space-md flex flex-wrap items-center gap-space-xs z-10">
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">FastAPI</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">Python 3.11</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">Socket.io</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">BullMQ / Redis</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary-container px-space-xs py-1 text-secondary-fixed">PostgreSQL</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Architecture Highlights Strip -->
+<section class="w-full bg-surface py-space-xl md:py-space-xxl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest font-semibold block mb-space-xs">FOUNDATIONAL DISCIPLINE</span>
+<h3 class="font-display-md text-display-md text-on-surface">Architectural Core Values</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-space-sm md:mt-0 leading-relaxed">
+          Every system is designed according to immutable infrastructure fundamentals, defensive schema structures, and deterministic operational guarantees.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Highlight 1 -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">schema</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest block mb-space-xs">STORAGE TOPOLOGY</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Rigorous DB Schema Design</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Normalized relational cores paired with bounded denormalized read-models. Strict constraint assertions, zero-null policies on financial tables, and strategic indexing planned around query execution plans.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container-high p-space-xs text-center">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">B-TREE INDEXING // JSONB QUERY OPTIMIZATION</span>
+</div>
+</div>
+<!-- Highlight 2 -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">enhanced_encryption</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest block mb-space-xs">DATA DEFENSE</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Security &amp; Encryption Protocols</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Application-level AES-256 field encryption for personally identifiable information (PII). Strict CORS, rate-limiting leaker buckets, rotating JWT tokens, and automated signature validation on incoming RPC channels.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container-high p-space-xs text-center">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">ZERO-TRUST RBAC // HMAC VERIFICATION</span>
+</div>
+</div>
+<!-- Highlight 3 -->
+<div class="bg-surface-container p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[20px]">swap_horizontal_circle</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest block mb-space-xs">ASYNC RELIABILITY</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Idempotent Webhook Dispatchers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Guaranteed at-least-once delivery with exponential backoff and jitter algorithms. Transaction deduplication keys eliminate accidental double-billing and phantom state updates across all third-party integrations.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container-high p-space-xs text-center">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">EXPONENTIAL RETRIES // DEAD-LETTER QUEUES</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Full-Width Lavender CTA Banner -->
+<section class="w-full bg-secondary-fixed py-space-xl md:py-space-xxl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-secondary-fixed font-semibold tracking-widest mb-space-xs">
+            NEED A PROVEN BACKEND ARCHITECT?
+          </span>
+<h2 class="font-display-lg text-display-lg text-on-secondary-fixed leading-tight">
+            Let's Build Something <br/>
+<span class="italic font-normal">Reliable Together.</span>
+</h2>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant mt-space-sm max-w-xl">
+            Whether you are designing a high-throughput microservice, revamping an unreliable POS server, or scaling a complex database cluster, I am available for architectural advisory and dedicated production contracts.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container px-space-xl py-space-md font-label-caps text-label-caps uppercase tracking-widest transition-all shadow-md group" data-path="contact" href="#">
+<span>LET'S WORK TOGETHER</span>
+<span class="ml-space-md transform group-hover:translate-x-1 transition-transform">→</span>
+</a>
+<a class="inline-flex items-center font-label-caps text-label-caps uppercase tracking-widest text-on-secondary-fixed hover:text-primary transition-colors underline underline-offset-8" href="mailto:hello@sadikrafi.dev">
+            OR COPY EMAIL
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Client-side Interactive Filter Script -->
+<script>
+    (function() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.project-card');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Update active styles
+          buttons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+          btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+          // Filter card display
+          cards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+              card.style.display = 'grid';
+              card.style.opacity = '1';
+            } else {
+              card.style.display = 'none';
+              card.style.opacity = '0';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant"><div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"><div class="lg:col-span-4 flex flex-col items-start"><div class="flex items-center gap-space-sm mb-space-md"><div class="w-8 h-8 border border-primary flex items-center justify-center"><span class="font-headline-md text-headline-md font-bold text-primary">SR</span></div><span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest font-semibold">Sadik Hasan Rafi</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-space-md leading-relaxed">Engineering robust APIs, high-throughput microservices, and reliable business systems with precision.</p><div class="font-code-sm text-code-sm text-on-surface-variant uppercase tracking-wider">PGP: 4A7D 89B2 01FC 3E91</div></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-md tracking-widest">Quick Links</span><ul class="flex flex-col gap-space-xs"><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="work" href="#">Work</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="blog" href="#">Blog</a></li><li class="pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></li></ul></div><div class="lg:col-span-3 flex flex-col"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-md tracking-widest">Services</span><ul class="flex flex-col gap-space-xs"><li class="border-b border-outline-variant/40 pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">API Architecture</span></li><li class="border-b border-outline-variant/40 pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">ERP / POS Solutions</span></li><li class="border-b border-outline-variant/40 pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">Payment Engines</span></li><li class="pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">LLM Integrations</span></li></ul></div><div class="lg:col-span-3 flex flex-col"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-md tracking-widest">Contact</span><div class="flex flex-col gap-space-xs mb-space-md"><a class="font-body-sm text-body-sm text-on-surface hover:text-secondary transition-colors" href="mailto:hello@sadikrafi.dev">hello@sadikrafi.dev</a><span class="font-body-sm text-body-sm text-on-surface-variant">+880 1712 345678</span><span class="font-body-sm text-body-sm text-on-surface-variant">Dhaka, Bangladesh (UTC+6)</span></div><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-xs tracking-widest">Follow Me</span><div class="flex items-center gap-space-md"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors uppercase" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub</a><span class="text-outline-variant">/</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors uppercase" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a><span class="text-outline-variant">/</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors uppercase" href="https://twitter.com" rel="noopener noreferrer" target="_blank">Twitter · X</a></div></div></div><div class="mt-space-xl pt-space-md border-t border-outline-variant flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">© 2026 Sadik Hasan Rafi. All Rights Reserved.</div><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Architectural Backend Craftsmanship</div></div></div></footer></body></html>

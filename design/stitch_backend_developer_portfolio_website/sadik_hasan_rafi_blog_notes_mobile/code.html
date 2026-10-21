@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-container": "#ab8ffd", "surface-container": "#efeded", "on-error": "#ffffff", "on-surface": "#1b1c1c", "on-tertiary-fixed-variant": "#474556", "outline": "#747878", "on-secondary-fixed-variant": "#4f319b", "on-tertiary-container": "#858195", "on-primary-fixed-variant": "#474646", "surface-tint": "#5f5e5e", "surface-container-low": "#f5f3f3", "secondary-fixed": "#e8ddff", "error": "#ba1a1a", "tertiary-fixed-dim": "#c8c4d9", "on-tertiary-fixed": "#1b1a29", "inverse-on-surface": "#f2f0f0", "on-primary-fixed": "#1c1b1b", "primary-container": "#1c1b1b", "surface-dim": "#dbdad9", "tertiary-fixed": "#e5e0f6", "on-background": "#1b1c1c", "surface-variant": "#e4e2e2", "on-primary": "#ffffff", "primary-fixed": "#e5e2e1", "error-container": "#ffdad6", "surface-container-highest": "#e4e2e2", "surface-bright": "#fbf9f8", "on-secondary-container": "#3f1e8b", "background": "#fbf9f8", "on-error-container": "#93000a", "primary": "#000000", "on-tertiary": "#ffffff", "on-secondary-fixed": "#21005e", "inverse-primary": "#c8c6c5", "on-secondary": "#ffffff", "outline-variant": "#c4c7c7", "secondary": "#674bb4", "secondary-fixed-dim": "#cebdff", "on-primary-container": "#858383", "tertiary-container": "#1b1a29", "surface-container-high": "#e9e8e7", "inverse-surface": "#303031", "on-surface-variant": "#444748", "surface": "#fbf9f8", "tertiary": "#000000", "primary-fixed-dim": "#c8c6c5", "surface-container-lowest": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "2rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-xxl": "6rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-desktop": "4rem", "margin": "1.25rem", "gutter-desktop": "2.5rem", "space-xl": "3.5rem" }, fontFamily: { "body-lg": ["Geist"], "display-lg-mobile": ["Playfair Display"], "label-caps": ["Geist"], "body-md": ["Geist"], "display-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-sm": ["Geist"], "headline-md": ["Playfair Display"], "code-sm": ["Geist"], "headline-lg": ["Playfair Display"], "headline-emphasis": ["Playfair Display"] }, fontSize: { "body-lg": ["1.125rem", { lineHeight: "1.7", fontWeight: "400" }], "display-lg-mobile": ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.01em", fontWeight: "400" }], "label-caps": ["0.6875rem", { lineHeight: "1", letterSpacing: "0.15em", fontWeight: "600" }], "body-md": ["0.9375rem", { lineHeight: "1.6", fontWeight: "400" }], "display-md": ["3.25rem", { lineHeight: "1.15", letterSpacing: "-0.015em", fontWeight: "400" }], "display-lg": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em", fontWeight: "400" }], "body-sm": ["0.8125rem", { lineHeight: "1.5", fontWeight: "400" }], "headline-md": ["1.75rem", { lineHeight: "1.3", fontWeight: "500" }], "code-sm": ["0.8125rem", { lineHeight: "1.4", fontWeight: "400" }], "headline-lg": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "500" }], "headline-emphasis": ["1.75rem", { lineHeight: "1.3", fontWeight: "400" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors -ml-space-xs" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col"><span class="font-label-caps text-[10px] text-outline uppercase tracking-[0.15em]">System Dossier</span><h1 class="font-headline-md text-[1.125rem] font-medium tracking-tight text-on-surface leading-none truncate max-w-[210px]">System Detail</h1></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface px-margin"><div class="flex flex-col w-full space-y-space-lg pb-space-xl">
+<!-- Eyebrow & Hero Title Section -->
+<section class="flex flex-col space-y-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-[0.15em] text-secondary">ENGINEERING LOGS &amp; ESSAYS / VOL. 04</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+      Notes on Architecture, Performance &amp; <span class="font-headline-emphasis text-headline-emphasis italic text-secondary">High-Availability Systems.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Deep-dives, field notes, and post-mortems on designing scalable backends, database internals, and mission-critical payment workflows.
+    </p>
+</section>
+<!-- Search Input Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-10 pr-10 py-3 rounded-none placeholder:text-outline focus:outline-none focus:bg-surface-container-low transition-colors" id="search-input" placeholder="Search essays, terms, SQL..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-3.5 flex items-center">
+<kbd class="font-code-sm text-[10px] text-outline px-1.5 py-0.5 bg-surface-container rounded uppercase">⌘K</kbd>
+</div>
+</div>
+<!-- Horizontal Scrollable Category Filter Pills -->
+<div class="w-full overflow-x-auto -mx-margin px-margin scrollbar-none flex items-center gap-space-xs py-1">
+<button class="shrink-0 px-3 py-1.5 bg-primary text-on-primary font-label-caps text-[11px] tracking-wider uppercase transition-colors">
+      ALL ARTICLES (18)
+    </button>
+<button class="shrink-0 px-3 py-1.5 bg-surface-container text-on-surface-variant font-label-caps text-[11px] tracking-wider uppercase hover:bg-surface-container-high transition-colors">
+      POSTGRESQL &amp; DATABASES
+    </button>
+<button class="shrink-0 px-3 py-1.5 bg-surface-container text-on-surface-variant font-label-caps text-[11px] tracking-wider uppercase hover:bg-surface-container-high transition-colors">
+      FINTECH &amp; PAYMENTS
+    </button>
+<button class="shrink-0 px-3 py-1.5 bg-surface-container text-on-surface-variant font-label-caps text-[11px] tracking-wider uppercase hover:bg-surface-container-high transition-colors">
+      SYSTEM ARCHITECTURE
+    </button>
+<button class="shrink-0 px-3 py-1.5 bg-surface-container text-on-surface-variant font-label-caps text-[11px] tracking-wider uppercase hover:bg-surface-container-high transition-colors">
+      NODE.JS &amp; TYPESCRIPT
+    </button>
+</div>
+<!-- Featured Field Report Card -->
+<section class="flex flex-col">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-[0.15em]">FEATURED DISPATCH</span>
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-1 font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span> BENCHMARKED
+      </span>
+</div>
+<article class="bg-surface-container-lowest p-space-md flex flex-col space-y-space-md shadow-sm">
+<!-- Article Header Meta -->
+<div class="flex flex-wrap items-center justify-between gap-1 font-label-caps text-[10px] tracking-widest uppercase">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-semibold">FINTECH ARCHITECTURE</span>
+<span class="text-outline">OCTOBER 14, 2025 · 12 MIN READ</span>
+</div>
+<!-- Title & Excerpt -->
+<div class="flex flex-col space-y-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">
+          Designing Idempotent Payment Webhooks That Never Double-Charge Under <span class="font-headline-emphasis text-headline-emphasis italic text-secondary">Burst Failures</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Distributed Redis mutex locking coupled with atomic database upserts and payload SHA-256 fingerprinting guarantees zero double-charge anomalies across concurrent retry spikes.
+        </p>
+</div>
+<!-- Performance Outcome Metrics Strip -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm bg-surface-container-low text-center">
+<div class="flex flex-col">
+<span class="font-code-sm text-[10px] text-outline uppercase tracking-wider">TTL Dedup</span>
+<span class="font-code-sm text-[15px] font-semibold text-on-surface">3,600s</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-[10px] text-outline uppercase tracking-wider">Duplicates</span>
+<span class="font-code-sm text-[15px] font-semibold text-secondary">0.000%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-code-sm text-[10px] text-outline uppercase tracking-wider">Mean Latency</span>
+<span class="font-code-sm text-[15px] font-semibold text-on-surface">14.2ms</span>
+</div>
+</div>
+<!-- Monolithic Terminal Preview -->
+<div class="bg-primary-container text-on-primary-container p-3 flex flex-col space-y-1.5 font-code-sm text-code-sm">
+<div class="flex items-center justify-between text-outline text-[11px] pb-1">
+<span class="text-secondary-fixed">atomic-lock.ts</span>
+<span>VALKEY / REDIS 7.2</span>
+</div>
+<div class="text-[12px] leading-relaxed text-on-primary truncate">
+<span class="text-secondary-fixed font-semibold">const</span> acquired = <span class="text-secondary-fixed font-semibold">await</span> redis.<span class="text-tertiary-fixed-dim">set</span>(
+        </div>
+<div class="text-[12px] leading-relaxed pl-3 text-secondary-fixed truncate">
+          `lock:webhook:${fingerprint}`, <span class="text-surface-bright">"processing"</span>, <span class="text-surface-bright">"NX"</span>, <span class="text-surface-bright">"EX"</span>, 60
+        </div>
+<div class="text-[12px] leading-relaxed text-on-primary truncate">
+          );
+        </div>
+</div>
+<!-- Card Footer Actions -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pt-1 gap-space-sm">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[11px]">Redis</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[11px]">Postgres</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[11px]">Stripe</span>
+</div>
+<button class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-2.5 font-label-caps text-label-caps tracking-[0.15em] uppercase hover:bg-inverse-surface transition-colors">
+<span>READ FULL ESSAY</span>
+<span>→</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Architectural Visual Breakdown: Flow Graphic -->
+<section class="bg-surface-container-low p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-widest">INGESTION PIPELINE TOPOLOGY</span>
+<span class="font-code-sm text-[10px] text-secondary">ACTIVE PROTOCOL</span>
+</div>
+<!-- Inline Lightweight SVG Architecture Diagram -->
+<div class="w-full py-2 flex items-center justify-center">
+<svg class="w-full h-24 text-on-surface" fill="none" viewbox="0 0 340 90" xmlns="http://www.w3.org/2000/svg">
+<!-- Webhook Source Node -->
+<rect fill="#E4E2E2" height="42" width="70" x="2" y="24"></rect>
+<text fill="#1B1C1C" font-family="Geist" font-size="8" font-weight="600" letter-spacing="0.08em" text-anchor="middle" x="37" y="44">WEBHOOK</text>
+<text fill="#747878" font-family="Geist" font-size="7" text-anchor="middle" x="37" y="56">INGEST</text>
+<!-- Arrow 1 -->
+<path d="M72 45H102" stroke="#674BB4" stroke-dasharray="2 2" stroke-width="1.5"></path>
+<polygon fill="#674BB4" points="102,42 108,45 102,48"></polygon>
+<!-- Redis Mutex Box -->
+<rect fill="#1C1B1B" height="58" width="95" x="110" y="16"></rect>
+<text fill="#FFFFFF" font-family="Geist" font-size="8" font-weight="600" letter-spacing="0.08em" text-anchor="middle" x="157.5" y="38">REDIS MUTEX</text>
+<text fill="#AB8FFD" font-family="Geist" font-size="7" text-anchor="middle" x="157.5" y="50">SET NX EX 60</text>
+<text fill="#858383" font-family="Geist" font-size="6.5" text-anchor="middle" x="157.5" y="62">FINGERPRINT SHA-256</text>
+<!-- Arrow 2 -->
+<path d="M205 45H235" stroke="#674BB4" stroke-width="1.5"></path>
+<polygon fill="#674BB4" points="235,42 241,45 235,48"></polygon>
+<!-- Ledger Node -->
+<rect fill="#E8DDFF" height="42" width="95" x="243" y="24"></rect>
+<text fill="#21005E" font-family="Geist" font-size="8" font-weight="600" letter-spacing="0.08em" text-anchor="middle" x="290.5" y="44">POSTGRES DB</text>
+<text fill="#4F319B" font-family="Geist" font-size="7" text-anchor="middle" x="290.5" y="56">ON CONFLICT DO</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-outline font-label-caps text-[9px] uppercase tracking-wider">
+<span>Idempotency Guarantee: 100%</span>
+<span>Throughput: 8,400 rps</span>
+</div>
+</section>
+<!-- Recent Field Reports & Engineering Audits Section -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-label-caps text-label-caps text-outline uppercase tracking-[0.15em]">FIELD REPORTS &amp; AUDITS</h3>
+<span class="font-code-sm text-code-sm text-outline">5 of 18 LOGS</span>
+</div>
+<!-- Mobile Stack Card 1: Postgres & pgvector -->
+<article class="bg-surface-container-lowest p-space-md flex flex-col space-y-space-xs transition-colors hover:bg-surface-container-low">
+<div class="flex items-center justify-between font-label-caps text-[10px] tracking-widest uppercase">
+<span class="text-secondary font-semibold">POSTGRESQL &amp; LLM</span>
+<span class="text-outline">AUG 28, 2025</span>
+</div>
+<h4 class="font-headline-md text-[1.25rem] text-on-surface leading-snug">
+        Why We Migrated From MongoDB to PostgreSQL with pgvector for Semantic Search
+      </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Benchmarking transactional ACID compliance, reducing infra fragmentation, and unifying multi-modal embeddings across HNSW index structures.
+      </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">POSTGRESQL</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">PGVECTOR</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">HNSW INDEX</span>
+</div>
+<span class="text-secondary font-headline-emphasis text-[14px]">→</span>
+</div>
+</article>
+<!-- Mobile Stack Card 2: Node.js & Prisma -->
+<article class="bg-surface-container-lowest p-space-md flex flex-col space-y-space-xs transition-colors hover:bg-surface-container-low">
+<div class="flex items-center justify-between font-label-caps text-[10px] tracking-widest uppercase">
+<span class="text-secondary font-semibold">NODE.JS / EXPRESS</span>
+<span class="text-outline">JUL 19, 2025</span>
+</div>
+<h4 class="font-headline-md text-[1.25rem] text-on-surface leading-snug">
+        Solving the N+1 Query Dilemma in Multi-Tenant Express &amp; Prisma Services
+      </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Strategic query batching with DataLoader abstractions, cutting P99 database roundtrips by 93.3% in high-concurrency enterprise accounts.
+      </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">NODE.JS</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">PRISMA</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">PERFORMANCE</span>
+</div>
+<span class="text-secondary font-headline-emphasis text-[14px]">→</span>
+</div>
+</article>
+<!-- Mobile Stack Card 3: Distributed Systems POS -->
+<article class="bg-surface-container-lowest p-space-md flex flex-col space-y-space-xs transition-colors hover:bg-surface-container-low">
+<div class="flex items-center justify-between font-label-caps text-[10px] tracking-widest uppercase">
+<span class="text-secondary font-semibold">DISTRIBUTED SYSTEMS</span>
+<span class="text-outline">JUN 04, 2025</span>
+</div>
+<h4 class="font-headline-md text-[1.25rem] text-on-surface leading-snug">
+        Building an Offline-First Sync Engine for POS Terminals with SQLite &amp; WebSockets
+      </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Deploying vector clocks and conflict-free replicated data structures to eliminate transaction collisions when network reconnects during offline sales spikes.
+      </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">SQLITE</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">WEBSOCKETS</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">CRDT</span>
+</div>
+<span class="text-secondary font-headline-emphasis text-[14px]">→</span>
+</div>
+</article>
+<!-- Mobile Stack Card 4: Database SRE -->
+<article class="bg-surface-container-lowest p-space-md flex flex-col space-y-space-xs transition-colors hover:bg-surface-container-low">
+<div class="flex items-center justify-between font-label-caps text-[10px] tracking-widest uppercase">
+<span class="text-secondary font-semibold">DATABASE SRE</span>
+<span class="text-outline">MAY 12, 2025</span>
+</div>
+<h4 class="font-headline-md text-[1.25rem] text-on-surface leading-snug">
+        Zero-Downtime Database Schema Migrations on Live High-Traffic Clusters
+      </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Executing dual-write phases, background backfills, and shadow validation patterns without table lockups or dropped queries across 14M rows.
+      </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">DEVOPS</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">POSTGRESQL</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">RELIABILITY</span>
+</div>
+<span class="text-secondary font-headline-emphasis text-[14px]">→</span>
+</div>
+</article>
+<!-- Mobile Stack Card 5: Asynchronous Pipelines -->
+<article class="bg-surface-container-lowest p-space-md flex flex-col space-y-space-xs transition-colors hover:bg-surface-container-low">
+<div class="flex items-center justify-between font-label-caps text-[10px] tracking-widest uppercase">
+<span class="text-secondary font-semibold">ASYNCHRONOUS PIPELINES</span>
+<span class="text-outline">APR 02, 2025</span>
+</div>
+<h4 class="font-headline-md text-[1.25rem] text-on-surface leading-snug">
+        Redis Cluster vs BullMQ: Scaling Async Job Queues Beyond 20,000 Jobs Per Second
+      </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Fine-tuning Lua script execution, memory overhead evaluation, and backpressure handling when event ingestion outpaces processing worker pods.
+      </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">REDIS</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">BULLMQ</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-[10px]">ARCHITECTURE</span>
+</div>
+<span class="text-secondary font-headline-emphasis text-[14px]">→</span>
+</div>
+</article>
+</section>
+<!-- Open Source Architecture Reproduction Kits -->
+<section class="bg-primary-container text-on-primary-container p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-primary-container uppercase tracking-widest">OPEN-SOURCE KITS</span>
+<span class="material-symbols-outlined text-secondary-container text-[18px]">terminal</span>
+</div>
+<div class="flex flex-col space-y-1">
+<h4 class="font-headline-md text-[1.25rem] text-on-primary">
+        Reproducible Architecture Testbeds
+      </h4>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+        Run all load benchmarks, race condition harnesses, and schema migration suites locally using pre-configured Docker Compose files and k6 script runners.
+      </p>
+</div>
+<!-- Code Clone Box -->
+<div class="bg-tertiary-container text-on-tertiary p-3 flex items-center justify-between font-code-sm text-code-sm select-all">
+<div class="flex items-center gap-2 truncate">
+<span class="text-secondary-fixed">$</span>
+<span class="truncate text-on-tertiary">git clone https://benchmarks.sadikrafi.dev</span>
+</div>
+<button class="text-secondary-fixed hover:text-on-secondary p-1 flex items-center" onclick="navigator.clipboard.writeText('git clone https://benchmarks.sadikrafi.dev')" title="Copy to clipboard">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</section>
+<!-- Newsletter & Architectural Consultation -->
+<section class="flex flex-col space-y-space-md pt-space-xs">
+<!-- Newsletter Box -->
+<div class="bg-surface-container p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">mark_email_read</span>
+<h4 class="font-headline-md text-[1.2rem] text-on-surface">Subscribe to Backend Dispatches</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Delivered once monthly. Zero buzzwords—just hard-learned backend lessons, production post-mortems, and distributed systems diagrams.
+      </p>
+<form class="flex flex-col sm:flex-row gap-2 pt-1" onsubmit="event.preventDefault();">
+<input class="flex-1 bg-surface-container-lowest text-on-surface font-body-md text-body-md px-3.5 py-2.5 rounded-none placeholder:text-outline focus:outline-none" placeholder="your.email@organization.com" required="" type="email"/>
+<button class="bg-primary text-on-primary px-5 py-2.5 font-label-caps text-label-caps tracking-[0.15em] uppercase hover:bg-inverse-surface transition-colors" type="submit">
+          SUBSCRIBE →
+        </button>
+</form>
+</div>
+<!-- Lavender Consultation Banner -->
+<div class="bg-secondary-fixed text-on-secondary-fixed p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center gap-1.5 font-label-caps text-[10px] tracking-widest uppercase text-on-secondary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>ADVISORY &amp; AUDITS</span>
+</div>
+<div class="flex flex-col space-y-1">
+<h4 class="font-headline-md text-[1.25rem] text-on-secondary-fixed leading-tight font-medium">
+          Looking for an architectural consultation? Let's build something reliable together.
+        </h4>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant leading-relaxed">
+          Available for database indexing audits, payment reliability overhauls, and high-concurrency backend reviews.
+        </p>
+</div>
+<div class="pt-2">
+<button class="bg-secondary text-on-secondary px-5 py-2.5 font-label-caps text-label-caps tracking-[0.15em] uppercase hover:bg-on-secondary-fixed transition-colors flex items-center gap-2">
+<span>GET IN TOUCH</span>
+<span>→</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Dossier Colophon Micro-Footer -->
+<footer class="pt-space-md pb-space-lg flex flex-col space-y-space-xs text-outline font-label-caps text-[9px] uppercase tracking-wider text-center">
+<div class="flex items-center justify-center gap-space-sm">
+<span>SR-ARCH-2025</span>
+<span>•</span>
+<span>NODE &amp; POSTGRES RELIABILITY</span>
+<span>•</span>
+<span>VOL. 04</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant normal-case">
+      Curated by Sadik Hasan Rafi. Crafted for engineers prioritizing stability over spectacle.
+    </p>
+</footer>
+</div>
+<script>
+  // Simple client-side search simulation micro-interaction
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const articles = document.querySelectorAll('article');
+      articles.forEach(article => {
+        const text = article.innerText.toLowerCase();
+        if (text.includes(query)) {
+          article.style.display = '';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main></body></html>

@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Sadik Hasan Rafi — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Next.js 16 (App Router) + Tailwind CSS v4, following the "Architectural Editorial"
+design in `design/`. Every public page is statically generated; a private dashboard
+edits all of the content, theme, images and pages.
 
-## Available Scripts
+## Commands
 
-In the project directory, you can run:
+```bash
+pnpm dev       # http://localhost:3000
+pnpm build     # pre-renders every public page
+pnpm start     # serves the build (needs a Node server — see Deploying)
+pnpm lint
+pnpm images    # rebuild the default images in public/images from design/
+```
 
-### `npm start`
+Copy `.env.example` to `.env.local` and fill it in:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Variable | What it does |
+| --- | --- |
+| `DASHBOARD_PASSCODE` | The dashboard login code (see below). Use something long in production. |
+| `SESSION_SECRET` | Signs the login cookie. 32+ random characters; changing it logs you out. |
+| `NEXT_PUBLIC_SITE_URL` | Your public URL, used in SEO tags, the sitemap and RSS. |
+| `MONGODB_URI` | MongoDB connection string (Atlas or self-hosted). All content and uploads live here. |
+| `MONGODB_DB` | Database name (default `portfolio`). |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## The dashboard
 
-### `npm test`
+1. Click **Let's Talk** in the header.
+2. Type the passcode in **both** the name and email fields and press **Send message**.
+3. You land on `/dashboard` (a signed, HttpOnly cookie keeps you logged in for 7 days).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The passcode is checked on the server, so it never appears in the site's JavaScript.
+Logins are rate-limited per IP, and `/dashboard` plus its APIs reject requests without a
+valid session.
 
-### `npm run build`
+In the dashboard you can change every text on the site, reorder lists by dragging
+(mouse, touch or keyboard), hide or show items and whole sections, switch pages on/off,
+upload images and the CV, edit light and dark theme colours, and back up or reset
+everything. Press **Save** (or ⌘/Ctrl+S) to publish — the affected static pages are
+regenerated on their next visit.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How content is stored (MongoDB)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Collection | Holds |
+| --- | --- |
+| `site_content` | One document, `{ _id: "site" }`, with everything the dashboard edits (merged over the defaults in `src/content/defaults.ts`). |
+| `content_history` | A snapshot on every save; the newest 30 are kept, so a bad edit can be recovered. |
+| `uploads.files` / `uploads.chunks` | GridFS: uploaded images (re-encoded to WebP) and PDFs, served from `/media/…`. |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Without `MONGODB_URI` the site renders the default content and the dashboard shows a
+"No database connected" notice with saving disabled. If MongoDB is briefly unreachable,
+pages keep rendering the last content the server saw; only saving and new uploads wait.
 
-### `npm run eject`
+Use **Backup & reset → Download backup** in the dashboard for an extra JSON copy.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deploying
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Everything lives in MongoDB, so any Node.js host works — Vercel, Railway, Render, a VPS
+or Docker. Set the environment variables above, then `pnpm build && pnpm start` (or let
+the platform build). For MongoDB Atlas, allow your host's IPs under *Network Access*.
+The build reads content from the database when it can, and falls back to the defaults
+if it can't; either way, the first save from the dashboard refreshes every page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Where things live
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| What | Where |
+| --- | --- |
+| Public pages | `src/app/(site)/` |
+| Dashboard | `src/app/dashboard/`, `src/components/dashboard/` |
+| Content model (types) | `src/types/content.ts` |
+| Defaults | `src/content/defaults.ts` |
+| MongoDB connection & storage | `src/lib/mongo.ts`, `src/lib/store.ts` |
+| Auth, theme CSS | `src/lib/auth.ts`, `src/lib/theme.ts` |
+| Dashboard field labels & help | `src/components/dashboard/hints.ts` |
+| Design tokens & animations | `src/app/globals.css` |
 
-## Learn More
+## Notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Forms (popup and contact page) open the visitor's email app with a pre-filled
+  message; nothing is sent to or stored on the server.
+- Motion uses only `transform`/`opacity` and respects `prefers-reduced-motion`.
+- The cursor ring follows the mouse (the normal cursor stays visible) and appears
+  under the finger on touch screens.

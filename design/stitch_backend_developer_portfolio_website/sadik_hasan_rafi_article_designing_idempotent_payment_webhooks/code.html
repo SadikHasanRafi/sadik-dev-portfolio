@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Sadik Hasan Rafi — Backend Developer</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-fixed-variant":"#474556","inverse-on-surface":"#f2f0f0","on-secondary-fixed-variant":"#4f319b","inverse-surface":"#303031","on-secondary-fixed":"#21005e","surface-container-low":"#f5f3f3","secondary-fixed-dim":"#cebdff","secondary-container":"#ab8ffd","on-secondary":"#ffffff","on-error":"#ffffff","primary-fixed":"#e5e2e1","primary":"#000000","on-tertiary-container":"#858195","secondary":"#674bb4","on-primary-fixed":"#1c1b1b","secondary-fixed":"#e8ddff","surface-container":"#efeded","surface-container-highest":"#e4e2e2","tertiary-container":"#1b1a29","surface-container-high":"#e9e8e7","on-primary":"#ffffff","surface-container-lowest":"#ffffff","on-error-container":"#93000a","error-container":"#ffdad6","tertiary-fixed":"#e5e0f6","surface-dim":"#dbdad9","tertiary":"#000000","tertiary-fixed-dim":"#c8c4d9","on-surface-variant":"#444748","surface-tint":"#5f5e5e","error":"#ba1a1a","surface":"#fbf9f8","background":"#fbf9f8","on-background":"#1b1c1c","outline":"#747878","primary-fixed-dim":"#c8c6c5","on-surface":"#1b1c1c","outline-variant":"#c4c7c7","on-primary-container":"#858383","surface-variant":"#e4e2e2","primary-container":"#1c1b1b","on-secondary-container":"#3f1e8b","on-tertiary-fixed":"#1b1a29","inverse-primary":"#c8c6c5","on-tertiary":"#ffffff","on-primary-fixed-variant":"#474646","surface-bright":"#fbf9f8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"4rem","space-sm":"0.5rem","space-xl":"3.5rem","gutter":"1.5rem","space-xxl":"6rem","space-lg":"2rem","margin":"1.25rem","space-xs":"0.25rem","space-md":"1rem","gutter-desktop":"2.5rem"},"fontFamily":{"headline-lg":["Playfair Display"],"headline-emphasis":["Playfair Display"],"body-md":["Geist"],"body-lg":["Geist"],"display-lg":["Playfair Display"],"code-sm":["Geist"],"display-md":["Playfair Display"],"label-caps":["Geist"],"body-sm":["Geist"],"display-lg-mobile":["Playfair Display"],"headline-md":["Playfair Display"]},"fontSize":{"headline-lg":["2.25rem",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-emphasis":["1.75rem",{"lineHeight":"1.3","fontWeight":"400"}],"body-md":["0.9375rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.7","fontWeight":"400"}],"display-lg":["4.5rem",{"lineHeight":"1.05","letterSpacing":"-0.02em","fontWeight":"400"}],"code-sm":["0.8125rem",{"lineHeight":"1.4","fontWeight":"400"}],"display-md":["3.25rem",{"lineHeight":"1.15","letterSpacing":"-0.015em","fontWeight":"400"}],"label-caps":["0.6875rem",{"lineHeight":"1","letterSpacing":"0.15em","fontWeight":"600"}],"body-sm":["0.8125rem",{"lineHeight":"1.5","fontWeight":"400"}],"display-lg-mobile":["2.75rem",{"lineHeight":"1.1","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"1.3","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant"><div class="h-16 max-w-[1360px] mx-auto px-margin md:px-margin-desktop flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><div class="w-8 h-8 border border-primary flex items-center justify-center"><span class="font-headline-md text-headline-md font-bold text-primary group-hover:text-secondary transition-colors">SR</span></div><div class="flex flex-col"><span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest font-semibold">Sadik Hasan Rafi</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Backend Developer</span></div></a><nav class="hidden lg:flex items-center gap-space-lg h-full" data-active-classes="text-primary border-b-2 border-secondary"><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="work" href="#">Work</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="blog" href="#">Blog</a><a class="h-full flex items-center font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-xs font-label-caps text-label-caps uppercase transition-colors group" data-path="contact" href="#"><span>Let's Talk</span><span class="ml-space-sm transform group-hover:translate-x-1 transition-transform">→</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Article Breadcrumb & Classification Bar -->
+<section class="w-full bg-surface-container-low border-b border-outline-variant/60">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<a class="inline-flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors group" data-path="blog" href="#">
+<span class="transform group-hover:-translate-x-0.5 transition-transform">←</span>
+<span>Back to All Essays</span>
+</a>
+<span class="text-outline-variant font-code-sm">/</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold">Technical Architecture</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant text-on-surface-variant font-label-caps text-label-caps uppercase">Fintech Architecture</span>
+<span class="inline-flex items-center px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps uppercase font-semibold">Reliability &amp; Concurrency</span>
+</div>
+</div>
+</section>
+<!-- Editorial Article Header -->
+<header class="w-full bg-surface border-b border-outline-variant">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop pt-space-xl pb-space-lg">
+<div class="flex flex-wrap items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant mb-space-md uppercase tracking-wider">
+<span>Published: October 14, 2025</span>
+<span class="text-outline-variant">•</span>
+<span>12 Min Read</span>
+<span class="text-outline-variant">•</span>
+<span>4,500 Words</span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary font-semibold">Production Hardened</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-5xl mb-space-md leading-[1.08] tracking-tight">
+        Designing Idempotent Payment Webhooks That Never Double-Charge Under <em class="font-headline-lg italic font-normal text-secondary underline decoration-1 underline-offset-8 decoration-secondary/30">Burst Failures.</em>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl mb-space-lg leading-relaxed">
+        An in-depth breakdown of distributed Redis locks, atomic database upserts, and payload fingerprinting safeguarding multi-gateway transaction webhooks under 4,500 simultaneous burst events.
+      </p>
+<!-- Author Card & Article Metadata -->
+<div class="pt-space-md border-t border-outline-variant/60 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 border border-primary bg-primary text-on-primary flex items-center justify-center font-headline-md text-headline-md font-bold">
+            SR
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest font-semibold">Sadik Hasan Rafi</span>
+<span class="inline-flex items-center px-1.5 py-0.2 bg-surface-container-high border border-outline-variant font-code-sm text-[10px] text-on-surface uppercase">PGP Signed</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Backend Architect &amp; Distributed Systems Engineer</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs border border-outline-variant bg-surface hover:bg-surface-container font-label-caps text-label-caps uppercase text-on-surface transition-colors flex items-center gap-space-xs" id="copy-citation-btn">
+<span class="material-symbols-outlined text-base">content_copy</span>
+<span>Copy Citation</span>
+</button>
+<a class="px-space-md py-space-xs bg-primary text-on-primary hover:bg-primary-container font-label-caps text-label-caps uppercase transition-colors flex items-center gap-space-xs" href="#k6-benchmark">
+<span class="material-symbols-outlined text-base">terminal</span>
+<span>Clone Repo</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Technical Metric Banner -->
+<section class="w-full bg-surface-container-low border-b border-outline-variant">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop py-space-md">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="border-l-2 border-secondary pl-space-md py-space-xs">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Dedup Window Guarantee</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">3,600s TTL</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Active cryptographic fingerprint persistence in distributed cluster cache</p>
+</div>
+<div class="border-l-2 border-primary pl-space-md py-space-xs">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Duplicate Leak Rate</div>
+<div class="font-headline-lg text-headline-lg text-secondary font-semibold tracking-tight">0.000%</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Across 18.4M audited webhook events spanning Stripe, bKash &amp; SSLCommerz</p>
+</div>
+<div class="border-l-2 border-outline pl-space-md py-space-xs">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">P99 Mutex Ingress Latency</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">14.2ms</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Atomic Redis lock acquisition + dual-write barrier roundtrip overhead</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Article Body & Sticky Architecture Panel -->
+<main class="w-full bg-surface py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Left / Core Editorial Content (70% on 12-col grid = 8 cols) -->
+<article class="lg:col-span-8 flex flex-col gap-space-xl text-on-surface">
+<!-- Section 1: Executive Summary & The Problem -->
+<section class="scroll-mt-24" id="the-problem">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary mb-space-xs tracking-widest">
+<span>01 / The Vulnerability</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              The Burst Failure Vulnerability in Multi-Gateway Settlement
+            </h2>
+<div class="prose max-w-none space-y-space-md font-body-md text-body-md leading-relaxed text-on-surface">
+<p>
+                In high-velocity commerce and fintech environments, webhook delivery is fundamentally built on an asynchronous, unreliable transport: <strong class="font-semibold text-primary">at-least-once HTTP delivery</strong>. Payment aggregators including Stripe, bKash, SSLCommerz, and Nagad specify guarantees that if your ingress server responds with anything other than an unequivocal <code class="font-code-sm bg-surface-container-high px-1 py-0.5 text-on-surface font-semibold">200 OK</code> within 3 to 5 seconds, an immediate retry storm is triggered.
+              </p>
+<p>
+                When an upstream network timeout occurs—or your application cluster experiences a sudden garbage collection pause or downstream database connection pool saturation—the payment gateway fires an exponential burst. In our production audit, we observed upstream providers dispatching <strong class="text-primary font-semibold">up to 8 duplicate webhook payloads within 400 milliseconds</strong> for a single payment reference.
+              </p>
+<div class="p-space-md bg-surface-container-low border-l-4 border-error my-space-md">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-error font-semibold block mb-1">Production Critical Incident Vector</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant m-0">
+                  If two separate worker threads pull the duplicate webhook requests concurrently, both queries check the ledger: both find no prior fulfillment record, both credit the customer account balance, and both execute irrevocable inventory decrement mutations. The result: financial double-crediting and ledger divergence.
+                </p>
+</div>
+</div>
+</section>
+<!-- Section 2: Cryptographic Payload Fingerprinting -->
+<section class="scroll-mt-24" id="payload-fingerprint">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary mb-space-xs tracking-widest">
+<span>02 / Deterministic Identity</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              Deterministic Payload Fingerprinting via SHA-256 HMAC
+            </h2>
+<div class="space-y-space-md font-body-md text-body-md leading-relaxed">
+<p>
+                Many naive implementations rely solely on the webhook event ID provided in the header (<code class="font-code-sm bg-surface-container px-1 py-0.5 text-on-surface">evt_xxx</code>). However, during regional network failovers, legacy gateways frequently re-issue payments under new synthetic identifiers while retaining the identical transaction payload.
+              </p>
+<p>
+                To achieve absolute idempotency, we build a compound deterministic fingerprint. We normalize the body keys alphabetically, concatenate the gateway timestamp, transaction reference, amount, and currency, and hash them with a cluster-shared secret HMAC.
+              </p>
+<!-- Ingress Architecture Pipeline SVG Diagram -->
+<div class="w-full bg-surface-container-lowest border border-outline-variant p-space-md my-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/60 mb-space-md">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Fig 1.0: End-to-End Idempotency Verification Pipeline</span>
+<span class="font-code-sm text-code-sm text-secondary">Zero-Drift Architecture</span>
+</div>
+<div class="w-full overflow-x-auto py-space-sm">
+<svg class="w-full min-w-[680px] h-auto text-on-surface font-mono" fill="none" viewbox="0 0 760 220" xmlns="http://www.w3.org/2000/svg">
+<!-- Step 1: Webhook Ingress -->
+<rect fill="currentColor" fill-opacity="0.03" height="130" stroke="currentColor" stroke-width="1.5" width="130" x="10" y="40"></rect>
+<text fill="currentColor" font-size="11" font-weight="600" text-anchor="middle" x="75" y="80">PAYMENT INGRESS</text>
+<text fill="#6B6B6B" font-size="9" text-anchor="middle" x="75" y="105">Gateway Webhook</text>
+<text fill="#5B3FA8" font-size="9" text-anchor="middle" x="75" y="125">HMAC Signature</text>
+<text fill="#6B6B6B" font-size="8" text-anchor="middle" x="75" y="145">4.5k Req / Sec</text>
+<!-- Flow Arrow 1 -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" x1="140" x2="190" y1="105" y2="105"></line>
+<polygon fill="currentColor" points="190,105 182,100 182,110"></polygon>
+<!-- Step 2: Redis Mutex -->
+<rect fill="#161618" height="130" stroke="#161618" stroke-width="1.5" width="160" x="190" y="40"></rect>
+<text fill="#FAFAFA" font-size="11" font-weight="600" text-anchor="middle" x="270" y="75">REDIS DISTRIBUTED MUTEX</text>
+<text fill="#A0A0A3" font-size="9" text-anchor="middle" x="270" y="98">SET NX EX 60</text>
+<rect fill="#2A2A2D" height="20" width="120" x="210" y="112"></rect>
+<text fill="#E8DDFF" font-size="8" text-anchor="middle" x="270" y="126">Lock TTL: 60.000s</text>
+<text fill="#CEBDFF" font-size="9" text-anchor="middle" x="270" y="152">Atomic Gatekeeper</text>
+<!-- Flow Arrow 2 -->
+<line stroke="currentColor" stroke-width="1.5" x1="350" x2="400" y1="105" y2="105"></line>
+<polygon fill="currentColor" points="400,105 392,100 392,110"></polygon>
+<!-- Step 3: PostgreSQL Ledger Barrier -->
+<rect fill="currentColor" fill-opacity="0.03" height="130" stroke="currentColor" stroke-width="1.5" width="170" x="400" y="40"></rect>
+<text fill="currentColor" font-size="11" font-weight="600" text-anchor="middle" x="485" y="75">POSTGRESQL REPEATABLE READ</text>
+<text fill="#6B6B6B" font-size="9" text-anchor="middle" x="485" y="98">UPSERT ON CONFLICT</text>
+<text fill="#5B3FA8" font-size="9" text-anchor="middle" x="485" y="120">FOR UPDATE Skip Locked</text>
+<text fill="#6B6B6B" font-size="9" text-anchor="middle" x="485" y="142">ACID State Machine</text>
+<!-- Flow Arrow 3 -->
+<line stroke="currentColor" stroke-width="1.5" x1="570" x2="620" y1="105" y2="105"></line>
+<polygon fill="currentColor" points="620,105 612,100 612,110"></polygon>
+<!-- Step 4: Final 200 OK + Event Dispatch -->
+<rect fill="currentColor" fill-opacity="0.03" height="130" stroke="currentColor" stroke-width="1.5" width="130" x="620" y="40"></rect>
+<text fill="currentColor" font-size="11" font-weight="600" text-anchor="middle" x="685" y="80">GATEWAY ACK</text>
+<text fill="#5B3FA8" font-size="11" font-weight="700" text-anchor="middle" x="685" y="105">HTTP 200 OK</text>
+<text fill="#6B6B6B" font-size="9" text-anchor="middle" x="685" y="125">BullMQ Worker Fired</text>
+<text fill="#6B6B6B" font-size="8" text-anchor="middle" x="685" y="145">No Double-Charge</text>
+</svg>
+</div>
+<div class="mt-space-xs font-code-sm text-code-sm text-on-surface-variant flex items-center justify-between">
+<span>Input payload normalized via canonical UTF-8</span>
+<span class="text-secondary font-semibold">Latency Overhead: ~14.2ms</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Redis SET NX Implementation Block -->
+<section class="scroll-mt-24" id="redis-mutex">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary mb-space-xs tracking-widest">
+<span>03 / Implementation Architecture</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              Distributed Mutex via Redis SET NX PX &amp; PostgreSQL Upsert
+            </h2>
+<p class="font-body-md text-body-md leading-relaxed mb-space-md">
+              Here is the production-tested Node.js + TypeScript handler executing the two-phase lock barrier. It ensures that duplicate threads fail fast at the cache boundary before any database connection pool resource is consumed.
+            </p>
+<!-- Architectural Dark Code Terminal Block -->
+<div class="w-full bg-[#161618] border border-[#2A2A2D] shadow-sm">
+<div class="flex items-center justify-between px-space-md py-space-xs border-b border-[#2A2A2D] bg-[#111113]">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 bg-[#444] rounded-full"></div>
+<div class="w-2.5 h-2.5 bg-[#444] rounded-full"></div>
+<div class="w-2.5 h-2.5 bg-[#444] rounded-full"></div>
+<span class="ml-space-sm font-code-sm text-code-sm text-[#A0A0A3] uppercase tracking-wider">src/payments/idempotent-webhook.service.ts</span>
+</div>
+<button class="text-[#A0A0A3] hover:text-[#FFFFFF] text-xs uppercase font-label-caps tracking-widest transition-colors flex items-center gap-1" onclick="navigator.clipboard.writeText('Copied'); alert('Code copied to clipboard');">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<div class="p-space-md overflow-x-auto text-[#FAFAFA] font-code-sm text-[13px] leading-relaxed">
+<pre class="m-0"><code><span class="text-[#cebdff]">import</span> { createHash } <span class="text-[#cebdff]">from</span> <span class="text-[#e8ddff]">'crypto'</span>;
+<span class="text-[#cebdff]">import</span> { Redis } <span class="text-[#cebdff]">from</span> <span class="text-[#e8ddff]">'ioredis'</span>;
+<span class="text-[#cebdff]">import</span> { PoolClient } <span class="text-[#cebdff]">from</span> <span class="text-[#e8ddff]">'pg'</span>;
+
+<span class="text-[#858383]">// Fast fail-closed idempotency engine for high-concurrency payment retries</span>
+<span class="text-[#cebdff]">export async function</span> <span class="text-[#ffffff] font-semibold">handlePaymentWebhookSafely</span>(
+  <span class="text-[#cebdff]">payload</span>: <span class="text-[#cebdff]">WebhookPayload</span>,
+  <span class="text-[#cebdff]">redis</span>: <span class="text-[#cebdff]">Redis</span>,
+  <span class="text-[#cebdff]">db</span>: <span class="text-[#cebdff]">PoolClient</span>
+): <span class="text-[#cebdff]">Promise</span>&lt;{ <span class="text-[#e8ddff]">status</span>: <span class="text-[#cebdff]">string</span>; <span class="text-[#e8ddff]">processed</span>: <span class="text-[#cebdff]">boolean</span> }&gt; {
+  
+  <span class="text-[#858383]">// 1. Compute canonical payload fingerprint</span>
+  <span class="text-[#cebdff]">const</span> canonicalPayload = <span class="text-[#cebdff]">JSON</span>.stringify(payload, Object.keys(payload).sort());
+  <span class="text-[#cebdff]">const</span> fingerprint = createHash(<span class="text-[#e8ddff]'sha256'&lt;/span&gt;) .update(`${payload.transaction_id}:${payload.amount}:${canonicalPayload}`) .digest(&lt;span class=" span="" text-[#e8ddff]'hex'<="">);
+
+  <span class="text-[#cebdff]">const</span> lockKey = <span class="text-[#e8ddff]`lock:idempotency:${fingerprint}`&lt;/span&gt;; &lt;span class=" text-[#cebdff]"="">const</span> resultKey = <span class="text-[#e8ddff]`cache:idempotency:${fingerprint}`&lt;/span&gt;; &lt;span class=" text-[#858383]"="">// 2. Check if already settled in hot cache (Instant 200 OK Short-Circuit)</span>
+  <span class="text-[#cebdff]">const</span> existingSettlement = <span class="text-[#cebdff]">await</span> redis.get(resultKey);
+  <span class="text-[#cebdff]">if</span> (existingSettlement) {
+    <span class="text-[#cebdff]">return</span> { status: <span class="text-[#e8ddff]'ALREADY_COMPLETED'&lt;/span&gt;, processed: &lt;span class=" font-semibold"="" text-[#cebdff]="">false</span> };
+  }
+
+  <span class="text-[#858383]">// 3. Acquire atomic distributed mutex with 60-second TTL (NX = Not Exists)</span>
+  <span class="text-[#cebdff]">const</span> acquiredLock = <span class="text-[#cebdff]">await</span> redis.set(lockKey, <span class="text-[#e8ddff]'ACQUIRED'&lt;/span&gt;, &lt;span class=" span="" text-[#e8ddff]'nx'<="">, <span class="text-[#e8ddff]'EX'&lt;/span&gt;, &lt;span class=" font-semibold"="" text-[#cebdff]="">60</span>);
+  <span class="text-[#cebdff]">if</span> (!acquiredLock) {
+    <span class="text-[#858383]">// Concurrent burst collision! Back off upstream gracefully</span>
+    <span class="text-[#cebdff] font-semibold">throw new</span> Error(<span class="text-[#e8ddff]'CONCURRENT_WEBHOOK_BURST_LOCK_HELD'&lt;/span&gt;); } &lt;span class=" text-[#cebdff]"="">try</span> {
+    <span class="text-[#cebdff]">await</span> db.query(<span class="text-[#e8ddff]'BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ'&lt;/span&gt;); &lt;span class=" text-[#858383]"="">// 4. Strangler State Machine: Atomic upsert prevents phantom race reads</span>
+    <span class="text-[#cebdff]">const</span> upsertQuery = <span class="text-[#e8ddff]` INSERT INTO payment_events (idempotency_hash, transaction_id, status, payload) VALUES ($1, $2, 'PROCESSING', $3) ON CONFLICT (idempotency_hash) DO UPDATE SET updated_at = NOW() WHERE payment_events.status = 'PENDING' RETURNING id, status; `&lt;/span&gt;; &lt;span class=" text-[#cebdff]"="">const</span> { rows } = <span class="text-[#cebdff]">await</span> db.query(upsertQuery, [fingerprint, payload.transaction_id, payload]);
+    
+    <span class="text-[#cebdff]">if</span> (rows.length === 0) {
+      <span class="text-[#858383]">// Row already existed in settled state, safely rollback &amp; acknowledge</span>
+      <span class="text-[#cebdff]">await</span> db.query(<span class="text-[#e8ddff]'ROLLBACK'&lt;/span&gt;); &lt;span class=" text-[#cebdff]"="">return</span> { status: <span class="text-[#e8ddff]'CONCURRENT_COMPLETION'&lt;/span&gt;, processed: &lt;span class=" font-semibold"="" text-[#cebdff]="">false</span> };
+    }
+
+    <span class="text-[#858383]">// 5. Execute immutable financial ledger entry</span>
+    <span class="text-[#cebdff]">await</span> db.query(
+      <span class="text-[#e8ddff]`INSERT INTO ledger_entries (account_id, amount, event_ref) VALUES ($1, $2, $3)`&lt;/span&gt;, [payload.account_id, payload.amount, rows[0].id] ); &lt;span class=" text-[#858383]"="">// Mark event completed atomically</span>
+    <span class="text-[#cebdff]">await</span> db.query(
+      <span class="text-[#e8ddff]`UPDATE payment_events SET status = 'COMPLETED' WHERE id = $1`&lt;/span&gt;, [rows[0].id] ); &lt;span class=" text-[#cebdff]"="">await</span> db.query(<span class="text-[#e8ddff]'COMMIT'&lt;/span&gt;); &lt;span class=" text-[#858383]"="">// 6. Cache result for 1 hour dedup window &amp; release mutex</span>
+    <span class="text-[#cebdff]">await</span> redis.set(resultKey, <span class="text-[#e8ddff]'SUCCESS'&lt;/span&gt;, &lt;span class=" span="" text-[#e8ddff]'ex'<="">, <span class="text-[#cebdff] font-semibold">3600</span>);
+    <span class="text-[#cebdff]">await</span> redis.del(lockKey);
+
+    <span class="text-[#cebdff]">return</span> { status: <span class="text-[#e8ddff]'SETTLED'&lt;/span&gt;, processed: &lt;span class=" font-semibold"="" text-[#cebdff]="">true</span> };
+
+  } <span class="text-[#cebdff]">catch</span> (err) {
+    <span class="text-[#cebdff]">await</span> db.query(<span class="text-[#e8ddff]'ROLLBACK'&lt;/span&gt;); &lt;span class=" text-[#cebdff]"="">await</span> redis.del(lockKey);
+    <span class="text-[#cebdff] font-semibold">throw</span> err;
+  }
+}</span></span></span></code></pre>
+</div>
+</div>
+</section>
+<!-- Section 4: Database State Machine Isolation -->
+<section class="scroll-mt-24" id="database-isolation">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary mb-space-xs tracking-widest">
+<span>04 / ACID Enforcement</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              Preventing Phantom Reads Under Repeatable Read Isolation
+            </h2>
+<div class="space-y-space-md font-body-md text-body-md leading-relaxed">
+<p>
+                In default PostgreSQL isolation (<code class="font-code-sm bg-surface-container px-1 py-0.5 text-on-surface">READ COMMITTED</code>), each statement takes its own snapshot of database state. This creates an insidious window for a race condition: Worker A reads the ledger, Worker B commits an insert, Worker A reads again and executes a double-write without violating foreign key constraints.
+              </p>
+<p>
+                By lifting the transaction isolation level to <code class="font-code-sm bg-surface-container-high px-1 py-0.5 text-on-surface font-semibold">REPEATABLE READ</code> combined with a unique composite index across <code class="font-code-sm bg-surface-container-high px-1 py-0.5 text-on-surface font-semibold">(gateway_code, transaction_id, amount)</code>, PostgreSQL raises a serialization anomaly error (<code class="font-code-sm bg-surface-container-high px-1 py-0.5 text-on-surface font-semibold">40001</code>) if any interleaved write attempts to tamper with the lock boundary.
+              </p>
+</div>
+</section>
+<!-- Section 5: K6 Stress-Test Benchmarks -->
+<section class="scroll-mt-24" id="k6-benchmark">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary mb-space-xs tracking-widest">
+<span>05 / Empirical Proof</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              Stress-Test Benchmarks: 4,500 Simultaneous Burst Events
+            </h2>
+<p class="font-body-md text-body-md leading-relaxed mb-space-md">
+              To empirically prove the zero-double-charge guarantee, we simulated an aggressive network failover using distributed <strong>k6</strong> runners executing on 4 worker nodes. We dispatched 4,500 identical webhook payloads targeting the exact same transaction ID over an 800ms spike.
+            </p>
+<!-- Benchmark Results Table Grid -->
+<div class="w-full border border-outline-variant bg-surface-container-lowest">
+<div class="grid grid-cols-4 bg-surface-container-high p-space-sm border-b border-outline-variant font-label-caps text-label-caps uppercase text-on-surface font-semibold">
+<div>Metric Parameter</div>
+<div>Naive Architecture</div>
+<div>Redis SETNX Alone</div>
+<div class="text-secondary font-bold">Rafi Dual-Layer Engine</div>
+</div>
+<div class="divide-y divide-outline-variant/60 font-body-sm text-body-sm">
+<div class="grid grid-cols-4 p-space-sm items-center">
+<div class="font-code-sm text-code-sm text-on-surface font-medium">Duplicate Ledger Credits</div>
+<div class="text-error font-semibold">14 to 32 entries</div>
+<div class="text-on-surface-variant">1 to 2 entries (TTL race)</div>
+<div class="text-secondary font-bold">0.000% (Absolute Zero)</div>
+</div>
+<div class="grid grid-cols-4 p-space-sm items-center bg-surface-container-low/40">
+<div class="font-code-sm text-code-sm text-on-surface font-medium">P95 Response Latency</div>
+<div class="text-on-surface-variant">184.2 ms</div>
+<div class="text-on-surface-variant">28.4 ms</div>
+<div class="text-primary font-semibold">11.6 ms</div>
+</div>
+<div class="grid grid-cols-4 p-space-sm items-center">
+<div class="font-code-sm text-code-sm text-on-surface font-medium">P99 Response Latency</div>
+<div class="text-on-surface-variant">420.8 ms</div>
+<div class="text-on-surface-variant">41.1 ms</div>
+<div class="text-primary font-semibold">14.2 ms</div>
+</div>
+<div class="grid grid-cols-4 p-space-sm items-center bg-surface-container-low/40">
+<div class="font-code-sm text-code-sm text-on-surface font-medium">DB Connection Pressure</div>
+<div class="text-error font-semibold">Pool Saturation (100%)</div>
+<div class="text-on-surface-variant">42% Utilization</div>
+<div class="text-secondary font-semibold">8% Utilization (Fail-Fast)</div>
+</div>
+<div class="grid grid-cols-4 p-space-sm items-center">
+<div class="font-code-sm text-code-sm text-on-surface font-medium">Gateway HTTP 200 Ack Rate</div>
+<div class="text-on-surface-variant">88.2% (Timeouts)</div>
+<div class="text-on-surface-variant">98.1%</div>
+<div class="text-secondary font-bold">100.00% Success</div>
+</div>
+</div>
+</div>
+<!-- Visual Bar Representation -->
+<div class="mt-space-md p-space-md bg-surface-container-low border border-outline-variant">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-space-sm tracking-wider">
+                Concurrent Execution Throughput under k6 Burst (Req/s Succeeded Without Error)
+              </span>
+<div class="space-y-space-xs font-code-sm text-code-sm">
+<div>
+<div class="flex justify-between mb-1">
+<span>Naive Unlocked DB Ingress</span>
+<span class="text-error">1,120 req/s (Pool Crash)</span>
+</div>
+<div class="w-full bg-outline-variant/40 h-2">
+<div class="bg-error h-2" style="width: 25%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span>Redis Mutex (Without In-Memory Hot Dedup)</span>
+<span>3,100 req/s</span>
+</div>
+<div class="w-full bg-outline-variant/40 h-2">
+<div class="bg-primary h-2" style="width: 68%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="font-semibold text-secondary">Rafi Production Pipeline (Dual Barrier)</span>
+<span class="font-semibold text-secondary">4,500 req/s (Max Capacity)</span>
+</div>
+<div class="w-full bg-outline-variant/40 h-2">
+<div class="bg-secondary h-2" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Dead-Letter Queues & Alerts -->
+<section class="scroll-mt-24" id="dlq-alerts">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-secondary mb-space-xs tracking-widest">
+<span>06 / Operational Resilience</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">
+              Dead-Letter Queues (DLQ) &amp; Automated Pager Alerts
+            </h2>
+<div class="space-y-space-md font-body-md text-body-md leading-relaxed">
+<p>
+                What happens when an upstream provider sends a genuine malformed JSON string, or a network partition severs our PostgreSQL replica during settlement?
+              </p>
+<p>
+                Instead of dropping the request or entering an infinite retry loop with the gateway, the ingress service automatically traps the non-idempotent payload and offloads it to a <strong>BullMQ Dead-Letter Queue (DLQ)</strong> backed by Redis Streams.
+              </p>
+<ul class="list-disc pl-space-md space-y-space-xs text-on-surface">
+<li><strong class="font-semibold text-primary">Exponential Jitter Backoff:</strong> Retries are executed at 2s, 8s, 32s, 128s with a 15% random jitter factor to avoid thundering-herd effects on recovery.</li>
+<li><strong class="font-semibold text-primary">Poison-Pill Quarantine:</strong> Any payload failing 5 sequential execution passes is moved into an immutable quarantine table with full headers, payload dump, and stack trace.</li>
+<li><strong class="font-semibold text-primary">PagerDuty P1 Hook:</strong> If the DLQ ingestion rate exceeds 3 events in a rolling 60-second window, automated alert webhooks page the on-call systems architect.</li>
+</ul>
+</div>
+</section>
+<!-- Rafi's Architectural Takeaway Callout Box -->
+<section class="border-2 border-secondary bg-secondary-fixed/30 p-space-lg my-space-md">
+<div class="flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold block mb-1">
+                  Architectural Axiom #41
+                </span>
+<p class="font-headline-emphasis text-headline-emphasis text-on-surface italic leading-snug mb-space-xs">
+                  “A payment endpoint that isn't idempotent by default is simply a production incident waiting for telecom packet drops.”
+                </p>
+<span class="font-code-sm text-code-sm text-on-surface-variant uppercase tracking-wider block">
+                  — Sadik Hasan Rafi, Engineering Principles for Fintech Backends
+                </span>
+</div>
+</div>
+</section>
+<!-- Checklist for Engineering Leads -->
+<section class="border border-outline-variant bg-surface-container-lowest p-space-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-md">
+              Checklist: Hardening Your Payment Ingress
+            </h3>
+<div class="space-y-space-sm font-body-md text-body-md">
+<label class="flex items-start gap-space-sm cursor-pointer group">
+<input checked="" class="mt-1 w-4 h-4 rounded-none accent-primary" disabled="" type="checkbox"/>
+<span class="text-on-surface"><strong class="font-semibold">Compute canonical payload fingerprint:</strong> Always sort JSON dictionary keys alphabetically prior to hashing.</span>
+</label>
+<label class="flex items-start gap-space-sm cursor-pointer group">
+<input checked="" class="mt-1 w-4 h-4 rounded-none accent-primary" disabled="" type="checkbox"/>
+<span class="text-on-surface"><strong class="font-semibold">Execute Redis SET NX before DB queries:</strong> Guard expensive database pool connections from burst saturation.</span>
+</label>
+<label class="flex items-start gap-space-sm cursor-pointer group">
+<input checked="" class="mt-1 w-4 h-4 rounded-none accent-primary" disabled="" type="checkbox"/>
+<span class="text-on-surface"><strong class="font-semibold">Enforce Repeatable Read Isolation:</strong> Prevent phantom reads when concurrent transactions bypass cache layers.</span>
+</label>
+<label class="flex items-start gap-space-sm cursor-pointer group">
+<input checked="" class="mt-1 w-4 h-4 rounded-none accent-primary" disabled="" type="checkbox"/>
+<span class="text-on-surface"><strong class="font-semibold">Never retry within the HTTP request cycle:</strong> Offload asynchronous side-effects (emails, notifications) to message queues.</span>
+</label>
+</div>
+</section>
+</article>
+<!-- Right / Sticky Technical Blueprint Sidebar (30% on 12-col = 4 cols) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg sticky top-20">
+<!-- Table of Contents Widget -->
+<div class="w-full bg-surface-container-low border border-outline-variant p-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/60 mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-wider">Table of Contents</span>
+<span class="font-code-sm text-code-sm text-secondary">6 Modules</span>
+</div>
+<nav class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+<a class="text-on-surface hover:text-secondary py-1 border-b border-outline-variant/30 flex items-center justify-between transition-colors" href="#the-problem">
+<span>1. The Burst Failure Vulnerability</span>
+<span class="font-code-sm text-on-surface-variant text-xs">§ 01</span>
+</a>
+<a class="text-on-surface hover:text-secondary py-1 border-b border-outline-variant/30 flex items-center justify-between transition-colors" href="#payload-fingerprint">
+<span>2. SHA-256 HMAC Fingerprints</span>
+<span class="font-code-sm text-on-surface-variant text-xs">§ 02</span>
+</a>
+<a class="text-on-surface hover:text-secondary py-1 border-b border-outline-variant/30 flex items-center justify-between transition-colors" href="#redis-mutex">
+<span>3. Distributed Mutex via SET NX</span>
+<span class="font-code-sm text-on-surface-variant text-xs">§ 03</span>
+</a>
+<a class="text-on-surface hover:text-secondary py-1 border-b border-outline-variant/30 flex items-center justify-between transition-colors" href="#database-isolation">
+<span>4. Database State Isolation</span>
+<span class="font-code-sm text-on-surface-variant text-xs">§ 04</span>
+</a>
+<a class="text-on-surface hover:text-secondary py-1 border-b border-outline-variant/30 flex items-center justify-between transition-colors" href="#k6-benchmark">
+<span>5. K6 Stress-Test Benchmarks</span>
+<span class="font-code-sm text-on-surface-variant text-xs">§ 05</span>
+</a>
+<a class="text-on-surface hover:text-secondary py-1 flex items-center justify-between transition-colors" href="#dlq-alerts">
+<span>6. Dead-Letter Queues &amp; Alerts</span>
+<span class="font-code-sm text-on-surface-variant text-xs">§ 06</span>
+</a>
+</nav>
+</div>
+<!-- Stack & Technology Badges -->
+<div class="w-full bg-surface-container-lowest border border-outline-variant p-space-md">
+<span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-wider block mb-space-sm">
+              Architectural Stack
+            </span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container border border-outline-variant font-code-sm text-code-sm text-on-surface">Node.js 22 LTS</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant font-code-sm text-code-sm text-on-surface">TypeScript 5.6</span>
+<span class="px-2 py-1 bg-secondary-fixed text-on-secondary-fixed font-code-sm text-code-sm font-semibold">PostgreSQL 16.4</span>
+<span class="px-2 py-1 bg-secondary-fixed text-on-secondary-fixed font-code-sm text-code-sm font-semibold">Redis 7.2 Cluster</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant font-code-sm text-code-sm text-on-surface">BullMQ Pro</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant font-code-sm text-code-sm text-on-surface">k6 Stress Engine</span>
+<span class="px-2 py-1 bg-surface-container border border-outline-variant font-code-sm text-code-sm text-on-surface">Docker Compose</span>
+</div>
+</div>
+<!-- Download / Benchmark Reproduction Kit Card -->
+<div class="w-full bg-[#161618] border border-[#2A2A2D] p-space-md text-[#FAFAFA]">
+<div class="flex items-center gap-space-xs text-secondary-fixed mb-space-xs font-label-caps text-label-caps uppercase tracking-widest font-semibold">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Open-Source Artifact</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-space-xs text-[#FAFAFA]">
+              Clone Reproduction Suite
+            </h4>
+<p class="font-body-sm text-body-sm text-[#A0A0A3] mb-space-md">
+              Run this exact k6 test harness against your own payment endpoints using Docker Compose and pre-configured Grafana dashboards.
+            </p>
+<div class="bg-[#111113] border border-[#2A2A2D] p-space-xs font-code-sm text-xs text-[#CEBDFF] mb-space-md break-all">
+              git clone https://github.com/sadikrafi/idempotent-webhook-suite.git
+            </div>
+<a class="w-full inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed hover:bg-white px-space-md py-space-xs font-label-caps text-label-caps uppercase transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>Inspect on GitHub</span>
+<span class="ml-2">→</span>
+</a>
+</div>
+<!-- Cryptographic Citation / PGP Signature -->
+<div class="w-full border border-outline-variant bg-surface-container-low p-space-md">
+<span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-wider block mb-space-xs">
+              Cryptographic Integrity
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              All architectural essays by Sadik Hasan Rafi are signed with personal GPG key.
+            </p>
+<div class="p-space-xs bg-surface border border-outline-variant font-code-sm text-[11px] text-on-surface-variant break-all mb-space-sm">
+              KEY: 4A7D 89B2 01FC 3E91 5C80 AA91<br/>
+              SIG: b78f10c66dbb7189a01f5ec208d132a
+            </div>
+<a class="font-label-caps text-label-caps uppercase text-secondary hover:underline flex items-center gap-1 font-semibold" href="mailto:hello@sadikrafi.dev">
+<span>Request Key Verification</span>
+<span>→</span>
+</a>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Next & Previous Post Navigation Strip -->
+<section class="w-full bg-surface-container-low border-t border-b border-outline-variant">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop py-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop divide-y md:divide-y-0 md:divide-x divide-outline-variant">
+<!-- Previous Essay -->
+<a class="flex flex-col group pr-0 md:pr-space-lg pb-space-md md:pb-0" data-path="blog" href="#">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest mb-1 group-hover:text-secondary transition-colors">
+            ← Previous Essay
+          </span>
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+            Why We Migrated From MongoDB to PostgreSQL with pgvector for High-Scale Semantic Search
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Storage Engine Performance • 8 Min Read
+          </span>
+</a>
+<!-- Next Essay -->
+<a class="flex flex-col group pl-0 md:pl-space-lg pt-space-md md:pt-0" data-path="blog" href="#">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest mb-1 group-hover:text-secondary transition-colors">
+            Next Essay →
+          </span>
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+            Solving the N+1 Query Dilemma in Multi-Tenant Express &amp; Prisma Architecture
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            ORM Optimization • 14 Min Read
+          </span>
+</a>
+</div>
+</div>
+</section>
+<!-- Consistent Lavender Call-To-Action Banner -->
+<section class="w-full bg-secondary-fixed/50 py-space-xl">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop">
+<div class="border border-secondary/30 bg-surface p-space-lg md:p-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-widest block mb-space-xs">
+            Fintech Resilience Audit
+          </span>
+<h2 class="font-display-md text-display-md text-on-surface tracking-tight mb-space-xs">
+            Have an API or Fintech Architecture to Harden?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            I help startups and enterprise platforms eliminate race conditions, design zero-downtime distributed queues, and audit mission-critical backend systems.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md shrink-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-md font-label-caps text-label-caps uppercase transition-colors group" data-path="contact" href="#">
+<span>Schedule Architecture Audit</span>
+<span class="ml-space-sm transform group-hover:translate-x-1 transition-transform">→</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client Behavior for Essay UI -->
+<script>
+    // Copy Citation Helper
+    const copyBtn = document.getElementById('copy-citation-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const citation = `Rafi, S. H. (2025). Designing Idempotent Payment Webhooks That Never Double-Charge Under Burst Failures. Technical Essays in Distributed Systems. https://sadikrafi.dev/blog/idempotent-payment-webhooks`;
+        navigator.clipboard.writeText(citation).then(() => {
+          const originalText = copyBtn.innerHTML;
+          copyBtn.innerHTML = `<span class="material-symbols-outlined text-base text-secondary">check</span><span>Citation Copied!</span>`;
+          setTimeout(() => {
+            copyBtn.innerHTML = originalText;
+          }, 3000);
+        });
+      });
+    }
+
+    // Smooth Scroll Offset for Table of Contents
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.length > 1) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            targetEl.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant"><div class="max-w-[1360px] mx-auto px-margin md:px-margin-desktop pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"><div class="lg:col-span-4 flex flex-col items-start"><div class="flex items-center gap-space-sm mb-space-md"><div class="w-8 h-8 border border-primary flex items-center justify-center"><span class="font-headline-md text-headline-md font-bold text-primary">SR</span></div><span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest font-semibold">Sadik Hasan Rafi</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-space-md leading-relaxed">Engineering robust APIs, high-throughput microservices, and reliable business systems with precision.</p><div class="font-code-sm text-code-sm text-on-surface-variant uppercase tracking-wider">PGP: 4A7D 89B2 01FC 3E91</div></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-md tracking-widest">Quick Links</span><ul class="flex flex-col gap-space-xs"><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#">About</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="work" href="#">Work</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a></li><li class="border-b border-outline-variant/40 pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="blog" href="#">Blog</a></li><li class="pb-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></li></ul></div><div class="lg:col-span-3 flex flex-col"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-md tracking-widest">Services</span><ul class="flex flex-col gap-space-xs"><li class="border-b border-outline-variant/40 pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">API Architecture</span></li><li class="border-b border-outline-variant/40 pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">ERP / POS Solutions</span></li><li class="border-b border-outline-variant/40 pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">Payment Engines</span></li><li class="pb-space-xs"><span class="font-body-sm text-body-sm text-on-surface-variant">LLM Integrations</span></li></ul></div><div class="lg:col-span-3 flex flex-col"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-md tracking-widest">Contact</span><div class="flex flex-col gap-space-xs mb-space-md"><a class="font-body-sm text-body-sm text-on-surface hover:text-secondary transition-colors" href="mailto:hello@sadikrafi.dev">hello@sadikrafi.dev</a><span class="font-body-sm text-body-sm text-on-surface-variant">+880 1712 345678</span><span class="font-body-sm text-body-sm text-on-surface-variant">Dhaka, Bangladesh (UTC+6)</span></div><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold mb-space-xs tracking-widest">Follow Me</span><div class="flex items-center gap-space-md"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors uppercase" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub</a><span class="text-outline-variant">/</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors uppercase" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a><span class="text-outline-variant">/</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors uppercase" href="https://twitter.com" rel="noopener noreferrer" target="_blank">Twitter · X</a></div></div></div><div class="mt-space-xl pt-space-md border-t border-outline-variant flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">© 2026 Sadik Hasan Rafi. All Rights Reserved.</div><div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Architectural Backend Craftsmanship</div></div></div></footer></body></html>

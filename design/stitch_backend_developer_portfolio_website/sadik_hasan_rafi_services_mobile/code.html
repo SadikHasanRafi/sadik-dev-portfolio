@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-container": "#ab8ffd", "surface-container": "#efeded", "on-error": "#ffffff", "on-surface": "#1b1c1c", "on-tertiary-fixed-variant": "#474556", "outline": "#747878", "on-secondary-fixed-variant": "#4f319b", "on-tertiary-container": "#858195", "on-primary-fixed-variant": "#474646", "surface-tint": "#5f5e5e", "surface-container-low": "#f5f3f3", "secondary-fixed": "#e8ddff", "error": "#ba1a1a", "tertiary-fixed-dim": "#c8c4d9", "on-tertiary-fixed": "#1b1a29", "inverse-on-surface": "#f2f0f0", "on-primary-fixed": "#1c1b1b", "primary-container": "#1c1b1b", "surface-dim": "#dbdad9", "tertiary-fixed": "#e5e0f6", "on-background": "#1b1c1c", "surface-variant": "#e4e2e2", "on-primary": "#ffffff", "primary-fixed": "#e5e2e1", "error-container": "#ffdad6", "surface-container-highest": "#e4e2e2", "surface-bright": "#fbf9f8", "on-secondary-container": "#3f1e8b", "background": "#fbf9f8", "on-error-container": "#93000a", "primary": "#000000", "on-tertiary": "#ffffff", "on-secondary-fixed": "#21005e", "inverse-primary": "#c8c6c5", "on-secondary": "#ffffff", "outline-variant": "#c4c7c7", "secondary": "#674bb4", "secondary-fixed-dim": "#cebdff", "on-primary-container": "#858383", "tertiary-container": "#1b1a29", "surface-container-high": "#e9e8e7", "inverse-surface": "#303031", "on-surface-variant": "#444748", "surface": "#fbf9f8", "tertiary": "#000000", "primary-fixed-dim": "#c8c6c5", "surface-container-lowest": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "2rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-xxl": "6rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-desktop": "4rem", "margin": "1.25rem", "gutter-desktop": "2.5rem", "space-xl": "3.5rem" }, fontFamily: { "body-lg": ["Geist"], "display-lg-mobile": ["Playfair Display"], "label-caps": ["Geist"], "body-md": ["Geist"], "display-md": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-sm": ["Geist"], "headline-md": ["Playfair Display"], "code-sm": ["Geist"], "headline-lg": ["Playfair Display"], "headline-emphasis": ["Playfair Display"] }, fontSize: { "body-lg": ["1.125rem", { lineHeight: "1.7", fontWeight: "400" }], "display-lg-mobile": ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.01em", fontWeight: "400" }], "label-caps": ["0.6875rem", { lineHeight: "1", letterSpacing: "0.15em", fontWeight: "600" }], "body-md": ["0.9375rem", { lineHeight: "1.6", fontWeight: "400" }], "display-md": ["3.25rem", { lineHeight: "1.15", letterSpacing: "-0.015em", fontWeight: "400" }], "display-lg": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em", fontWeight: "400" }], "body-sm": ["0.8125rem", { lineHeight: "1.5", fontWeight: "400" }], "headline-md": ["1.75rem", { lineHeight: "1.3", fontWeight: "500" }], "code-sm": ["0.8125rem", { lineHeight: "1.4", fontWeight: "400" }], "headline-lg": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "500" }], "headline-emphasis": ["1.75rem", { lineHeight: "1.3", fontWeight: "400" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors -ml-space-xs" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col"><span class="font-label-caps text-[10px] text-outline uppercase tracking-[0.15em]">System Dossier</span><h1 class="font-headline-md text-[1.125rem] font-medium tracking-tight text-on-surface leading-none truncate max-w-[210px]">System Detail</h1></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface px-margin"><div class="flex flex-col w-full pb-12">
+<!-- Hero Section -->
+<section class="flex flex-col pt-4 pb-8">
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.15em]">HOW I CAN HELP</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-tight mb-4">
+      Backend Engineering Tailored for Real World <span class="italic text-secondary font-headline-emphasis">Demands &amp; Scale.</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+      From zero-to-one architectural design to hardening high-load production APIs, fault-tolerant ledger engines, and financial payment pipelines.
+    </p>
+<!-- Visual Polish: Architectural Spec Sheet Cover -->
+<div class="w-full h-44 rounded-lg overflow-hidden relative mb-6 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Minimalist architectural blueprint schematic of distributed microservices, server racks, and database telemetry diagrams drawn in elegant thin violet and slate lines on an off-white background with high technical clarity and editorial typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkSdSO0Et9o7JOVsUoZ5VcSKNKwa-BfHAyRpmVPuQIKAxhWriMKQWrVsjA4fSpRzWC1ntb2rWfTq0PHeFLBsDP_8NXeV3j_d7MkvxS3DwlJfHGsE4tmWYLgvVcvppgWX0denz7MuIxES2VvnOp6QoG0SUkNFAakx57nwNkcsAe8F2eXgOp1WOX6ZLrR0dsHJWLGFcyCUEXGBl-38CVCF1m_gXAH_sulA4MkpavRh9Lluz_qTCxZ5ZsYA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent flex flex-col justify-end p-4">
+<span class="font-label-caps text-[10px] text-secondary-fixed uppercase tracking-widest">INFRASTRUCTURE BLUEPRINT // SPEC-044</span>
+<span class="font-headline-md text-on-primary text-base font-normal">Deterministic Cloud Topologies</span>
+</div>
+</div>
+<!-- Reliability Target Tags (Horizontal Scrollable Strip) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<div class="flex-shrink-0 px-3 py-1.5 bg-surface-container rounded-sm flex items-center gap-2 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">99.98% Service Uptime</span>
+</div>
+<div class="flex-shrink-0 px-3 py-1.5 bg-surface-container rounded-sm flex items-center gap-2 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">P99 &lt; 45ms Latency</span>
+</div>
+<div class="flex-shrink-0 px-3 py-1.5 bg-surface-container rounded-sm flex items-center gap-2 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">ACID-Compliant State</span>
+</div>
+<div class="flex-shrink-0 px-3 py-1.5 bg-surface-container rounded-sm flex items-center gap-2 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Zero Data Loss Policy</span>
+</div>
+</div>
+</section>
+<!-- Architectural Disciplines / Service Cards -->
+<section class="flex flex-col gap-5 py-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">PILLARS OF PRACTICE</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">4 SPECIALIZATIONS</span>
+</div>
+<!-- Service 01 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">SERVICE 01 // REST &amp; GRAPHQL</span>
+<span class="material-symbols-outlined text-outline text-[18px]">hub</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">API &amp; Microservices Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High-throughput routing layers, structured RPC protocols, and hardened authentication gateways built for concurrent resilience.</p>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-md flex flex-col gap-2">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">KEY DELIVERABLES</span>
+<ul class="flex flex-col gap-1.5">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Fully-documented OpenAPI/Swagger specifications</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Distributed token-bucket rate limiting</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Hierarchical RBAC &amp; JWT / OAuth2 lifecycle</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Multi-tier Redis caching with stale-while-revalidate</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">&gt;85% automated test coverage (Unit &amp; E2E)</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Node.js</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Express</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Fastify</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-code-sm text-code-sm rounded-sm">TypeScript</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Jest</span>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">SERVICE 02 // CORE TRANSACTIONS</span>
+<span class="material-symbols-outlined text-outline text-[18px]">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">ERP, POS &amp; Inventory Systems</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic financial ledgers, multi-warehouse stock allocations, and zero-drift concurrency systems.</p>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-md flex flex-col gap-2">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">KEY DELIVERABLES</span>
+<ul class="flex flex-col gap-1.5">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Relational double-entry bookkeeping schemas</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Multi-counter inventory synchronization via WebSockets</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Asynchronous PDF invoice generation queue</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Pessimistic concurrency controls on ledger updates</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-code-sm text-code-sm rounded-sm">PostgreSQL</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Prisma</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">TypeORM</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">WebSockets</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Redis</span>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">SERVICE 03 // FINANCIAL PIPELINES</span>
+<span class="material-symbols-outlined text-outline text-[18px]">payments</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Payment Gateways &amp; FinTech Integration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Secure, hardened transaction processors that absorb provider downtime with idempotent background queues.</p>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-md flex flex-col gap-2">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">KEY DELIVERABLES</span>
+<ul class="flex flex-col gap-1.5">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Turnkey bKash, Nagad, SSLCommerz &amp; Stripe ingestion</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Deterministic idempotency keys per transaction</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Metered &amp; recurring subscription billing engines</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">BullMQ dead-letter queues with exponential retry</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Node.js</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-code-sm text-code-sm rounded-sm">BullMQ</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Redis</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Webhook Engine</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">SSL TLS 1.3</span>
+</div>
+</div>
+<!-- Service 04 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">SERVICE 04 // COGNITIVE PIPELINES</span>
+<span class="material-symbols-outlined text-outline text-[18px]">psychology</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">AI, LLM &amp; Workflow Automation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bridging foundational LLM intelligence directly with transactional databases using semantic vector stores.</p>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-md flex flex-col gap-2">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">KEY DELIVERABLES</span>
+<ul class="flex flex-col gap-1.5">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Hybrid RAG pipelines via PostgreSQL &amp; pgvector</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Resilient OpenAI &amp; Anthropic fallback orchestration</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Server-Sent Events (SSE) token streaming</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[14px] mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Background document chunking &amp; embedding sync</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">LangChain</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-code-sm text-code-sm rounded-sm">pgvector</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Python</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Node.js</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm rounded-sm">Redis Streams</span>
+</div>
+</div>
+</section>
+<!-- Deterministic by Design Terminal Card -->
+<section class="my-6">
+<div class="bg-primary text-on-primary p-5 rounded-lg shadow-md flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-caps text-[10px] text-on-primary-container tracking-widest uppercase">SYS.ARCHITECTURE // FLOW</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-primary text-lg mb-1">Deterministic by Design</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container">Every state change undergoes sequential lock guarantees before physical commit.</p>
+</div>
+<!-- Architecture Pipeline Diagram -->
+<div class="flex flex-col gap-2 p-3 bg-surface-container-highest/10 rounded-md">
+<!-- Node 1 -->
+<div class="flex items-center justify-between p-2.5 bg-surface-container-highest/15 rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">dns</span>
+<span class="font-code-sm text-code-sm text-on-primary font-medium">CLIENT / REST API</span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary-fixed uppercase">INGRESS</span>
+</div>
+<div class="flex justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</div>
+<!-- Node 2 -->
+<div class="flex items-center justify-between p-2.5 bg-surface-container-highest/15 rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">lock_clock</span>
+<span class="font-code-sm text-code-sm text-on-primary font-medium">IDEMPOTENCY ENGINE</span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary-container uppercase">REDIS MUTEX</span>
+</div>
+<div class="flex justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</div>
+<!-- Node 3 -->
+<div class="flex items-center justify-between p-2.5 bg-surface-container-highest/15 rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">database</span>
+<span class="font-code-sm text-code-sm text-on-primary font-medium">LEDGER &amp; POSTGRES</span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary-fixed uppercase">ACID ISOLATION</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2 pt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-primary-fixed">OpenTelemetry Distributed Tracing</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-primary-fixed">Zero-Downtime Blue/Green DB Migrations</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-primary-fixed">Deep Probing &amp; Granular Synthetic Healthchecks</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The Engineering Pipeline (Vertical Stepper) -->
+<section class="flex flex-col py-4">
+<div class="flex flex-col mb-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-1">EXECUTION METHODOLOGY</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">The Engineering Pipeline</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">A rigorous, four-stage protocol taking systems from technical ambiguity to provable uptime.</p>
+</div>
+<div class="relative flex flex-col gap-6 pl-6 before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-3 before:w-0.5 before:bg-surface-container-high">
+<!-- Phase 01 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider">PHASE 01 // 3–5 DAYS</span>
+<h4 class="font-headline-md text-base text-on-surface font-medium">System Discovery &amp; Schema Blueprinting</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deep audit of business domain constraints, edge conditions, entity-relationship models, and distributed event boundaries.</p>
+<div class="mt-2 py-1.5 px-3 bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-caps text-[9px] text-outline uppercase">DELIVERABLE</span>
+<span class="font-code-sm text-[11px] text-on-surface font-medium">Schema Specs &amp; Flow Models</span>
+</div>
+</div>
+<!-- Phase 02 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider">PHASE 02 // 1–2 WEEKS</span>
+<h4 class="font-headline-md text-base text-on-surface font-medium">Core Engine &amp; DB Prototyping</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Spinning up database migration engines, transactional models, API routes, and containerized local mock harnesses.</p>
+<div class="mt-2 py-1.5 px-3 bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-caps text-[9px] text-outline uppercase">DELIVERABLE</span>
+<span class="font-code-sm text-[11px] text-on-surface font-medium">Working Staging Endpoints</span>
+</div>
+</div>
+<!-- Phase 03 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider">PHASE 03 // 1 WEEK</span>
+<h4 class="font-headline-md text-base text-on-surface font-medium">Stress Testing, Audits &amp; Caching</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Simulating synthetic load spikes (k6/autocannon), tracing slow database joins, applying compound indexes, and verifying deadlock freedom.</p>
+<div class="mt-2 py-1.5 px-3 bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-caps text-[9px] text-outline uppercase">DELIVERABLE</span>
+<span class="font-code-sm text-[11px] text-on-surface font-medium">Benchmark &amp; Audit Logs</span>
+</div>
+</div>
+<!-- Phase 04 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider">PHASE 04 // GO-LIVE</span>
+<h4 class="font-headline-md text-base text-on-surface font-medium">Production Release &amp; Observability</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous integration deployment to production clusters, configuring Sentry error capture, Grafana telemetry, and automated alerts.</p>
+<div class="mt-2 py-1.5 px-3 bg-surface-container rounded flex items-center justify-between">
+<span class="font-label-caps text-[9px] text-outline uppercase">DELIVERABLE</span>
+<span class="font-code-sm text-[11px] text-on-surface font-medium">Live Cluster &amp; Telemetry</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Engagement Models -->
+<section class="flex flex-col gap-4 py-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider mb-1">COLLABORATION SCHEMES</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Engagement Models</h3>
+</div>
+<!-- Model 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">PROJECT-BASED</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">2–6 WEEKS</span>
+</div>
+<h4 class="font-headline-md text-base text-on-surface font-medium">Sprint-Based Backend Architecture</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ideal for early-stage products and MVPs requiring hardened technical foundations, database design, and end-to-end API construction with concrete milestones.</p>
+<div class="flex items-center gap-2 pt-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span class="font-body-sm text-body-sm text-on-surface">Fixed milestone pricing &amp; scoped deliverables</span>
+</div>
+</div>
+<!-- Model 2 (Recommended) -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-md flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary px-3 py-1 font-label-caps text-[9px] uppercase tracking-wider rounded-bl">
+        RECOMMENDED
+      </div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">FRACTIONAL LEAD</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">20–40H / MONTH</span>
+</div>
+<h4 class="font-headline-md text-base text-on-surface font-medium">Mission-Critical Retainer</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ongoing backend custody, high-priority SLA response for outages, continuous query tuning, schema refactors, and engineering team code reviews.</p>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span class="font-body-sm text-body-sm text-on-surface">Direct on-call channel via Slack/Telegram</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span class="font-body-sm text-body-sm text-on-surface">Bi-weekly database index and query tuning</span>
+</div>
+</div>
+</div>
+<!-- Model 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">TEAM AUGMENTATION</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">CUSTOM SPRINT</span>
+</div>
+<h4 class="font-headline-md text-base text-on-surface font-medium">Dedicated Feature Delivery</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Embedding directly into your current sprint cycles to build out isolated complex sub-systems like billing pipelines or multi-tenant authorization engines.</p>
+<div class="flex items-center gap-2 pt-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span class="font-body-sm text-body-sm text-on-surface">Direct PR reviews &amp; zero onboarding drag</span>
+</div>
+</div>
+</section>
+<!-- Conversion Banner -->
+<section class="my-6">
+<div class="bg-secondary-fixed text-on-secondary-fixed p-6 rounded-lg shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">handshake</span>
+<span class="font-label-caps text-label-caps text-on-secondary-fixed-variant uppercase tracking-widest">START A COLLABORATION</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-secondary-fixed leading-snug">
+        Ready to scope your project? Let's Build Something Reliable Together.
+      </h3>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant">
+        Have an existing codebase needing audit, or starting from a clean slate? Let's evaluate the architecture and identify performance risks before they reach production.
+      </p>
+<button class="w-full mt-2 py-3.5 px-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-none hover:bg-surface-container-highest transition-colors active:scale-[0.98]" id="consultation-btn">
+<span>BOOK A TECHNICAL CONSULTATION</span>
+<span class="transition-transform duration-200 group-hover:translate-x-1">→</span>
+</button>
+<div class="flex items-center justify-center gap-3 pt-2 text-on-secondary-fixed-variant">
+<span class="font-code-sm text-[11px]">Direct PGP Encrypted Comms</span>
+<span>•</span>
+<span class="font-code-sm text-[11px]">No Obligation Initial Audit</span>
+</div>
+</div>
+</section>
+<!-- Minimal Blueprint Footer -->
+<footer class="pt-6 pb-2 flex flex-col gap-4 border-t border-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-md font-bold text-on-surface text-base">SR</span>
+<span class="font-body-sm text-outline text-xs">/ Sadik Hasan Rafi</span>
+</div>
+<span class="font-label-caps text-[10px] text-outline uppercase">DHAKA (UTC+6)</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline leading-relaxed">
+      Senior Backend &amp; Distributed Systems Specialist. Designing zero-downtime microservices and deterministic transaction engines.
+    </p>
+<div class="flex items-center justify-between pt-2">
+<span class="font-code-sm text-[11px] text-outline">© 2025 All Rights Reserved.</span>
+<div class="flex gap-4">
+<a class="font-label-caps text-[11px] text-on-surface hover:text-secondary uppercase" href="#github">GITHUB</a>
+<a class="font-label-caps text-[11px] text-on-surface hover:text-secondary uppercase" href="#linkedin">LINKEDIN</a>
+<a class="font-label-caps text-[11px] text-on-surface hover:text-secondary uppercase" href="#cv">READCV</a>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  // Micro-interaction for consultation button
+  const ctaBtn = document.getElementById('consultation-btn');
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', () => {
+      const originalText = ctaBtn.innerHTML;
+      ctaBtn.innerHTML = `<span>CONNECTING DISCOVERY PORTAL...</span>`;
+      setTimeout(() => {
+        ctaBtn.innerHTML = `<span>OPENING CALENDAR →</span>`;
+        setTimeout(() => {
+          ctaBtn.innerHTML = originalText;
+        }, 1500);
+      }, 600);
+    });
+  }
+</script></main></body></html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sadik Hasan Rafi — Backend Developer</title>
+<!-- Google Fonts: Cormorant Garamond (Serif), Inter (Sans-serif), Caveat (Handwritten) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              violet: '#5B3FA8',
+              lavender: '#E9E4FA',
+              dark: '#111111',
+              muted: '#6B6B6B',
+              border: '#E5E5E7',
+              bgLight: '#FAFAFA',
+              strip: '#F4F4F6'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            hand: ['Caveat', 'cursive']
+          }
+        }
+      }
+    };
+  </script>
+<!-- Custom Typography & Visual Styles -->
+<style data-purpose="custom-typography">
+    .font-serif-hero {
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: -0.02em;
+    }
+    .badge-rotate {
+      animation: spinSlow 24s linear infinite;
+    }
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+<!-- Dot Grid Pattern Style -->
+<style data-purpose="background-patterns">
+    .dot-grid {
+      background-image: radial-gradient(#C4B5FD 1.2px, transparent 1.2px);
+      background-size: 14px 14px;
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#111111] font-sans antialiased selection:bg-[#E9E4FA] selection:text-[#5B3FA8]">
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-[#FAFAFA] border-b border-[#E5E5E7] sticky top-0 z-50">
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16 h-24 flex items-center justify-between">
+<!-- Brand Logo / Monogram -->
+<a class="flex items-center gap-3.5 group" href="#">
+<span class="font-serif text-3xl font-bold tracking-tight text-[#111111]">SR</span>
+<div class="h-8 w-[1px] bg-[#E5E5E7]"></div>
+<div class="flex flex-col">
+<span class="text-[13px] font-bold tracking-[0.2em] text-[#111111] uppercase leading-tight">Sadik Hasan Rafi</span>
+<span class="text-[9px] font-semibold tracking-[0.25em] text-[#6B6B6B] uppercase mt-0.5">Backend Developer</span>
+</div>
+</a>
+<!-- Navigation Links -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-10">
+<a class="relative text-[11px] font-semibold tracking-[0.2em] text-[#111111] uppercase pb-1.5 transition-colors" href="#home">
+          Home
+          <!-- Active Indicator Line -->
+<span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#5B3FA8]"></span>
+</a>
+<a class="text-[11px] font-semibold tracking-[0.2em] text-[#6B6B6B] hover:text-[#111111] uppercase transition-colors" href="#about">About</a>
+<a class="text-[11px] font-semibold tracking-[0.2em] text-[#6B6B6B] hover:text-[#111111] uppercase transition-colors" href="#work">Work</a>
+<a class="text-[11px] font-semibold tracking-[0.2em] text-[#6B6B6B] hover:text-[#111111] uppercase transition-colors" href="#services">Services</a>
+<a class="text-[11px] font-semibold tracking-[0.2em] text-[#6B6B6B] hover:text-[#111111] uppercase transition-colors" href="#blog">Blog</a>
+<a class="text-[11px] font-semibold tracking-[0.2em] text-[#6B6B6B] hover:text-[#111111] uppercase transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Header CTA Button -->
+<div class="flex items-center">
+<a class="inline-flex items-center justify-center bg-[#111111] text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-7 py-3.5 hover:bg-[#5B3FA8] transition-colors rounded-none" href="#contact">
+          Let's Talk <span class="ml-2">→</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden pt-12 lg:pt-16 pb-16 border-b border-[#E5E5E7]" id="home">
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Copy & Actions -->
+<div class="lg:col-span-6 flex flex-col justify-center pr-0 lg:pr-6 z-10">
+<!-- Intro Caps Label -->
+<span class="text-[11px] font-semibold tracking-[0.22em] text-[#5B3FA8] uppercase mb-5 block">
+          Hi, I'm Rafi
+        </span>
+<!-- Main Headline -->
+<h1 class="font-serif-hero text-5xl sm:text-6xl lg:text-[68px] leading-[1.08] text-[#111111] font-normal mb-8">
+          Building Backends<br/>
+          That Quietly Power<br/>
+<span class="italic text-[#5B3FA8] font-medium">Real Businesses.</span>
+</h1>
+<!-- Subtle Line Divider -->
+<div class="w-12 h-[1.5px] bg-[#111111] mb-8"></div>
+<!-- Bio Description -->
+<p class="text-[15px] leading-relaxed text-[#6B6B6B] max-w-lg mb-10 font-normal">
+          I'm a Node.js &amp; TypeScript backend developer from Dhaka. I build secure, scalable APIs, payment flows and business systems that actually run in the real world.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 mb-16">
+<a class="inline-flex items-center justify-center bg-[#111111] text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-[#5B3FA8] transition-colors rounded-none" href="#work">
+            View My Work <span class="ml-2 text-sm">→</span>
+</a>
+<a class="inline-flex items-center justify-center bg-white text-[#111111] border border-[#111111] text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-[#FAFAFA] transition-colors rounded-none" href="#about">
+            About Me
+          </a>
+</div>
+<!-- Scroll Indicator -->
+<div class="flex items-center text-[10px] tracking-[0.25em] text-[#6B6B6B] uppercase font-semibold">
+          Scroll Down <span class="ml-1 text-xs">↓</span>
+</div>
+</div>
+<!-- Right Column: Hero Visual Portrait & Badges -->
+<div class="lg:col-span-6 relative flex items-center justify-center lg:justify-end">
+<div class="relative w-full max-w-[540px] aspect-[4/5] flex items-end justify-center">
+<!-- Pale Lavender Background Circle -->
+<div class="absolute w-[440px] h-[440px] rounded-full bg-[#E9E4FA] top-4 left-6 -z-10"></div>
+<!-- Subtle Violet Dot Pattern Accent -->
+<div class="absolute w-36 h-48 right-0 top-16 dot-grid opacity-70 -z-10"></div>
+<!-- Hero Cutout Portrait -->
+<img alt="Sadik Hasan Rafi — Backend Developer" class="w-full h-full object-cover object-top grayscale contrast-110 drop-shadow-xl" data-purpose="hero-cutout-portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHrFRjyuZBvv77_CA3G8U2b4tPMSR7YllC7wT3-YVUrxrSZ68mahotOch9JnA6g4Dml6cNRtDauagUB9O5YHVppDhJjRh-vyoy3lIghjz19mO2M6n7QcAAV9XHCaF4csyjk8jFOO8__p-1UgI1yl1bU-KOJuXXZOMj900BnX3ZSuuCMqIUbjj50kuPyApHtCb6jkONSEkFlv93gyz_tXR6wosLceZW3n46zLbJNFwOyeTubEIsg69ltnjM1aX6hqxummE"/>
+<!-- Circular Rotating Badge (Top Right) -->
+<div class="absolute top-2 right-4 w-32 h-32 select-none pointer-events-none" data-purpose="hero-stamp-badge">
+<!-- Curved Circular SVG Text -->
+<svg class="w-full h-full badge-rotate" viewbox="0 0 160 160">
+<defs>
+<path d="M 80, 80 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" id="circlePath"></path>
+</defs>
+<text fill="#5B3FA8" font-family="Inter" font-size="10.8" font-weight="600" letter-spacing="3.2">
+<textpath startoffset="0%" xlink:href="#circlePath">
+                  BACKEND DEVELOPER • NODE.JS •
+                </textpath>
+</text>
+</svg>
+<!-- Handwritten Center Signature -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-hand text-3xl font-bold text-[#5B3FA8] transform -rotate-12 translate-y-0.5">Rafi.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: ServicesStrip -->
+<section class="w-full bg-[#F4F4F6] border-b border-[#E5E5E7] py-14" id="services">
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16">
+<!-- 4 Equal Service Columns with Dividers -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#E5E5E7]">
+<!-- Service 1: API & Backend Development -->
+<div class="py-6 md:py-2 md:px-8 first:pl-0 flex flex-col justify-start">
+<div class="w-10 h-10 mb-5 text-[#5B3FA8]">
+<!-- Line Icon: Server/API -->
+<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<rect height="7" rx="1" width="20" x="2" y="3"></rect>
+<rect height="7" rx="1" width="20" x="2" y="14"></rect>
+<line stroke-linecap="round" stroke-width="2.5" x1="6" x2="6.01" y1="6.5" y2="6.5"></line>
+<line stroke-linecap="round" stroke-width="2.5" x1="6" x2="6.01" y1="17.5" y2="17.5"></line>
+<line stroke-linecap="round" x1="10" x2="14" y1="6.5" y2="6.5"></line>
+<line stroke-linecap="round" x1="10" x2="14" y1="17.5" y2="17.5"></line>
+</svg>
+</div>
+<h2 class="text-xs font-bold tracking-[0.18em] text-[#111111] uppercase mb-2">API &amp; Backend Dev</h2>
+<p class="text-[13px] leading-relaxed text-[#6B6B6B]">Scalable Node.js, Express &amp; TypeScript APIs built clean and secure.</p>
+</div>
+<!-- Service 2: ERP / POS Systems -->
+<div class="py-6 md:py-2 md:px-8 flex flex-col justify-start">
+<div class="w-10 h-10 mb-5 text-[#5B3FA8]">
+<!-- Line Icon: Terminal/Database -->
+<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+<path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+<path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+</svg>
+</div>
+<h2 class="text-xs font-bold tracking-[0.18em] text-[#111111] uppercase mb-2">ERP / POS Systems</h2>
+<p class="text-[13px] leading-relaxed text-[#6B6B6B]">Inventory, accounting and billing systems for real shops and businesses.</p>
+</div>
+<!-- Service 3: Payment Integration -->
+<div class="py-6 md:py-2 md:px-8 flex flex-col justify-start">
+<div class="w-10 h-10 mb-5 text-[#5B3FA8]">
+<!-- Line Icon: Credit Card / Payment -->
+<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<rect height="14" rx="2" width="20" x="2" y="5"></rect>
+<line x1="2" x2="22" y1="10" y2="10"></line>
+<line x1="6" x2="10" y1="15" y2="15"></line>
+</svg>
+</div>
+<h2 class="text-xs font-bold tracking-[0.18em] text-[#111111] uppercase mb-2">Payment Integration</h2>
+<p class="text-[13px] leading-relaxed text-[#6B6B6B]">bKash, SSLCommerz and subscription billing flows done right.</p>
+</div>
+<!-- Service 4: AI & LLM Integration -->
+<div class="py-6 md:py-2 md:px-8 last:pr-0 flex flex-col justify-start">
+<div class="w-10 h-10 mb-5 text-[#5B3FA8]">
+<!-- Line Icon: Neural / Chip -->
+<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<rect height="16" rx="2" width="16" x="4" y="4"></rect>
+<rect height="6" width="6" x="9" y="9"></rect>
+<line x1="9" x2="9" y1="1" y2="4"></line>
+<line x1="15" x2="15" y1="1" y2="4"></line>
+<line x1="9" x2="9" y1="20" y2="23"></line>
+<line x1="15" x2="15" y1="20" y2="23"></line>
+<line x1="20" x2="23" y1="9" y2="9"></line>
+<line x1="20" x2="23" y1="15" y2="15"></line>
+<line x1="1" x2="4" y1="9" y2="9"></line>
+<line x1="1" x2="4" y1="15" y2="15"></line>
+</svg>
+</div>
+<h2 class="text-xs font-bold tracking-[0.18em] text-[#111111] uppercase mb-2">AI &amp; LLM Integration</h2>
+<p class="text-[13px] leading-relaxed text-[#6B6B6B]">Streaming chat, RAG and smart automation powered by LLMs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ServicesStrip -->
+<!-- BEGIN: SelectedProjects -->
+<section class="py-20 bg-[#FAFAFA] border-b border-[#E5E5E7]" id="work">
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+<div>
+<span class="text-[11px] font-semibold tracking-[0.22em] text-[#5B3FA8] uppercase mb-2 block">
+            Featured Work
+          </span>
+<h2 class="font-serif text-4xl sm:text-5xl text-[#111111] font-normal tracking-tight">
+            Selected Projects
+          </h2>
+</div>
+<a class="mt-4 sm:mt-0 inline-flex items-center text-[11px] font-semibold tracking-[0.2em] text-[#111111] uppercase hover:text-[#5B3FA8] transition-colors" href="#work">
+          View All Projects <span class="ml-2">→</span>
+</a>
+</div>
+<!-- 4-Column Card Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Project Card 1: Liguni POS -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-[#1E1E1E] overflow-hidden mb-4 relative flex items-center justify-center p-4">
+<div class="w-full h-full bg-[#121214] border border-[#2E2E32] p-4 flex flex-col justify-between rounded-sm shadow-inner group-hover:border-[#5B3FA8] transition-colors">
+<div class="flex items-center justify-between border-b border-[#2A2A2E] pb-2">
+<span class="text-[9px] font-mono tracking-widest text-[#9CA3AF] uppercase">POS TERMINAL / LIVE</span>
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+</div>
+<div class="space-y-1.5 my-auto">
+<div class="h-2 w-3/4 bg-[#2A2A2E] rounded"></div>
+<div class="h-2 w-1/2 bg-[#2A2A2E] rounded"></div>
+<div class="h-6 w-full bg-[#5B3FA8]/20 border border-[#5B3FA8]/40 rounded flex items-center px-2">
+<span class="text-[9px] font-mono text-[#E9E4FA]">INV-2026-0982 • $1,420.50</span>
+</div>
+</div>
+<div class="text-[8px] font-mono text-[#6B6B6B] flex justify-between">
+<span>POSTGRESQL</span>
+<span>WEBSOCKET</span>
+</div>
+</div>
+</div>
+<h3 class="text-xs font-bold tracking-[0.16em] text-[#111111] uppercase group-hover:text-[#5B3FA8] transition-colors">
+            Liguni POS
+          </h3>
+<p class="text-[12px] text-[#6B6B6B] mt-0.5 font-normal">
+            Retail POS &amp; Inventory
+          </p>
+</article>
+<!-- Project Card 2: Village Agro Farm -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-[#18181A] overflow-hidden mb-4 relative flex items-center justify-center p-4">
+<div class="w-full h-full bg-[#0F0F10] border border-[#27272A] p-4 flex flex-col justify-between rounded-sm shadow-inner group-hover:border-[#5B3FA8] transition-colors">
+<div class="flex items-center justify-between border-b border-[#27272A] pb-2">
+<span class="text-[9px] font-mono tracking-widest text-[#9CA3AF] uppercase">AGRO ERP / BATCHES</span>
+<span class="text-[9px] font-mono text-[#A1A1AA]">v2.4</span>
+</div>
+<div class="grid grid-cols-2 gap-2 my-auto">
+<div class="p-1.5 bg-[#1F1F23] rounded border border-[#2D2D32]">
+<span class="text-[7px] text-[#71717A] uppercase block">Feed Stock</span>
+<span class="text-[11px] font-mono font-bold text-[#F4F4F6]">14.2 Tons</span>
+</div>
+<div class="p-1.5 bg-[#1F1F23] rounded border border-[#2D2D32]">
+<span class="text-[7px] text-[#71717A] uppercase block">Gross Rev</span>
+<span class="text-[11px] font-mono font-bold text-emerald-400">৳ 842k</span>
+</div>
+</div>
+<div class="text-[8px] font-mono text-[#6B6B6B] flex justify-between">
+<span>NESTJS</span>
+<span>PRISMA ORM</span>
+</div>
+</div>
+</div>
+<h3 class="text-xs font-bold tracking-[0.16em] text-[#111111] uppercase group-hover:text-[#5B3FA8] transition-colors">
+            Village Agro Farm
+          </h3>
+<p class="text-[12px] text-[#6B6B6B] mt-0.5 font-normal">
+            ERP &amp; Accounting
+          </p>
+</article>
+<!-- Project Card 3: Pharmacy POS -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-[#16171B] overflow-hidden mb-4 relative flex items-center justify-center p-4">
+<div class="w-full h-full bg-[#0D0E12] border border-[#23242B] p-4 flex flex-col justify-between rounded-sm shadow-inner group-hover:border-[#5B3FA8] transition-colors">
+<div class="flex items-center justify-between border-b border-[#23242B] pb-2">
+<span class="text-[9px] font-mono tracking-widest text-[#9CA3AF] uppercase">MULTI-TENANT SAAS</span>
+<span class="text-[9px] font-mono text-purple-400">62 STORES</span>
+</div>
+<div class="space-y-1.5 my-auto">
+<div class="flex items-center justify-between text-[8px] font-mono text-[#9CA3AF]">
+<span>Batch Exp. Alert</span>
+<span class="text-rose-400">3 Days</span>
+</div>
+<div class="w-full bg-[#1F2028] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#5B3FA8] h-full w-4/5"></div>
+</div>
+<div class="flex justify-between text-[7px] font-mono text-[#6B6B6B]">
+<span>99.98% API UPTIME</span>
+<span>SSLCOMMERZ</span>
+</div>
+</div>
+<div class="text-[8px] font-mono text-[#6B6B6B] flex justify-between">
+<span>DOCKER</span>
+<span>REDIS CACHE</span>
+</div>
+</div>
+</div>
+<h3 class="text-xs font-bold tracking-[0.16em] text-[#111111] uppercase group-hover:text-[#5B3FA8] transition-colors">
+            Pharmacy POS
+          </h3>
+<p class="text-[12px] text-[#6B6B6B] mt-0.5 font-normal">
+            Multi-tenant SaaS
+          </p>
+</article>
+<!-- Project Card 4: Exam Prep Platform -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-[#151518] overflow-hidden mb-4 relative flex items-center justify-center p-4">
+<div class="w-full h-full bg-[#0B0B0D] border border-[#222228] p-4 flex flex-col justify-between rounded-sm shadow-inner group-hover:border-[#5B3FA8] transition-colors">
+<div class="flex items-center justify-between border-b border-[#222228] pb-2">
+<span class="text-[9px] font-mono tracking-widest text-[#9CA3AF] uppercase">MCQ ANALYTICS / AI</span>
+<span class="text-[9px] font-mono text-amber-400">LIVE EXAM</span>
+</div>
+<div class="my-auto space-y-2">
+<div class="flex items-end justify-between h-8 px-2 gap-1.5">
+<div class="w-1/5 bg-[#2A2B35] h-3 rounded-t"></div>
+<div class="w-1/5 bg-[#2A2B35] h-5 rounded-t"></div>
+<div class="w-1/5 bg-[#5B3FA8] h-8 rounded-t"></div>
+<div class="w-1/5 bg-[#2A2B35] h-4 rounded-t"></div>
+<div class="w-1/5 bg-[#2A2B35] h-6 rounded-t"></div>
+</div>
+<div class="text-[8px] font-mono text-center text-[#9CA3AF]">
+                  Percentile Rank: <span class="text-white font-bold">Top 1.4%</span>
+</div>
+</div>
+<div class="text-[8px] font-mono text-[#6B6B6B] flex justify-between">
+<span>FASTAPI</span>
+<span>OPENAI RAG</span>
+</div>
+</div>
+</div>
+<h3 class="text-xs font-bold tracking-[0.16em] text-[#111111] uppercase group-hover:text-[#5B3FA8] transition-colors">
+            Exam Prep Platform
+          </h3>
+<p class="text-[12px] text-[#6B6B6B] mt-0.5 font-normal">
+            MCQ &amp; AI Reports
+          </p>
+</article>
+</div>
+</div>
+</section>
+<!-- END: SelectedProjects -->
+<!-- BEGIN: AboutSection -->
+<section class="py-20 bg-[#F4F4F6] border-b border-[#E5E5E7]" id="about">
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Philosophy & Signature -->
+<div class="lg:col-span-4 flex flex-col justify-center">
+<span class="text-[11px] font-semibold tracking-[0.22em] text-[#5B3FA8] uppercase mb-4 block">
+          About Me
+        </span>
+<h2 class="font-serif text-3xl sm:text-4xl text-[#111111] leading-[1.18] font-normal mb-6">
+          Good backend work is invisible <span class="italic text-[#5B3FA8]">until it breaks.</span>
+</h2>
+<p class="text-[14px] leading-relaxed text-[#6B6B6B] mb-6 font-normal">
+          I design systems that survive real-world scale, flaky networks, and peak traffic without silent failures. I believe clean code, testability, and thoughtful schema design are the real foundation of great user experiences.
+        </p>
+<!-- Signature -->
+<div class="mb-8">
+<span class="font-hand text-4xl text-[#5B3FA8] font-bold block transform -rotate-3">Rafi</span>
+</div>
+<!-- Download CV Button -->
+<div>
+<a class="inline-flex items-center justify-center bg-white text-[#111111] border border-[#111111] text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-3.5 hover:bg-[#FAFAFA] transition-colors rounded-none" href="#">
+            Download CV <span class="ml-2 text-sm">⤓</span>
+</a>
+</div>
+</div>
+<!-- Center Column: Framed Editorial Poster Art -->
+<div class="lg:col-span-4 flex items-center justify-center">
+<div class="w-full max-w-[340px] bg-white p-6 shadow-sm border border-[#E5E5E7] flex flex-col items-center text-center">
+<!-- Minimal Frame Container -->
+<div class="w-full border border-[#111111] p-8 flex flex-col items-center justify-center aspect-[3/4] bg-[#FAFAFA]">
+<span class="text-[10px] tracking-[0.3em] font-mono text-[#6B6B6B] uppercase mb-6">CODE PHILOSOPHY</span>
+<div class="font-serif text-2xl sm:text-3xl text-[#111111] leading-snug tracking-tight font-medium uppercase">
+              Good<br/>
+              Architecture<br/>
+              Is Good<br/>
+<span class="italic text-[#5B3FA8]">Business.</span>
+</div>
+<div class="w-8 h-[1px] bg-[#111111] my-6"></div>
+<span class="text-[9px] font-mono text-[#6B6B6B] tracking-widest">SR — 2026</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Key Stats with Dividers -->
+<div class="lg:col-span-4 flex flex-col justify-center divide-y divide-[#E5E5E7]">
+<!-- Stat Item 1 -->
+<div class="py-5 first:pt-0 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#E9E4FA] flex items-center justify-center text-[#5B3FA8]">
+<!-- Code / Smiley Icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<polyline points="16 18 22 12 16 6"></polyline>
+<polyline points="8 6 2 12 8 18"></polyline>
+</svg>
+</div>
+<span class="font-serif text-4xl text-[#111111] font-light tracking-tight">2+</span>
+</div>
+<span class="text-[11px] font-bold tracking-[0.18em] text-[#6B6B6B] uppercase text-right">Years of Experience</span>
+</div>
+<!-- Stat Item 2 -->
+<div class="py-5 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#E9E4FA] flex items-center justify-center text-[#5B3FA8]">
+<!-- Rocket Icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+<path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+</svg>
+</div>
+<span class="font-serif text-4xl text-[#111111] font-light tracking-tight">15+</span>
+</div>
+<span class="text-[11px] font-bold tracking-[0.18em] text-[#6B6B6B] uppercase text-right">Projects Built</span>
+</div>
+<!-- Stat Item 3 -->
+<div class="py-5 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#E9E4FA] flex items-center justify-center text-[#5B3FA8]">
+<!-- Shield / Payment Icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<span class="font-serif text-4xl text-[#111111] font-light tracking-tight">8+</span>
+</div>
+<span class="text-[11px] font-bold tracking-[0.18em] text-[#6B6B6B] uppercase text-right">Payment Flows</span>
+</div>
+<!-- Stat Item 4 -->
+<div class="py-5 last:pb-0 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#E9E4FA] flex items-center justify-center text-[#5B3FA8]">
+<!-- Award Icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<circle cx="12" cy="8" r="6"></circle>
+<path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+</svg>
+</div>
+<span class="font-serif text-4xl text-[#111111] font-light tracking-tight">12+</span>
+</div>
+<span class="text-[11px] font-bold tracking-[0.18em] text-[#6B6B6B] uppercase text-right">Core Technologies</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: CtaBanner -->
+<section class="w-full bg-[#E9E4FA] py-14">
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<!-- Headline & Label -->
+<div>
+<span class="text-[11px] font-semibold tracking-[0.22em] text-[#5B3FA8] uppercase mb-2 block">
+          Have a project in mind?
+        </span>
+<h2 class="font-serif text-3xl sm:text-4xl lg:text-[42px] text-[#111111] font-normal tracking-tight">
+          Let's Build Something Reliable Together.
+        </h2>
+</div>
+<!-- Button -->
+<div>
+<a class="inline-flex items-center justify-center bg-[#111111] text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-9 py-4 hover:bg-[#5B3FA8] transition-colors whitespace-nowrap rounded-none" href="#contact">
+          Let's Work Together <span class="ml-2">→</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: CtaBanner -->
+<!-- BEGIN: MainFooter -->
+<footer class="w-full bg-[#FAFAFA] pt-16 pb-12 text-[#111111]" id="contact">
+<div class="max-w-[1440px] mx-auto px-8 lg:px-16">
+<!-- Footer Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-[#E5E5E7]">
+<!-- Brand / Identity Column -->
+<div class="lg:col-span-4">
+<a class="flex items-center gap-3.5 mb-4" href="#">
+<span class="font-serif text-3xl font-bold tracking-tight text-[#111111]">SR</span>
+<div class="h-8 w-[1px] bg-[#E5E5E7]"></div>
+<div class="flex flex-col">
+<span class="text-[13px] font-bold tracking-[0.2em] text-[#111111] uppercase leading-tight">Sadik Hasan Rafi</span>
+<span class="text-[9px] font-semibold tracking-[0.25em] text-[#6B6B6B] uppercase mt-0.5">Backend Developer</span>
+</div>
+</a>
+<p class="text-[13px] text-[#6B6B6B] max-w-xs leading-relaxed">
+            Engineering robust APIs, high-throughput microservices, and reliable business systems with precision.
+          </p>
+</div>
+<!-- Quick Links -->
+<div class="lg:col-span-2">
+<h4 class="text-[11px] font-bold tracking-[0.2em] text-[#111111] uppercase mb-4">Quick Links</h4>
+<ul class="space-y-2.5 text-[13px] text-[#6B6B6B]">
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#home">Home</a></li>
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#about">About</a></li>
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#work">Work</a></li>
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#services">Services</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div class="lg:col-span-2">
+<h4 class="text-[11px] font-bold tracking-[0.2em] text-[#111111] uppercase mb-4">Services</h4>
+<ul class="space-y-2.5 text-[13px] text-[#6B6B6B]">
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#services">API Architecture</a></li>
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#services">ERP / POS Solutions</a></li>
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#services">Payment Engines</a></li>
+<li><a class="hover:text-[#5B3FA8] transition-colors" href="#services">LLM Integrations</a></li>
+</ul>
+</div>
+<!-- Contact Details -->
+<div class="lg:col-span-2">
+<h4 class="text-[11px] font-bold tracking-[0.2em] text-[#111111] uppercase mb-4">Contact</h4>
+<div class="space-y-2.5 text-[13px] text-[#6B6B6B]">
+<a class="flex items-center gap-2 hover:text-[#5B3FA8] transition-colors" href="mailto:hello@sadikrafi.dev">
+<svg class="w-4 h-4 text-[#5B3FA8] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+<span>hello@sadikrafi.dev</span>
+</a>
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-[#5B3FA8] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+<span>+880 1712 345678</span>
+</div>
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-[#5B3FA8] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+<span>Dhaka, Bangladesh</span>
+</div>
+</div>
+</div>
+<!-- Follow Me Links -->
+<div class="lg:col-span-2">
+<h4 class="text-[11px] font-bold tracking-[0.2em] text-[#111111] uppercase mb-4">Follow Me</h4>
+<div class="flex items-center space-x-4 text-[#111111]">
+<!-- GitHub -->
+<a class="hover:text-[#5B3FA8] transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<!-- LinkedIn -->
+<a class="hover:text-[#5B3FA8] transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74V10.13H5.06v8.37h2.8z"></path>
+</svg>
+</a>
+<!-- Twitter/X -->
+<a class="hover:text-[#5B3FA8] transition-colors" href="https://x.com" rel="noopener noreferrer" target="_blank" title="Twitter/X">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg>
+</a>
+<!-- Dev.to -->
+<a class="hover:text-[#5B3FA8] transition-colors" href="https://dev.to" rel="noopener noreferrer" target="_blank" title="Dev.to">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M7.42 10.05c-.18-.1-.4-.15-.65-.15H5.4v4.2h1.37c.25 0 .47-.05.65-.15.18-.1.31-.24.4-.42.09-.18.14-.39.14-.63v-1.22c0-.24-.05-.45-.14-.63-.09-.18-.22-.32-.4-.42v.42zm7.62-.05h-2.1v4.2h2.1v-.84h-1.26v-.84h1.05v-.84h-1.05v-.84h1.26v-.84zm4.41.05c-.18-.1-.4-.15-.65-.15H17.4v4.2h1.37c.25 0 .47-.05.65-.15.18-.1.31-.24.4-.42.09-.18.14-.39.14-.63v-1.22c0-.24-.05-.45-.14-.63-.09-.18-.22-.32-.4-.42zM2 6v12h20V6H2zm6.75 6.94c0 .48-.11.89-.32 1.23-.21.34-.51.6-.9.77-.39.17-.86.26-1.41.26H4.2V8.8h1.92c.55 0 1.02.09 1.41.26.39.17.69.43.9.77.21.34.32.75.32 1.23v1.88zm5.45 2.26H11.7V8.8h2.5v1.2h-1.35v1.05h1.2v1.2h-1.2v1.35h1.35v1.2zm6.75-2.26c0 .48-.11.89-.32 1.23-.21.34-.51.6-.9.77-.39.17-.86.26-1.41.26H16.2V8.8h1.92c.55 0 1.02.09 1.41.26.39.17.69.43.9.77.21.34.32.75.32 1.23v1.88z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<!-- Copyright Sub-Footer -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-center text-center">
+<p class="text-[12px] font-mono text-[#6B6B6B]">
+          © 2026 Sadik Hasan Rafi. All Rights Reserved.
+        </p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>
