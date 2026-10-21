@@ -124,7 +124,17 @@ export const pathHints: Record<string, Hint> = {
 
   // Media
   "media.portrait": { label: "Portrait", help: "Used in the home hero and on the About page." },
+  "media.portraitDark": {
+    kind: "image",
+    label: "Portrait — dark theme (optional)",
+    help: "Shown instead of the portrait when the site is dark. Leave empty to use the portrait above (shown framed).",
+  },
   "media.desk": { label: "Desk photo", help: "The framed photo in the home About section." },
+  "media.deskDark": {
+    kind: "image",
+    label: "Desk photo — dark theme (optional)",
+    help: "Shown instead of the desk photo when the site is dark. Leave empty to use the one above.",
+  },
   "media.ogImage": { label: "Link preview image", help: "Shown when the site is shared. 1200×630 is ideal." },
   "media.cv": { kind: "file", label: "CV / résumé (PDF)" },
 

@@ -1,3 +1,4 @@
+import Ambient from "@/components/effects/Ambient";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { cn, delay } from "@/lib/utils";
 
@@ -15,7 +16,7 @@ type Props = {
 export default function PageIntro({ eyebrow, lines, accent, lead, children, className }: Props) {
   return (
     <section className={cn("relative overflow-hidden border-b border-line bg-bg", className)}>
-      <div aria-hidden className="dot-grid anim-fade absolute -right-4 top-10 hidden h-44 w-48 opacity-50 lg:block" style={delay(500)} />
+      <Ambient variant="intro" className="anim-fade" />
       <div className="container-page relative py-14 md:py-20 lg:py-24">
         {eyebrow && (
           <div className="anim-rise mb-8">

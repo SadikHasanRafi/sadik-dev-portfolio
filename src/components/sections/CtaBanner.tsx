@@ -1,3 +1,4 @@
+import Ambient from "@/components/effects/Ambient";
 import MagneticCta from "@/components/sections/MagneticCta";
 import { safeHref } from "@/lib/links";
 import { delay } from "@/lib/utils";
@@ -8,7 +9,7 @@ export default function CtaBanner({ banner }: { banner: Banner }) {
   if (!banner.visible) return null;
   return (
     <section className="relative overflow-hidden bg-lavender">
-      <div aria-hidden className="dot-grid absolute -right-6 top-6 hidden h-40 w-56 opacity-60 md:block" />
+      <Ambient variant="band" />
       <div className="container-page relative flex flex-col justify-between gap-8 py-14 md:py-20 lg:flex-row lg:items-center">
         <div className="max-w-2xl" data-reveal>
           {banner.eyebrow && (

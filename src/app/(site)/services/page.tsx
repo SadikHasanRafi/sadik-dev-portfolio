@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Ambient from "@/components/effects/Ambient";
 import Icon from "@/components/ui/Icon";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Tag from "@/components/ui/Tag";
@@ -87,8 +88,9 @@ export default async function ServicesPage() {
       {services.philosophy.visible && (
         <section className="border-b border-line bg-bg py-14 md:py-20">
           <div className="container-page">
-            <div data-dark data-reveal className="flex flex-col items-center justify-between gap-10 bg-night p-6 text-white sm:p-10 lg:flex-row lg:p-14">
-              <div className="max-w-xl">
+            <div data-dark data-reveal className="relative flex flex-col items-center justify-between gap-10 overflow-hidden bg-night p-6 text-white sm:p-10 lg:flex-row lg:p-14">
+              <Ambient variant="dark" />
+              <div className="relative max-w-xl">
                 <h3 className="mb-4 font-serif text-[1.8rem] leading-tight sm:text-headline-lg">{services.philosophy.title}</h3>
                 <p className="text-body-md text-white/75">{services.philosophy.body}</p>
               </div>
@@ -172,7 +174,7 @@ export default async function ServicesPage() {
 /** Request path drawn as a blueprint: client → API guard → database, with the audit loop back. */
 function FlowDiagram() {
   return (
-    <svg viewBox="0 0 300 184" className="h-auto w-full max-w-[22rem] shrink-0 text-lavender-deep" fill="none" aria-hidden>
+    <svg viewBox="0 0 300 184" className="relative h-auto w-full max-w-[22rem] shrink-0 text-lavender-deep" fill="none" aria-hidden>
       <rect x="8" y="8" width="84" height="50" fill="#2A2A2D" stroke="currentColor" strokeWidth="1.2" />
       <text x="50" y="31" fill="#F2F0F0" fontSize="9.5" fontWeight="600" textAnchor="middle" className="font-sans">CLIENT / POS</text>
       <text x="50" y="45" fill="#A0A0A3" fontSize="8" textAnchor="middle" className="font-sans">JWT Session</text>

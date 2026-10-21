@@ -63,7 +63,7 @@ export default function Header({ brand, nav, cta, contact, talk, themeToggle }: 
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   className={cn(
-                    "label-caps relative flex h-full items-center tracking-[0.2em] transition-colors duration-300",
+                    "label-caps relative flex h-full items-center tracking-[0.2em] transition-colors duration-300 focus-visible:text-violet focus-visible:outline-none",
                     active ? "text-ink" : "text-muted hover:text-ink",
                   )}
                 >
@@ -72,7 +72,7 @@ export default function Header({ brand, nav, cta, contact, talk, themeToggle }: 
                     aria-hidden
                     className={cn(
                       "absolute inset-x-0 -bottom-px h-0.5 origin-left bg-violet transition-transform duration-500 ease-out-soft",
-                      active ? "scale-x-100" : "scale-x-0",
+                      active ? "scale-x-100" : "scale-x-0 in-focus-visible:scale-x-100",
                     )}
                   />
                 </Link>

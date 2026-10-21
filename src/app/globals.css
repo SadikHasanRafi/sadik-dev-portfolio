@@ -169,6 +169,10 @@
 
 /* Fades the portrait's off-white edges into the page ground */
 .portrait-mask {
+  /* The photo's off-white backdrop: brighten slightly, then "darken" against the page
+     so the backdrop takes the page colour exactly and no rectangle edge shows. */
+  filter: brightness(1.03);
+  mix-blend-mode: darken;
   -webkit-mask-image:
     linear-gradient(to bottom, transparent 0, #000 16%),
     linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
@@ -417,6 +421,7 @@ html.theme-fade * {
 }
 /* The portrait has a light studio background: on dark pages show it as a framed print */
 :root[data-theme="dark"] .portrait-mask {
+  mix-blend-mode: normal;
   -webkit-mask-image: none;
   mask-image: none;
   padding: 0.75rem 0.75rem 0;
@@ -424,6 +429,150 @@ html.theme-fade * {
   border: 1px solid var(--color-line);
   border-bottom: 0;
   filter: brightness(0.94);
+}
+
+/* Theme-specific images: only-light / only-dark swap with the theme */
+:root[data-theme="dark"] .only-light,
+:root:not([data-theme="dark"]) .only-dark {
+  display: none;
+}
+/* A dedicated dark portrait fades its edges into the dark page, no frame */
+.portrait-mask-dark {
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0, #000 16%),
+    linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0, #000 16%),
+    linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* ---------- Ambient background motion (components/effects/Ambient.tsx) ---------- */
+
+@keyframes ambient-dots {
+  to {
+    transform: translate3d(-14px, 14px, 0);
+  }
+}
+@keyframes ambient-grid {
+  to {
+    transform: translate3d(-48px, -48px, 0);
+  }
+}
+@keyframes ambient-wander-a {
+  0% {
+    transform: translate3d(-8%, -12%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(18%, 10%, 0) scale(1.15);
+  }
+  100% {
+    transform: translate3d(4%, 22%, 0) scale(0.92);
+  }
+}
+@keyframes ambient-wander-b {
+  0% {
+    transform: translate3d(10%, 18%, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(-16%, -6%, 0) scale(0.9);
+  }
+  100% {
+    transform: translate3d(-4%, -18%, 0) scale(1.12);
+  }
+}
+@keyframes ambient-sweep {
+  0%,
+  55% {
+    transform: translate3d(-120%, 0, 0) skewX(-18deg);
+  }
+  100% {
+    transform: translate3d(320%, 0, 0) skewX(-18deg);
+  }
+}
+
+/* Drifting dot field (top-right corner) */
+.ambient-dots-box {
+  position: absolute;
+  right: -1.5rem;
+  top: 1.5rem;
+  width: 15rem;
+  height: 11rem;
+  overflow: hidden;
+  opacity: 0.6;
+  -webkit-mask-image: linear-gradient(to left, #000 40%, transparent);
+  mask-image: linear-gradient(to left, #000 40%, transparent);
+}
+.ambient-dots {
+  position: absolute;
+  inset: -14px;
+  animation: ambient-dots 5s linear infinite;
+  will-change: transform;
+}
+
+/* Faint blueprint grid that slowly pans */
+.ambient-grid {
+  position: absolute;
+  inset: -48px;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-line) 70%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-line) 70%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.55;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 85% 30%, #000, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 80% at 85% 30%, #000, transparent 75%);
+  animation: ambient-grid 18s linear infinite;
+  will-change: transform;
+}
+.ambient-dark .ambient-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-lavender-deep) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender-deep) 14%, transparent) 1px, transparent 1px);
+  opacity: 1;
+}
+
+/* Soft accent tint that wanders (gradient only — no blur filter, so it's cheap) */
+.ambient-tint {
+  position: absolute;
+  width: 46rem;
+  height: 46rem;
+  max-width: 120vw;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--color-violet) 16%, transparent), transparent);
+  will-change: transform;
+}
+.ambient-tint-a {
+  left: -12rem;
+  top: -22rem;
+  animation: ambient-wander-a 22s ease-in-out infinite alternate;
+}
+.ambient-tint-b {
+  right: -14rem;
+  bottom: -26rem;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--color-lavender-deep) 22%, transparent), transparent);
+  animation: ambient-wander-b 26s ease-in-out infinite alternate;
+}
+.ambient-intro .ambient-tint {
+  opacity: 0.7;
+}
+.ambient-dark .ambient-tint-a {
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--color-violet) 22%, transparent), transparent);
+  left: auto;
+  right: -10rem;
+}
+
+/* A light sweep that crosses now and then */
+.ambient-sweep {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, white 7%, transparent), transparent);
+  animation: ambient-sweep 9s var(--ease-out-soft) infinite;
+  will-change: transform;
+}
+:root:not([data-theme="dark"]) .ambient-band .ambient-sweep {
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, white 45%, transparent), transparent);
 }
 
 /* ---------- FAQ accordion ---------- */

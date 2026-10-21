@@ -102,12 +102,14 @@ export const defaultContent: SiteContent = {
   socials: site.socials.map((s) => ({ ...s, visible: true })),
   media: {
     portrait: { src: "/images/portrait.webp", width: 1296, height: 1213, alt: "Sadik Hasan Rafi, backend developer, in a black and white portrait" },
+    portraitDark: null,
     desk: {
       src: "/images/desk.webp",
       width: 1448,
       height: 1086,
       alt: "A black frame on a white desk reading “We want a world to live”, beside a snake plant, books and pencils",
     },
+    deskDark: null,
     ogImage: { src: "/images/og.jpg", width: 1200, height: 630, alt: site.name },
     cv: { src: site.cv, name: "Sadik-Hasan-Rafi-Resume.pdf" },
   },

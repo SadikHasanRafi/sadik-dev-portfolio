@@ -8,7 +8,7 @@ import type { SiteContent } from "@/types";
 
 export default function AboutTeaser({ content }: { content: SiteContent }) {
   const { about, stats } = content.home;
-  const { desk, cv } = content.media;
+  const { desk, deskDark, cv } = content.media;
   const shownStats = stats.filter(isOn);
 
   return (
@@ -48,8 +48,18 @@ export default function AboutTeaser({ content }: { content: SiteContent }) {
                 width={desk.width}
                 height={desk.height}
                 sizes="(min-width: 1024px) 400px, (min-width: 768px) 45vw, 90vw"
-                className="h-auto w-full transition-transform duration-[1.2s] ease-out-soft group-hover:scale-[1.04]"
+                className={`h-auto w-full transition-transform duration-[1.2s] ease-out-soft group-hover:scale-[1.04] ${deskDark ? "only-light" : ""}`}
               />
+              {deskDark && (
+                <Image
+                  src={deskDark.src}
+                  alt={deskDark.alt || desk.alt}
+                  width={deskDark.width}
+                  height={deskDark.height}
+                  sizes="(min-width: 1024px) 400px, (min-width: 768px) 45vw, 90vw"
+                  className="only-dark h-auto w-full transition-transform duration-[1.2s] ease-out-soft group-hover:scale-[1.04]"
+                />
+              )}
             </div>
           </figure>
         </div>

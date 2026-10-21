@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import Eyebrow from "@/components/ui/Eyebrow";
 import SiteChrome from "@/components/layout/SiteChrome";
+import Ambient from "@/components/effects/Ambient";
 import { getContent } from "@/lib/store";
 import { delay } from "@/lib/utils";
 
@@ -11,7 +12,7 @@ export default async function NotFound() {
   return (
     <SiteChrome content={content}>
       <section className="relative overflow-hidden border-b border-line">
-        <div aria-hidden className="dot-grid absolute right-8 top-10 h-48 w-40 opacity-60" />
+        <Ambient variant="intro" />
         <div className="container-page relative flex min-h-[70vh] flex-col justify-center py-20">
           <Eyebrow className="anim-rise mb-6">Error 404 / Route Not Found</Eyebrow>
           <h1

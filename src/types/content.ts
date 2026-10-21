@@ -100,7 +100,16 @@ export type SiteContent = {
     utc: string;
   };
   socials: SocialLink[];
-  media: { portrait: ImageAsset; desk: ImageAsset; ogImage: ImageAsset; cv: FileAsset };
+  media: {
+    portrait: ImageAsset;
+    /** Optional version shown in dark mode; falls back to `portrait` */
+    portraitDark: ImageAsset | null;
+    desk: ImageAsset;
+    /** Optional version shown in dark mode; falls back to `desk` */
+    deskDark: ImageAsset | null;
+    ogImage: ImageAsset;
+    cv: FileAsset;
+  };
   home: {
     seo: Seo;
     sections: { id: HomeSectionId; visible: boolean }[];

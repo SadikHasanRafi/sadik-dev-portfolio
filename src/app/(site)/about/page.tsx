@@ -56,8 +56,17 @@ export default async function AboutPage() {
                   fill
                   preload
                   sizes="(min-width: 1024px) 400px, (min-width: 768px) 40vw, 92vw"
-                  className="object-cover object-[60%_center] transition-transform duration-[1.4s] ease-out-soft group-hover:scale-[1.04]"
+                  className={`origin-bottom scale-[1.14] object-cover object-[60%_center] transition-transform duration-[1.4s] ease-out-soft group-hover:scale-[1.18] ${media.portraitDark ? "only-light" : ""}`}
                 />
+                {media.portraitDark && (
+                  <Image
+                    src={media.portraitDark.src}
+                    alt={about.portraitAlt || media.portraitDark.alt || media.portrait.alt}
+                    fill
+                    sizes="(min-width: 1024px) 400px, (min-width: 768px) 40vw, 92vw"
+                    className="only-dark origin-bottom scale-[1.14] object-cover object-[60%_center] transition-transform duration-[1.4s] ease-out-soft group-hover:scale-[1.18]"
+                  />
+                )}
               </div>
               {about.availability.visible && (
                 <div className="flex items-center justify-between bg-strip px-3 py-2.5 text-body-sm">

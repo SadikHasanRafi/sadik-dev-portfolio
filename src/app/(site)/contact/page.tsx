@@ -6,6 +6,7 @@ import CopyButton from "@/components/blog/CopyButton";
 import ContactForm from "@/components/contact/ContactForm";
 import LocalTime from "@/components/contact/LocalTime";
 import FaqSection from "@/components/sections/FaqSection";
+import Ambient from "@/components/effects/Ambient";
 import PageIntro from "@/components/sections/PageIntro";
 import { isOn, safeHref, telHref } from "@/lib/links";
 import { getContent } from "@/lib/store";
@@ -142,8 +143,9 @@ export default async function ContactPage() {
 
       {/* Fast track */}
       {page.fastTrack.visible && (
-        <section className="bg-lavender">
-          <div className="container-page flex flex-col justify-between gap-8 py-14 md:py-16 lg:flex-row lg:items-center">
+        <section className="relative overflow-hidden bg-lavender">
+          <Ambient variant="band" />
+          <div className="container-page relative flex flex-col justify-between gap-8 py-14 md:py-16 lg:flex-row lg:items-center">
             <div className="max-w-2xl" data-reveal>
               <h2 className="mb-2 font-serif text-[1.9rem] leading-tight text-violet-ink sm:text-headline-lg">{page.fastTrack.title}</h2>
               <p className="text-body-md text-violet-ink/70">{page.fastTrack.body}</p>
