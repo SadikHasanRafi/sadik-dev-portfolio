@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/run/media/rafi/All Projects/personals/web/personal_portfolio/personal-portfolio\" && cat AGENTS.md CLAUDE.md && cat src/app/layout.tsx next.config.ts && rm -rf .git && ls node_modules/next/dist/docs 2>/dev/null | head)",
+      "Bash(npm i *)",
+      "Bash(sed -i '/\"baseUrl\": \"\\\\.\",/d' tsconfig.app.json)",
+      "Bash(sed -i 's/\"name\": \"client\"/\"name\": \"portfolio-dashboard-client\"/' package.json)",
+      "Bash(npm run *)",
+      "Bash(sed -i 's#\"@/\\\\*\": \\\\[\"src/\\\\*\"\\\\]#\"@/*\": [\"./src/*\"]#' tsconfig.app.json)",
+      "Bash(which chromium *)",
+      "Read(//home/rafi/.cache/**)",
+      "Bash(sed -i 's/<span className=\"font-serif text-4xl font-light\">{s.value}/<span className=\"font-serif text-4xl font-light [font-variant-numeric:lining-nums]\">{s.value}/' src/components/sections/About.tsx)",
+      "Bash(google-chrome --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,2650 --virtual-time-budget=8000 --screenshot=/tmp/claude-1000/-run-media-rafi-All-Projects-personals-web-personal-portfolio/3482f2a8-e88f-4a64-bd69-b97dcfe03ebb/scratchpad/portfolio2.png http://localhost:3000)"
+    ],
+    "additionalDirectories": [
+      "/run/media/rafi/All Projects/personals/web/personal_portfolio/personal-portfolio/.git"
+    ]
+  }
+}
