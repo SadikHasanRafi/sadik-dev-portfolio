@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
+import { uploadFile } from "@/actions/upload";
 import { DButton, DIcon, FieldShell, inputClass } from "@/components/dashboard/ui";
 import { cn } from "@/lib/utils";
 import type { FileAsset, ImageAsset } from "@/types";
@@ -8,10 +9,9 @@ import type { FileAsset, ImageAsset } from "@/types";
 async function upload(file: File) {
   const body = new FormData();
   body.append("file", file);
-  const res = await fetch("/api/dashboard/upload/", { method: "POST", body });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error ?? `Upload failed (${res.status})`);
-  return data as { src: string; width?: number; height?: number; name?: string };
+  const result = await uploadFile(body);
+  if (!result.ok) throw new Error(result.error);
+  return result;
 }
 
 /** Shared drop zone: click to browse or drop a file on it. */

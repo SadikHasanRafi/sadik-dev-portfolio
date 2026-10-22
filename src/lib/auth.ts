@@ -1,6 +1,6 @@
 /**
  * Dashboard sessions: an HMAC-signed, expiring token in an HttpOnly cookie.
- * Uses Web Crypto so the same code runs in proxy.ts and in route handlers.
+ * Uses Web Crypto so the same code runs in proxy.ts and in server actions.
  */
 export const SESSION_COOKIE = "sr_session";
 export const SESSION_TTL_SECONDS = 60 * 60 * 24 * 7;

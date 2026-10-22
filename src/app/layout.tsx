@@ -3,6 +3,7 @@ import { Caveat, Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/effects/Cursor";
 import RevealObserver from "@/components/effects/RevealObserver";
+import Telemetry from "@/components/effects/Telemetry";
 import { getContent } from "@/lib/store";
 import { themeCss, themeScript } from "@/lib/theme";
 
@@ -70,6 +71,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <Cursor />
         <RevealObserver />
+        <Telemetry />
       </body>
     </html>
   );

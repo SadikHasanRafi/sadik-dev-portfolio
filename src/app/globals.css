@@ -297,6 +297,48 @@
   animation: fade-in 0.45s ease both;
 }
 
+/* Loading skeletons: a soft light sweep over a flat block (transform only) */
+@keyframes shimmer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-line);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-paper) 70%, transparent), transparent);
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* Outlined giant numerals (404) */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-ink);
+}
+
+/* Slow float for the 404 marker */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float-y 5s ease-in-out infinite;
+}
+
 /* Filtered lists re-animate when their items change */
 .item-enter {
   animation: rise 0.55s var(--ease-out-soft) both;

@@ -1,3 +1,4 @@
+import { log } from "@/lib/log";
 import { readUpload } from "@/lib/store";
 
 /** Serves dashboard uploads from GridFS. Names are random and never reused, so they cache forever. */
@@ -17,7 +18,7 @@ export async function GET(_request: Request, { params }: RouteContext<"/media/[f
       },
     });
   } catch (err) {
-    console.error("[media] Reading from MongoDB failed:", err);
+    log.error("media", "Reading from MongoDB failed", err, { file });
     return new Response("Temporarily unavailable", { status: 503 });
   }
 }

@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { logout } from "@/actions/auth";
+import { saveSiteContent } from "@/actions/content";
 import { ContentContext, SectionEditor, UpdateContext } from "@/components/dashboard/AutoForm";
 import BackupPanel from "@/components/dashboard/BackupPanel";
 import NavEditor from "@/components/dashboard/NavEditor";
@@ -31,16 +33,10 @@ export default function DashboardApp({ initial, dbReady }: { initial: SiteConten
   const save = useCallback(async () => {
     setStatus({ kind: "saving" });
     try {
-      const res = await fetch("/api/dashboard/content/", {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(content),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (res.status === 401) throw new Error("Your session expired — open the dashboard again from the Let’s Talk popup.");
-      if (!res.ok) throw new Error(data.error ?? `Save failed (${res.status})`);
-      setSaved(data.content);
-      setContent(data.content);
+      const result = await saveSiteContent(content);
+      if (!result.ok) throw new Error(result.error);
+      setSaved(result.content);
+      setContent(result.content);
       setStatus({ kind: "saved", message: `Saved at ${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}` });
     } catch (e) {
       setStatus({ kind: "error", message: e instanceof Error ? e.message : "Save failed" });
@@ -90,7 +86,7 @@ export default function DashboardApp({ initial, dbReady }: { initial: SiteConten
 
   const logout = async () => {
     if (dirty && !window.confirm("You have unsaved changes. Log out anyway?")) return;
-    await fetch("/api/auth/logout/", { method: "POST" }).catch(() => {});
+    await logout().catch(() => {});
     router.push("/");
   };
 

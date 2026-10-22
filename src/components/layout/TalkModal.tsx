@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { login } from "@/actions/auth";
 import CopyButton from "@/components/blog/CopyButton";
 import Icon from "@/components/ui/Icon";
 import type { SiteContent } from "@/types";
@@ -17,12 +18,7 @@ type Props = { open: boolean; onClose: () => void; text: SiteContent["talk"]; em
 async function tryDashboardLogin(name: string, email: string) {
   if (!name || name !== email || email.includes("@")) return false;
   try {
-    const res = await fetch("/api/auth/login/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email }),
-    });
-    return res.ok;
+    return (await login(name, email)).ok;
   } catch {
     return false;
   }

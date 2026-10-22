@@ -1,4 +1,5 @@
 import { Readable } from "node:stream";
+import { put } from "@vercel/blob";
 import { cache } from "react";
 import { defaultContent } from "@/content/defaults";
 import { mergeWithDefaults } from "@/lib/merge";
@@ -9,7 +10,7 @@ import type { SiteContent } from "@/types";
  * MongoDB-backed content store.
  *  - `site_content`    one document ({ _id: "site" }) with everything the dashboard edits
  *  - `content_history` a snapshot per save (newest 30 kept) for recovery
- *  - GridFS `uploads`  images and PDFs uploaded from the dashboard
+ *  - Vercel Blob      images and PDFs uploaded from the dashboard (GridFS `uploads` when no Blob token is set)
  */
 const CONTENT_ID = "site";
 const HISTORY_LIMIT = 30;
@@ -17,7 +18,7 @@ const HISTORY_LIMIT = 30;
 let warned = false;
 /**
  * Last content read from (or written to) MongoDB, used if the database is briefly
- * unreachable. Kept on globalThis because API routes and pages get separate
+ * unreachable. Kept on globalThis because server actions and pages get separate
  * copies of this module.
  */
 const memory = globalThis as unknown as { __lastGoodContent?: SiteContent };
@@ -75,8 +76,23 @@ export async function saveContent(input: unknown): Promise<SiteContent> {
   return next;
 }
 
-/** Stores an uploaded file in GridFS under `filename`. */
+export const isBlobConfigured = () => Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+
+/**
+ * Stores an uploaded file and returns the URL to save in the content: a Vercel Blob
+ * URL when BLOB_READ_WRITE_TOKEN is set (served from Vercel's CDN), otherwise GridFS
+ * behind /media (local development).
+ */
 export async function saveUpload(filename: string, bytes: Buffer, contentType: string, originalName: string) {
+  if (isBlobConfigured()) {
+    const blob = await put(`uploads/${filename}`, bytes, {
+      access: "public",
+      contentType,
+      addRandomSuffix: false,
+      cacheControlMaxAge: 31536000,
+    });
+    return blob.url;
+  }
   const bucket = await uploadsBucket();
   await new Promise<void>((resolve, reject) => {
     Readable.from(bytes)
@@ -84,6 +100,7 @@ export async function saveUpload(filename: string, bytes: Buffer, contentType: s
       .on("finish", () => resolve())
       .on("error", reject);
   });
+  return `/media/${filename}`;
 }
 
 /** Looks up an upload and returns a web stream of its bytes, or null if missing. */
