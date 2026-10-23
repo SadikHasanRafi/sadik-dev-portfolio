@@ -35,10 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: media.ogImage.src, width: media.ogImage.width, height: media.ogImage.height, alt: media.ogImage.alt }],
     },
     twitter: { card: "summary_large_image", images: [media.ogImage.src] },
-    icons: {
-      icon: identity.favicon?.src ?? "/favicon.svg",
-      apple: identity.favicon?.src ?? "/apple-touch-icon.png",
-    },
+    // Without an uploaded favicon, Next serves the generated app/icon.tsx and app/apple-icon.tsx.
+    ...(identity.favicon && { icons: { icon: identity.favicon.src, apple: identity.favicon.src } }),
     alternates: { types: { "application/rss+xml": "/feed.xml" } },
   };
 }
