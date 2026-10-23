@@ -40,7 +40,7 @@ export default async function AboutPage() {
               </span>
             ))}
             {about.intro.accent && (
-              <span className="anim-rise inline-block italic text-violet sm:block" style={delay(80 + about.intro.lines.length * 90)}>
+              <span className="anim-rise inline-block accent-text accent-sunset sm:block" style={delay(80 + about.intro.lines.length * 90)}>
                 {about.intro.accent}
               </span>
             )}

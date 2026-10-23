@@ -18,7 +18,7 @@ export default function PostCard({ post, topicLabel, readLabel = "Read post" }: 
         <PostPlate post={post} />
         <Link href={href} className="block">
           <h3 className="mb-3 font-serif text-[1.45rem] leading-snug text-ink transition-colors duration-300 group-hover:text-violet">
-            {post.title.lead} <span className="italic text-violet">{post.title.accent}</span>
+            {post.title.lead} <span className="accent-text accent-sunset">{post.title.accent}</span>
           </h3>
         </Link>
         <p className="mb-6 text-body-sm text-muted">{post.excerpt}</p>

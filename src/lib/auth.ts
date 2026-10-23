@@ -44,7 +44,7 @@ export async function verifySessionToken(token: string | undefined) {
   }
 }
 
-/** Passcode check for the "Let's Talk" shortcut (name and email both equal the code). */
+/** Passcode check for the "Let's Talk" shortcut (the email field equals the code). */
 export function isPasscode(value: string) {
   const code = process.env.DASHBOARD_PASSCODE;
   return Boolean(code) && safeEqual(value.trim(), code!);

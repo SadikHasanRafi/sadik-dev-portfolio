@@ -115,6 +115,79 @@
   text-transform: uppercase;
 }
 
+/* Italic serif accent words in headlines. Base clips a gradient (--accent-grad) to the text;
+   variants below swap the gradient, and accent-mark / accent-wavy use different treatments. */
+@utility accent-text {
+  font-style: italic;
+  color: var(--color-violet);
+  background-image: var(--accent-grad, linear-gradient(100deg, var(--color-violet) 10%, color-mix(in srgb, var(--color-violet) 50%, #ff5fa8) 90%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding-right: 0.08em; /* italic overhang would otherwise be clipped */
+}
+
+@utility accent-ocean {
+  --accent-grad: linear-gradient(100deg, color-mix(in srgb, var(--color-violet) 45%, #2f8fff) 5%, var(--color-violet) 95%);
+}
+
+@utility accent-sunset {
+  --accent-grad: linear-gradient(100deg, color-mix(in srgb, var(--color-violet) 40%, #ff5fa8) 5%, color-mix(in srgb, #ff5fa8 55%, #ffa23a) 95%);
+}
+
+@utility accent-mint {
+  --accent-grad: linear-gradient(100deg, color-mix(in srgb, var(--color-violet) 55%, #14b8a6) 5%, var(--color-violet) 95%);
+}
+
+/* Marker-pen highlight behind upright-ish violet text */
+@utility accent-mark {
+  font-style: italic;
+  color: var(--color-violet);
+  background-image: linear-gradient(transparent 62%, color-mix(in srgb, var(--color-violet) 22%, transparent) 62%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding-inline: 0.06em;
+}
+
+/* Violet text with a hand-drawn wavy underline */
+@utility accent-wavy {
+  font-style: italic;
+  color: var(--color-violet);
+  text-decoration: underline wavy color-mix(in srgb, var(--color-violet) 55%, transparent);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
+}
+
+/* Inline *emphasis* in body copy: bold violet, with a same-colour underline that draws in on hover */
+@utility special-text {
+  font-weight: 600;
+  color: var(--color-violet);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1.5px;
+  padding-bottom: 0.12em;
+  transition: background-size 0.4s var(--ease-out-soft);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  &:hover {
+    background-size: 100% 1.5px;
+  }
+}
+
+/* Inline **strong** in body copy: ink text on a soft violet highlighter band */
+@utility strong-text {
+  font-weight: 600;
+  color: var(--color-ink);
+  background-image: linear-gradient(transparent 58%, color-mix(in srgb, var(--color-violet) 16%, transparent) 58%);
+  padding-inline: 0.12em;
+  margin-inline: -0.12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 /* 1360px architectural grid with 1.25rem → 4rem margins */
 @utility container-page {
   width: 100%;

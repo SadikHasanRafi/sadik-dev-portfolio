@@ -27,7 +27,7 @@ Copy `.env.example` to `.env.local` and fill it in:
 ## The dashboard
 
 1. Click **Let's Talk** in the header.
-2. Type the passcode in **both** the name and email fields and press **Send message**.
+2. Type the passcode in the **email** field (the other fields can stay empty) and press **Send message**.
 3. You land on `/dashboard` (a signed, HttpOnly cookie keeps you logged in for 7 days).
 
 The passcode is checked on the server, so it never appears in the site's JavaScript.

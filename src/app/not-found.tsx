@@ -38,7 +38,7 @@ export default async function NotFound() {
               className="anim-rise mt-6 max-w-xl font-serif text-headline-lg leading-tight text-ink sm:text-[2.5rem]"
               style={delay(160)}
             >
-              This page wandered <span className="italic text-violet">off the map.</span>
+              This page wandered <span className="accent-wavy">off the map.</span>
             </h1>
             <p className="anim-rise mt-5 max-w-md text-body-md text-muted sm:text-body-lg" style={delay(240)}>
               The link may be broken or the page has moved. Head back home, or jump straight to something useful.

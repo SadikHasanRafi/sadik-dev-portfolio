@@ -23,8 +23,8 @@ function limited(ip: string) {
 
 export type LoginResult = { ok: true } | { ok: false; error?: string };
 
-/** Owner shortcut: name and email both equal the dashboard passcode. Sets the session cookie. */
-export async function login(name: string, email: string): Promise<LoginResult> {
+/** Owner shortcut: the email field equals the dashboard passcode. Sets the session cookie. */
+export async function login(email: string): Promise<LoginResult> {
   const h = await headers();
   const ip = h.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
   if (limited(ip)) {
@@ -33,7 +33,7 @@ export async function login(name: string, email: string): Promise<LoginResult> {
     return { ok: false, error: "Too many attempts. Try again later." };
   }
 
-  if (typeof name !== "string" || typeof email !== "string" || !isPasscode(name) || !isPasscode(email)) {
+  if (typeof email !== "string" || !isPasscode(email)) {
     log.warn("auth", "Failed dashboard login", { ip });
     await track("dashboard_login_failed");
     return { ok: false };

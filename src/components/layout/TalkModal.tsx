@@ -14,11 +14,11 @@ const FOCUSABLE = "a[href], button:not([disabled]), input, textarea, select, [ta
 
 type Props = { open: boolean; onClose: () => void; text: SiteContent["talk"]; email: string };
 
-/** Owner shortcut: when name and email are the same non-email value, ask the server if it's the passcode. */
-async function tryDashboardLogin(name: string, email: string) {
-  if (!name || name !== email || email.includes("@")) return false;
+/** Owner shortcut: when the email field holds a non-email value, ask the server if it's the passcode. */
+async function tryDashboardLogin(email: string) {
+  if (!email || email.includes("@")) return false;
   try {
-    return (await login(name, email)).ok;
+    return (await login(email)).ok;
   } catch {
     return false;
   }
@@ -77,7 +77,7 @@ export default function TalkModal({ open, onClose, text, email: inbox }: Props) 
     const query = String(data.get("query")).trim();
 
     setBusy(true);
-    const isOwner = await tryDashboardLogin(name, email);
+    const isOwner = await tryDashboardLogin(email);
     setBusy(false);
     if (isOwner) {
       router.push("/dashboard");
@@ -114,7 +114,7 @@ export default function TalkModal({ open, onClose, text, email: inbox }: Props) 
 
         <span className="label-caps mb-3 block text-violet">{text.eyebrow}</span>
         <h2 id="talk-title" className="mb-2 pr-8 font-serif text-[2rem] leading-tight tracking-tight text-ink sm:text-[2.25rem]">
-          {text.title} <span className="italic text-violet">{text.accent}</span>
+          {text.title} <span className="accent-text accent-ocean">{text.accent}</span>
         </h2>
         <p className="mb-7 text-body-sm text-muted">{text.body}</p>
 

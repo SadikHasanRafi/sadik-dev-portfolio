@@ -55,7 +55,7 @@ export default async function BlogPage() {
                   </div>
                   <Link href={`/blog/${featured.slug}/`}>
                     <h2 className="mb-5 font-serif text-[1.9rem] leading-tight text-ink transition-colors group-hover:text-violet sm:text-headline-lg">
-                      {featured.title.lead} <span className="italic text-violet">{featured.title.accent}</span>
+                      {featured.title.lead} <span className="accent-text accent-mint">{featured.title.accent}</span>
                     </h2>
                   </Link>
                   <p className="mb-8 text-body-md text-muted">{featured.excerpt}</p>

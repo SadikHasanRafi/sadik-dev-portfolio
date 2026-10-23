@@ -22,7 +22,7 @@ export default function CtaBanner({ banner }: { banner: Banner }) {
             </span>
           )}
           <h2 className="font-serif text-[2rem] leading-[1.15] tracking-tight text-ink sm:text-[2.6rem] lg:text-[2.9rem]">
-            {banner.title} <span className="italic text-violet">{banner.accent}</span>
+            {banner.title} <span className="accent-mark">{banner.accent}</span>
           </h2>
           {banner.body && <p className="mt-4 max-w-xl text-body-md text-muted">{banner.body}</p>}
         </div>

@@ -29,7 +29,7 @@ export default function Hero({ content }: { content: SiteContent }) {
               </span>
             ))}
             {hero.accent && (
-              <span className="anim-rise block font-medium italic text-violet" style={delay(80 + hero.lines.length * 90)}>
+              <span className="anim-rise block font-medium accent-text" style={delay(80 + hero.lines.length * 90)}>
                 {hero.accent}
               </span>
             )}

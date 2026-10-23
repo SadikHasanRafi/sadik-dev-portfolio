@@ -98,7 +98,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
           </div>
           <h1 className="anim-rise mb-6 max-w-5xl font-serif text-[2.2rem] leading-[1.1] tracking-tight text-ink sm:text-display-md lg:text-[3.9rem]" style={delay(80)}>
             {post.title.lead}{" "}
-            <em className="font-normal italic text-violet underline decoration-violet/30 decoration-1 underline-offset-8">{post.title.accent}.</em>
+            <em className="font-normal accent-text underline decoration-violet/30 decoration-1 underline-offset-8">{post.title.accent}.</em>
           </h1>
           <p className="anim-rise mb-10 max-w-3xl text-body-md text-muted sm:text-body-lg" style={delay(160)}>
             {post.excerpt}
@@ -167,7 +167,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
                         <Icon name="check" className="size-3" strokeWidth={3} />
                       </span>
                       <span className="text-ink/85">
-                        <strong className="font-semibold text-ink">{c.title}:</strong> {c.detail}
+                        <strong className="strong-text">{c.title}:</strong> {c.detail}
                       </span>
                     </li>
                   ))}

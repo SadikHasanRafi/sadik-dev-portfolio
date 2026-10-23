@@ -30,7 +30,7 @@ export default function PageIntro({ eyebrow, lines, accent, lead, children, clas
             </span>
           ))}
           {accent && (
-            <span className="anim-rise inline-block italic text-violet sm:block" style={delay(80 + lines.length * 90)}>
+            <span className="anim-rise inline-block accent-text accent-ocean sm:block" style={delay(80 + lines.length * 90)}>
               {accent}
             </span>
           )}
