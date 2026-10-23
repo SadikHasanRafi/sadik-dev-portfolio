@@ -45,7 +45,7 @@ export default async function BlogPage() {
               <div className="flex flex-col justify-between lg:col-span-7">
                 <div>
                   <div className="mb-6 flex flex-wrap items-center gap-3">
-                    <span className="text-body-sm font-semibold text-violet">{topicLabel(featured.topic, featured.topicLabel)}</span>
+                    <span className="special-text text-body-sm">{topicLabel(featured.topic, featured.topicLabel)}</span>
                     <span className="text-line">•</span>
                     <time className="label-caps text-muted" dateTime={featured.date}>
                       {formatDate(featured.date)}

@@ -136,7 +136,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
           <article id="article-body" className="min-w-0 lg:col-span-8">
             {post.sections.map((section) => (
               <section key={section.id} id={section.id} className="mb-14 scroll-mt-28" data-reveal="fade">
-                <span className="mb-3 block text-body-sm font-semibold text-violet">{section.kicker}</span>
+                <span className="special-text mb-3 inline-block text-body-sm">{section.kicker}</span>
                 <h2 className="mb-6 font-serif text-[1.75rem] leading-tight text-ink sm:text-headline-lg">{section.title}</h2>
                 {section.blocks.map((block, i) => (
                   <PostBody key={i} block={block} />
@@ -149,7 +149,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
                 <div className="flex items-start gap-4">
                   <Icon name="shield" className="mt-1 size-7 shrink-0 text-violet" />
                   <div>
-                    <span className="mb-2 block text-body-sm font-semibold text-violet">{article.takeawayLabel}</span>
+                    <span className="special-text mb-2 inline-block text-body-sm">{article.takeawayLabel}</span>
                     <p className="mb-3 font-serif text-[1.45rem] italic leading-snug text-ink sm:text-headline-md">“{post.takeaway}”</p>
                     <span className="font-mono text-[0.75rem] uppercase tracking-wider text-muted">— {identity.name}</span>
                   </div>

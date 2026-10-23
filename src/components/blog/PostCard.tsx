@@ -12,7 +12,7 @@ export default function PostCard({ post, topicLabel, readLabel = "Read post" }: 
     <article className="group flex h-full flex-col justify-between border border-line bg-paper p-6 transition-[border-color,transform] duration-500 ease-out-soft hover:border-ink lg:p-7">
       <div>
         <div className="mb-5 flex items-center justify-between gap-3 font-mono text-[0.72rem] text-muted">
-          <span className="text-body-sm font-semibold text-violet">{topicLabel ?? post.topicLabel}</span>
+          <span className="special-text text-body-sm">{topicLabel ?? post.topicLabel}</span>
           <time dateTime={post.date}>{formatDate(post.date, "short").toUpperCase()}</time>
         </div>
         <PostPlate post={post} />

@@ -162,7 +162,7 @@
 
 /* Inline *emphasis* in body copy: bold violet, with a same-colour underline that draws in on hover */
 @utility special-text {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-violet);
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;

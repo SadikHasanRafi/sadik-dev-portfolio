@@ -182,7 +182,7 @@ export default async function AboutPage() {
                   <span aria-hidden className="absolute left-0 top-0 h-full w-0.5 origin-top scale-y-0 bg-violet transition-transform duration-700 ease-out-soft group-hover:scale-y-100" />
                   <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
                     <div className="flex flex-col lg:col-span-3">
-                      <span className="font-mono text-[0.8rem] font-semibold text-violet">{item.period.toUpperCase()}</span>
+                      <span className="special-text font-mono text-[0.8rem]">{item.period.toUpperCase()}</span>
                       <span className="label-caps mt-2 text-muted">{item.role}</span>
                       <span className="mt-2 font-serif text-[1.6rem] leading-tight text-ink">{item.org}</span>
                       <span className="text-body-sm text-muted">{item.context}</span>
@@ -270,7 +270,7 @@ export default async function AboutPage() {
                 <Eyebrow className="mb-4">{about.education.eyebrow}</Eyebrow>
                 <h2 className="mb-8 font-serif text-[2rem] leading-tight text-ink sm:text-headline-lg">{about.education.title}</h2>
                 <div className="border border-line bg-paper p-6 sm:p-8">
-                  <span className="font-mono text-[0.8rem] font-semibold text-violet">{about.education.detail}</span>
+                  <span className="special-text font-mono text-[0.8rem]">{about.education.detail}</span>
                   <h3 className="mt-2 font-serif text-[1.5rem] leading-tight text-ink">{about.education.degree}</h3>
                   <p className="mt-1 text-body-sm text-muted">{about.education.school}</p>
                   {about.education.courses.length > 0 && (

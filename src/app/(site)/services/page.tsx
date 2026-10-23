@@ -115,7 +115,7 @@ export default async function ServicesPage() {
                 >
                   <span aria-hidden className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-violet transition-transform duration-500 ease-out-soft group-hover:scale-x-100" />
                   <div>
-                    <span className="mb-4 block text-body-sm font-semibold text-violet">{p.phase}</span>
+                    <span className="special-text mb-4 inline-block text-body-sm">{p.phase}</span>
                     <h3 className="mb-3 font-serif text-[1.45rem] leading-tight text-ink">{p.title}</h3>
                     <p className="mb-6 text-body-sm text-muted">{p.body}</p>
                   </div>
@@ -146,7 +146,7 @@ export default async function ServicesPage() {
                   style={delay(i * 100)}
                 >
                   <div>
-                    <span className="mb-3 block text-body-sm font-semibold text-violet">{m.kicker}</span>
+                    <span className="special-text mb-3 inline-block text-body-sm">{m.kicker}</span>
                     <h3 className="mb-3 font-serif text-[1.55rem] leading-tight text-ink">{m.title}</h3>
                     <p className="mb-7 text-body-sm text-muted">{m.body}</p>
                     <ul className="mb-8 space-y-2.5 text-body-sm">
