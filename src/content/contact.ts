@@ -14,7 +14,7 @@ export const contactPage = {
     {
       kicker: "Scope",
       q: "Do you handle frontend or purely backend?",
-      a: "My focus is the backend — APIs, databases, auth and integrations — but I'm comfortable building the React, Next.js or Angular screens that go with it, so smaller projects can be handled end to end.",
+      a: "My focus is the backend, APIs, databases, auth and integrations, but I'm comfortable building the React, Next.js or Angular screens that go with it, so smaller projects can be handled end to end.",
     },
     {
       kicker: "Existing code",

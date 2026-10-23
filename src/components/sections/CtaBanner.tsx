@@ -4,7 +4,7 @@ import { safeHref } from "@/lib/links";
 import { delay } from "@/lib/utils";
 import type { Banner } from "@/types";
 
-/** Full-bleed lavender band that closes most pages. */
+/** Full-bleed lavender band that closes most pages. Headline matches the home hero style. */
 export default function CtaBanner({ banner }: { banner: Banner }) {
   if (!banner.visible) return null;
   return (
@@ -21,8 +21,8 @@ export default function CtaBanner({ banner }: { banner: Banner }) {
               {banner.eyebrow}
             </span>
           )}
-          <h2 className="font-serif text-[2rem] leading-[1.15] tracking-tight text-ink sm:text-[2.6rem] lg:text-[2.9rem]">
-            {banner.title} <span className="accent-mark">{banner.accent}</span>
+          <h2 className="font-sans text-[1.7rem] font-light uppercase leading-[1.2] tracking-[0.07em] text-ink sm:text-[2.2rem] lg:text-[2.5rem]">
+            {banner.title} <span className="accent-text">{banner.accent}</span>
           </h2>
           {banner.body && <p className="mt-4 max-w-xl text-body-md text-muted">{banner.body}</p>}
         </div>

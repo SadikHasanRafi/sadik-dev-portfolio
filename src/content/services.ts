@@ -9,7 +9,7 @@ export const services: Service[] = [
     tag: "01",
     meta: "Typed Contracts",
     title: "APIs & backend",
-    body: "Clean, modular REST APIs designed around how your business actually works. Strong typing end to end, clear error responses and authentication that is built in from the first route — not bolted on later.",
+    body: "Clean, modular REST APIs designed around how your business actually works. Strong typing end to end, clear error responses and authentication that is built in from the first route, not bolted on later.",
     deliverables: [
       "Documented REST endpoints with typed request / response contracts",
       "JWT authentication, bcrypt hashing and role-based access control",
@@ -26,7 +26,7 @@ export const services: Service[] = [
     tag: "02",
     meta: "Double-Entry Ledgers",
     title: "ERP, POS & inventory systems",
-    body: "Transactional backends for retail and operations — variant-level inventory, barcode and receipt flows, and accounting modules where every invoice, bill and ledger entry adds up and is ready for an audit.",
+    body: "Transactional backends for retail and operations, variant-level inventory, barcode and receipt flows, and accounting modules where every invoice, bill and ledger entry adds up and is ready for an audit.",
     deliverables: [
       "Invoices, bills, general ledger, trial balance and balance sheet",
       "Variant-based inventory with barcode generation and receipt printing",
@@ -43,7 +43,7 @@ export const services: Service[] = [
     tag: "03",
     meta: "Replay-Safe Webhooks",
     title: "Payments & billing",
-    body: "Local payment integrations that hold up in production: bKash Tokenized Checkout, SSLCommerz, card, cash and cash-on-delivery — with courier booking and webhooks that stay correct when a gateway retries.",
+    body: "Local payment integrations that hold up in production: bKash Tokenized Checkout, SSLCommerz, card, cash and cash-on-delivery, with courier booking and webhooks that stay correct when a gateway retries.",
     deliverables: [
       "bKash Tokenized Checkout: grant tokens, agreements and payments",
       "SSLCommerz checkout with server-side validation",
@@ -75,7 +75,7 @@ export const process = [
   {
     phase: "Step 1",
     title: "Understand the business",
-    body: "I learn how the business actually runs — roles, approvals, money flow — and turn it into entities, relationships and clear data rules before writing code.",
+    body: "I learn how the business actually runs, roles, approvals, money flow, and turn it into entities, relationships and clear data rules before writing code.",
     deliverable: "You get: Schema & Flow Notes",
   },
   {
@@ -118,7 +118,7 @@ export const engagements = [
   {
     kicker: "Join your team",
     title: "One module, end to end",
-    body: "I join your team to own one well-defined module end to end — auth, billing, reporting or real-time notifications.",
+    body: "I join your team to own one well-defined module end to end, auth, billing, reporting or real-time notifications.",
     points: ["Works within your Git & review flow", "Follows your existing conventions", "Fast start on familiar stacks"],
     commitment: "Part-time or full-time",
     featured: false,

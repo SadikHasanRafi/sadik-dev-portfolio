@@ -55,6 +55,6 @@ export async function uploadFile(form: FormData): Promise<UploadResult> {
     return { ok: true, src, width: image.info.width, height: image.info.height };
   } catch (err) {
     log.error("upload", "Saving the upload failed", err, { name: file.name, size: file.size });
-    return { ok: false, error: "Couldn't save the file — check the Blob store / database connection." };
+    return { ok: false, error: "Couldn't save the file, check the Blob store / database connection." };
   }
 }

@@ -48,7 +48,7 @@ export default async function ServicesPage() {
                   <div>
                     <div className="mb-4 flex items-start gap-4">
                       <Icon name={s.icon} className="mt-1 size-7 shrink-0 text-violet transition-transform duration-500 group-hover:-translate-y-0.5" strokeWidth={1.4} />
-                      <h2 className="font-serif text-[1.6rem] leading-tight text-ink transition-colors duration-300 group-hover:text-violet sm:text-headline-md">
+                      <h2 className="font-sans font-light uppercase tracking-[0.07em] text-[1.4rem] leading-[1.25] text-ink transition-colors duration-300 group-hover:text-violet sm:text-[1.8rem]">
                         {s.title}
                       </h2>
                     </div>

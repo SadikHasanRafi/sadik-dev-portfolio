@@ -96,9 +96,9 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
             <span className="text-line">•</span>
             <span>{post.readMinutes} Min Read</span>
           </div>
-          <h1 className="anim-rise mb-6 max-w-5xl font-serif text-[2.2rem] leading-[1.1] tracking-tight text-ink sm:text-display-md lg:text-[3.9rem]" style={delay(80)}>
+          <h1 className="anim-rise mb-6 max-w-5xl font-sans font-light uppercase tracking-[0.07em] text-[2rem] leading-[1.1] text-ink min-[400px]:text-[2.3rem] sm:text-[3rem] lg:text-[3.6rem]" style={delay(80)}>
             {post.title.lead}{" "}
-            <em className="font-normal accent-text underline decoration-violet/30 decoration-1 underline-offset-8">{post.title.accent}.</em>
+            <em className="font-normal accent-text">{post.title.accent}.</em>
           </h1>
           <p className="anim-rise mb-10 max-w-3xl text-body-md text-muted sm:text-body-lg" style={delay(160)}>
             {post.excerpt}
@@ -137,7 +137,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
             {post.sections.map((section) => (
               <section key={section.id} id={section.id} className="mb-14 scroll-mt-28" data-reveal="fade">
                 <span className="special-text mb-3 inline-block text-body-sm">{section.kicker}</span>
-                <h2 className="mb-6 font-serif text-[1.75rem] leading-tight text-ink sm:text-headline-lg">{section.title}</h2>
+                <h2 className="mb-6 font-sans font-light uppercase tracking-[0.07em] text-[1.5rem] leading-[1.25] text-ink sm:text-[2rem]">{section.title}</h2>
                 {section.blocks.map((block, i) => (
                   <PostBody key={i} block={block} />
                 ))}
@@ -151,7 +151,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
                   <div>
                     <span className="special-text mb-2 inline-block text-body-sm">{article.takeawayLabel}</span>
                     <p className="mb-3 font-serif text-[1.45rem] italic leading-snug text-ink sm:text-headline-md">“{post.takeaway}”</p>
-                    <span className="font-mono text-[0.75rem] uppercase tracking-wider text-muted">— {identity.name}</span>
+                    <span className="font-mono text-[0.75rem] uppercase tracking-wider text-muted">{identity.name}</span>
                   </div>
                 </div>
               </section>
@@ -225,7 +225,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
         <section className="border-y border-line bg-strip py-16 md:py-20">
           <div className="container-page">
             <div className="mb-10 flex items-end justify-between gap-4" data-reveal>
-              <h2 className="font-serif text-[2rem] leading-tight text-ink sm:text-headline-lg">{article.relatedTitle}</h2>
+              <h2 className="font-sans font-light uppercase tracking-[0.07em] text-[1.6rem] leading-[1.25] text-ink sm:text-[2.2rem]">{article.relatedTitle}</h2>
               <Link href="/blog/" className="label-caps link-rule text-ink hover:text-violet">
                 {article.relatedLink}
               </Link>

@@ -26,10 +26,10 @@ export default function SectionHeader({ eyebrow, title, aside, className, size =
           data-reveal
           style={delay(90)}
           className={cn(
-            "font-serif font-normal text-ink",
+            "font-sans font-light uppercase tracking-[0.07em] text-ink",
             size === "lg"
-              ? "text-[2.25rem] leading-[1.12] tracking-tight sm:text-display-md"
-              : "text-[1.9rem] leading-tight sm:text-headline-lg",
+              ? "text-[1.8rem] leading-[1.25] sm:text-[2.6rem]"
+              : "text-[1.5rem] leading-tight sm:text-[2rem]",
           )}
         >
           {title}

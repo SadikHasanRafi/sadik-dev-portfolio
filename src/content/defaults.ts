@@ -224,14 +224,14 @@ export const defaultContent: SiteContent = {
   },
   work: {
     seo: {
-      title: "Work — Case Studies",
+      title: "Work: Case Studies",
       description:
         "Case studies: Liguni retail POS, Village Agro Farm ERP & accounting, E-China import logistics and the Pink Life Line health platform.",
     },
     intro: {
       eyebrow: "Work",
-      lines: ["Systems built for", "real shops, farms &"],
-      accent: "growing teams.",
+      lines: ["Backend systems for", "real shops, farms and"],
+      accent: "ambitious teams.",
       lead: "A few of the systems I've built: a retail POS, a subscription ERP, an import logistics platform and a health app with several user roles.",
     },
     allLabel: projectFilters[0].label,
@@ -259,7 +259,7 @@ export const defaultContent: SiteContent = {
     intro: {
       eyebrow: "Services",
       lines: ["Backend work for", "real businesses,"],
-      accent: "from first idea to launch.",
+      accent: "FROM FIRST IDEA TO LAUNCH.",
       lead: "APIs, accounting, payments and the integrations that hold a business together, whether it's a brand-new ERP or a POS that needs fixing.",
     },
     list: {
@@ -297,7 +297,7 @@ export const defaultContent: SiteContent = {
   },
   blog: {
     seo: {
-      title: "Blog — Engineering Notes",
+      title: "Blog: Engineering Notes",
       description:
         "Field notes on payment callbacks, ORM migrations, access control and concurrency from real ERP, POS and health-platform backends.",
     },
@@ -379,7 +379,7 @@ export const defaultContent: SiteContent = {
       briefLabel: "About the project",
       briefPlaceholder: "Tell me a bit about your project…",
       submitLabel: "Send Inquiry",
-      note: "Opens your email app — nothing is stored",
+      note: "Opens your email app, nothing is stored",
       successText: "Your email app should open with the message ready. If it didn't, copy it and send it to",
     },
     faq: {

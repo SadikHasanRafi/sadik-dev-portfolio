@@ -1,15 +1,15 @@
 import type { ExperienceItem, IconName } from "@/types";
 
 export const about = {
-  title: ["Building the Invisible Engines", "That Let Businesses Grow"],
-  accent: "with Confidence.",
+  title: ["Building the Invisible Engines", "That Let Businesses"],
+  accent: "Grow with Confidence.",
   meta: [] as string[],
   background: {
-    lead: "I'm a software engineer based in Dhaka who builds the backend side of business software — authentication, payments, accounting and the APIs that hold them together.",
+    lead: "I'm a software engineer based in Dhaka who builds the backend side of business software, authentication, payments, accounting and the APIs that hold them together.",
     body: "Over 2.5+ years I've shipped enterprise portals at Celloscope and full ERP, POS and logistics systems for clients. I work with React, Next.js and Node.js on PostgreSQL and MySQL, and I'm hands-on with REST APIs, auth, debugging and AI-assisted development.",
   },
   thesis: {
-    quote: "“Software should explain the business it runs — clearly enough that the owner understands it too.”",
+    quote: "“Software should explain the business it runs, clearly enough that the owner understands it too.”",
     body: "I start by learning how a client's business actually operates, then turn it into working software and explain it in plain language. Strict schemas, honest permission boundaries and payment flows that survive retries matter more to me than clever code.",
   },
   availability: "Open to Projects",
@@ -28,7 +28,7 @@ export const toolGroups: { index: string; icon: IconName; title: string; body: s
     index: "Frameworks",
     icon: "layers",
     title: "Backend & Frontend",
-    body: "Modular Node.js services and the frontends that consume them — React, Next.js and Angular.",
+    body: "Modular Node.js services and the frontends that consume them, React, Next.js and Angular.",
     tools: ["Node.js", "Express.js", "NestJS", "React", "Next.js", "Angular"],
     accent: "Node.js",
   },
@@ -58,7 +58,7 @@ export const experience: ExperienceItem[] = [
     org: "Independent",
     context: "Retail, ERP & Logistics Clients",
     summary:
-      "Building business systems directly with owners — currently a POS and shop management system for a footwear retailer, from the proposal and contract terms through to the code.",
+      "Building business systems directly with owners, currently a POS and shop management system for a footwear retailer, from the proposal and contract terms through to the code.",
     points: [
       "Integrated SSLCommerz plus bKash, card, cash and COD orders through the Steadfast courier API.",
       "Implemented admin / salesman role-based access, WhatsApp order notifications and a mini-CRM.",
@@ -66,7 +66,7 @@ export const experience: ExperienceItem[] = [
     stack: ["Express", "TypeScript", "Prisma", "PostgreSQL", "React"],
   },
   {
-    period: "Oct 2023 — Jul 2025",
+    period: "Oct 2023 to Jul 2025",
     role: "Junior Software Engineer",
     org: "Celloscope",
     context: "Enterprise & Fintech Portals",
@@ -80,7 +80,7 @@ export const experience: ExperienceItem[] = [
     stack: ["Angular", "Spring Boot", "RabbitMQ", "PostgreSQL", "STOMP"],
   },
   {
-    period: "Apr 2023 — Oct 2023",
+    period: "Apr 2023 to Oct 2023",
     role: "Software Engineer Intern",
     org: "Celloscope",
     context: "Enterprise Applications",
@@ -103,7 +103,7 @@ export const principles: { rule: string; icon: IconName; title: string; body: st
     rule: "02",
     icon: "key",
     title: "Permissions Are Data",
-    body: "Roles and access rules belong in the database, not hard-coded in routes. Changing who can approve, edit or view something should be a setting — not a redeploy.",
+    body: "Roles and access rules belong in the database, not hard-coded in routes. Changing who can approve, edit or view something should be a setting, not a redeploy.",
     footer: "Database-Driven RBAC",
   },
   {
@@ -117,14 +117,14 @@ export const principles: { rule: string; icon: IconName; title: string; body: st
 
 export const recognition = {
   achievements: [
-    "1st Place — University Business Idea Contest",
-    "3rd Place — University Hackathon Competition",
+    "1st Place, University Business Idea Contest",
+    "3rd Place, University Hackathon Competition",
     "Ranked 49th among 200+ participants in a Programming Contest",
   ],
   education: {
     degree: "B.Sc. in Computer Science and Engineering",
     school: "Daffodil International University",
-    detail: "2019 — 2023 · CGPA 3.44",
+    detail: "2019 to 2023 · CGPA 3.44",
   },
-  courses: ["Complete Web Development — Jhankar Mahbub", "Learning & Earning Development Project (LEDP)"],
+  courses: ["Complete Web Development, Jhankar Mahbub", "Learning & Earning Development Project (LEDP)"],
 };

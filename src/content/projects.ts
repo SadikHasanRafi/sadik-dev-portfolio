@@ -13,7 +13,7 @@ export const projects: Project[] = [
     eyebrow: ["Retail POS Server", "Footwear Retailer"],
     title: { lead: "Liguni POS", accent: "Variant-Aware", tail: " Retail & Checkout" },
     summary:
-      "A point-of-sale and shop management system for a footwear retailer. Every shoe exists in many sizes and colours, so inventory is tracked per variant with generated barcodes and printed receipts — and online orders flow through the same stock ledger as walk-in sales.",
+      "A point-of-sale and shop management system for a footwear retailer. Every shoe exists in many sizes and colours, so inventory is tracked per variant with generated barcodes and printed receipts, and online orders flow through the same stock ledger as walk-in sales.",
     challenge: {
       label: "The challenge",
       body: "One order can be paid by SSLCommerz, bKash, card, cash or cash-on-delivery, and COD orders must be booked with the Steadfast courier. Payment and delivery state had to stay consistent with stock across every path.",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     eyebrow: ["Agricultural ERP", "Accounting System"],
     title: { lead: "Village Agro Farm", accent: "Double-Entry", tail: " Farm ERP" },
     summary:
-      "An ERP that merges farm operations, money management and accounting, sold as a subscription. I built the accounting core — invoices, bills, general ledger, trial balance, balance sheet, tax summary and bank reconciliation — plus the billing that keeps subscriptions alive.",
+      "An ERP that merges farm operations, money management and accounting, sold as a subscription. I built the accounting core, invoices, bills, general ledger, trial balance, balance sheet, tax summary and bank reconciliation, plus the billing that keeps subscriptions alive.",
     challenge: {
       label: "The tricky part",
       body: "bKash Tokenized Checkout needs a grant-token lifecycle, agreement creation and payment execution, with webhooks that can arrive late or twice. Handlers were written to be safe to replay so a retry never double-bills a farm.",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     eyebrow: ["Import Logistics", "Procurement Platform"],
     title: { lead: "E-China", accent: "Import Pipeline", tail: " From Sourcing to Delivery" },
     summary:
-      "A full-stack system that manages product sourcing from China, import logistics to Bangladesh and local sales. Procurement, inventory and sales are modelled as one connected lifecycle — from order creation to import tracking and final delivery.",
+      "A full-stack system that manages product sourcing from China, import logistics to Bangladesh and local sales. Procurement, inventory and sales are modelled as one connected lifecycle, from order creation to import tracking and final delivery.",
     challenge: {
       label: "Who sees what",
       body: "Suppliers, admins and sales staff share one platform but must never see each other's data. JWT authentication with RBAC enforces permission boundaries on every route, and typed API contracts keep frontend and backend in agreement.",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
       body: "Admin permissions are stored in the database and resolved per route at runtime, so access rules change without a redeploy. Doctor scheduling supports recurring weekly availability, holiday overrides and slot-capacity limits.",
     },
     highlights: [
-      "Dynamic, database-driven RBAC per admin role — no redeploy to change access",
+      "Dynamic, database-driven RBAC per admin role, no redeploy to change access",
       "Doctor scheduling with recurring availability, holidays and slot capacity",
       "FCM notifications with a cron scheduler for predicted-cycle reminders",
       "Reddit-style community with nested comments, voting, saves and moderation",
@@ -139,14 +139,14 @@ export const coreValues = [
     icon: "database" as const,
     kicker: "Data",
     title: "Well-shaped databases",
-    body: "Normalised relational cores, clear foreign keys and seed data from day one. When a schema stops fitting, I migrate it properly — like moving a live ERP from Prisma to Drizzle.",
+    body: "Normalised relational cores, clear foreign keys and seed data from day one. When a schema stops fitting, I migrate it properly, like moving a live ERP from Prisma to Drizzle.",
     footer: "Normalisation // Typed ORM Models",
   },
   {
     icon: "key" as const,
     kicker: "Security",
     title: "Clear access rules",
-    body: "JWT sessions, bcrypt hashing and role-based access control on every route. Suppliers, salesmen, doctors and admins each see exactly what they should — nothing more.",
+    body: "JWT sessions, bcrypt hashing and role-based access control on every route. Suppliers, salesmen, doctors and admins each see exactly what they should, nothing more.",
     footer: "JWT // RBAC // Audit Trails",
   },
   {

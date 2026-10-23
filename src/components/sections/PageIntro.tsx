@@ -23,14 +23,14 @@ export default function PageIntro({ eyebrow, lines, accent, lead, children, clas
             <Eyebrow>{eyebrow}</Eyebrow>
           </div>
         )}
-        <h1 className="mb-8 max-w-5xl font-serif text-[2.5rem] font-normal leading-[1.08] tracking-tight text-ink min-[400px]:text-[2.75rem] sm:text-display-md lg:text-display-lg">
+        <h1 className="mb-8 max-w-5xl font-sans text-[2rem] font-light uppercase leading-[1.2] tracking-[0.07em] text-ink min-[400px]:text-[2.3rem] sm:text-[3rem] lg:text-[3.6rem]">
           {lines.map((line, i) => (
             <span key={`${line}-${i}`} className="anim-rise sm:block" style={delay(80 + i * 90)}>
               {line}{" "}
             </span>
           ))}
           {accent && (
-            <span className="anim-rise inline-block accent-text accent-ocean sm:block" style={delay(80 + lines.length * 90)}>
+            <span className="anim-rise inline-block accent-text sm:block" style={delay(80 + lines.length * 90)}>
               {accent}
             </span>
           )}

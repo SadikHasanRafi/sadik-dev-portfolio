@@ -12,7 +12,7 @@ export const posts: Post[] = [
       accent: "Retries",
     },
     excerpt:
-      "How I made bKash subscription billing safe to replay: claiming a payment row atomically, executing once, and asking the gateway — not guessing — when a request times out.",
+      "How I made bKash subscription billing safe to replay: claiming a payment row atomically, executing once, and asking the gateway, not guessing, when a request times out.",
     topic: "payments",
     topicLabel: "Payments & Billing",
     date: "2026-09-28",
@@ -49,7 +49,7 @@ export const posts: Post[] = [
         blocks: [
           {
             type: "p",
-            text: "The fix is to make one request the *owner* of a payment before any side effect happens. Each payment is stored when it is created, keyed by bKash's `paymentID` with a unique index. A callback can only proceed if it moves that row from `PENDING` to `EXECUTING` — a single conditional `UPDATE` that the database applies atomically.",
+            text: "The fix is to make one request the *owner* of a payment before any side effect happens. Each payment is stored when it is created, keyed by bKash's `paymentID` with a unique index. A callback can only proceed if it moves that row from `PENDING` to `EXECUTING`, a single conditional `UPDATE` that the database applies atomically.",
           },
           {
             type: "steps",
@@ -100,7 +100,7 @@ export const posts: Post[] = [
         blocks: [
           {
             type: "p",
-            text: "Settling writes three things: the payment becomes `COMPLETED` with bKash's `trxID`, a journal entry is posted, and the subscription period is extended. They go into **one database transaction**, so the system can never end up with money recorded but no subscription — or a subscription with no money behind it.",
+            text: "Settling writes three things: the payment becomes `COMPLETED` with bKash's `trxID`, a journal entry is posted, and the subscription period is extended. They go into **one database transaction**, so the system can never end up with money recorded but no subscription, or a subscription with no money behind it.",
           },
           {
             type: "code",
@@ -138,7 +138,7 @@ export const posts: Post[] = [
         blocks: [
           {
             type: "p",
-            text: "If the server crashes between claiming and settling, a payment can be left in `EXECUTING`. A small scheduled job picks up rows that have been stuck for more than a few minutes and resolves them with **Query Payment** — completing them if bKash says the money was captured, or releasing them back to `PENDING` if it wasn't.",
+            text: "If the server crashes between claiming and settling, a payment can be left in `EXECUTING`. A small scheduled job picks up rows that have been stuck for more than a few minutes and resolves them with **Query Payment**, completing them if bKash says the money was captured, or releasing them back to `PENDING` if it wasn't.",
           },
           {
             type: "list",
@@ -215,19 +215,19 @@ git add src/db/schema.ts`,
         blocks: [
           {
             type: "p",
-            text: "The migration went module by module — invoices, then bills, then the general ledger — with both clients connected to the same database. Each module's queries were rewritten, tested against the seed data, and shipped before moving on.",
+            text: "The migration went module by module, invoices, then bills, then the general ledger, with both clients connected to the same database. Each module's queries were rewritten, tested against the seed data, and shipped before moving on.",
           },
           {
             type: "code",
             file: "src/invoices/repository.ts",
             lang: "ts",
-            code: `// Before — Prisma
+            code: `// Before: Prisma
 const unpaid = await prisma.invoice.findMany({
   where: { farmId, status: "UNPAID" },
   include: { customer: true },
 });
 
-// After — Drizzle, same result, closer to the SQL
+// After: Drizzle, same result, closer to the SQL
 const unpaid = await db
   .select()
   .from(invoices)
@@ -249,7 +249,7 @@ const unpaid = await db
         blocks: [
           {
             type: "p",
-            text: "Once every module was on Drizzle, Prisma's client, schema file and generate step were removed in one final change. By then it was a deletion, not a rewrite — the risky work had already been done in small, tested pieces.",
+            text: "Once every module was on Drizzle, Prisma's client, schema file and generate step were removed in one final change. By then it was a deletion, not a rewrite, the risky work had already been done in small, tested pieces.",
           },
         ],
       },
@@ -266,7 +266,7 @@ const unpaid = await db
     slug: "database-driven-rbac",
     title: { lead: "Role-Based Access Control That Changes", accent: "Without a Redeploy" },
     excerpt:
-      "Storing permissions per admin role in MongoDB and resolving them per route at runtime — the access model behind the Pink Life Line admin panel.",
+      "Storing permissions per admin role in MongoDB and resolving them per route at runtime, the access model behind the Pink Life Line admin panel.",
     topic: "architecture",
     topicLabel: "System Architecture",
     date: "2026-07-02",
@@ -337,7 +337,7 @@ router.patch("/posts/:id", authenticate, authorize("posts:moderate"), moderatePo
         ],
       },
     ],
-    takeaway: "Access rules are business decisions. Store them where the business can change them — in the database.",
+    takeaway: "Access rules are business decisions. Store them where the business can change them, in the database.",
     checklist: [
       { title: "Name permissions by resource:action", detail: "doctors:read, posts:moderate, bookings:cancel." },
       { title: "Declare permissions on routes", detail: "Routes ask for capabilities, never for role names." },
@@ -349,7 +349,7 @@ router.patch("/posts/:id", authenticate, authorize("posts:moderate"), moderatePo
     slug: "maker-checker-approval-workflow",
     title: { lead: "Building a Maker-Checker Approval Flow for", accent: "Merchant Operations" },
     excerpt:
-      "The four-eyes principle as a small state machine: create, submit, approve — with the rule that the person who makes a change can never be the one who approves it.",
+      "The four-eyes principle as a small state machine: create, submit, approve, with the rule that the person who makes a change can never be the one who approves it.",
     topic: "architecture",
     topicLabel: "System Architecture",
     date: "2026-05-19",
@@ -438,7 +438,7 @@ export function assertTransition(req: ChangeRequest, next: Status, actor: User) 
         ],
       },
     ],
-    takeaway: "Approval rules belong in one state machine — not scattered across buttons and controllers.",
+    takeaway: "Approval rules belong in one state machine, not scattered across buttons and controllers.",
     checklist: [
       { title: "Define legal transitions once", detail: "API, UI and audit trail all read the same map." },
       { title: "Enforce maker ≠ checker on the server", detail: "Never trust the UI to hide the approve button." },
@@ -450,7 +450,7 @@ export function assertTransition(req: ChangeRequest, next: Status, actor: User) 
     slug: "booking-slots-without-overbooking",
     title: { lead: "Doctor Booking Slots Without", accent: "Overbooking" },
     excerpt:
-      "Recurring weekly availability, holiday overrides and slot-capacity limits — and the single atomic MongoDB update that stops two patients taking the last seat.",
+      "Recurring weekly availability, holiday overrides and slot-capacity limits, and the single atomic MongoDB update that stops two patients taking the last seat.",
     topic: "node",
     topicLabel: "Node.js & MongoDB",
     date: "2026-04-06",
@@ -466,7 +466,7 @@ export function assertTransition(req: ChangeRequest, next: Status, actor: User) 
         blocks: [
           {
             type: "p",
-            text: "Doctors on Pink Life Line set recurring weekly availability — say, Thursdays 18:00–21:00 in 30-minute slots of four patients each. Holidays override that rule for specific dates. Concrete slot documents are generated from the rule, which gives each slot its own `capacity` and `booked` count.",
+            text: "Doctors on Pink Life Line set recurring weekly availability, say, Thursdays 18:00–21:00 in 30-minute slots of four patients each. Holidays override that rule for specific dates. Concrete slot documents are generated from the rule, which gives each slot its own `capacity` and `booked` count.",
           },
         ],
       },
@@ -479,7 +479,7 @@ export function assertTransition(req: ChangeRequest, next: Status, actor: User) 
             type: "callout",
             tone: "warning",
             label: "The bug",
-            text: "If the API reads a slot, sees 3 of 4 booked, and then increments, two patients clicking at the same moment both see 3 — and the slot ends up with 5 bookings.",
+            text: "If the API reads a slot, sees 3 of 4 booked, and then increments, two patients clicking at the same moment both see 3, and the slot ends up with 5 bookings.",
           },
           {
             type: "p",
@@ -523,7 +523,7 @@ export function assertTransition(req: ChangeRequest, next: Status, actor: User) 
         ],
       },
     ],
-    takeaway: "If two users can click at the same time, the database — not the API — has to decide who wins.",
+    takeaway: "If two users can click at the same time, the database, not the API, has to decide who wins.",
     checklist: [
       { title: "Generate slots from rules", detail: "Weekly availability creates concrete slot documents." },
       { title: "Check and increment atomically", detail: "Put the capacity condition in the update filter." },

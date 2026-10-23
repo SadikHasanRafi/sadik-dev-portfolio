@@ -8,7 +8,7 @@ export type Brand = { name: string; role: string; initials: string; logo: ImageA
 /** Monogram (or uploaded logo) with name and role. */
 export default function Logo({ brand, className }: { brand: Brand; className?: string }) {
   return (
-    <Link href="/" className={cn("group flex items-center gap-3", className)} aria-label={`${brand.name} — home`}>
+    <Link href="/" className={cn("group flex items-center gap-3", className)} aria-label={`${brand.name}, home`}>
       {brand.logo ? (
         <Image
           src={brand.logo.src}

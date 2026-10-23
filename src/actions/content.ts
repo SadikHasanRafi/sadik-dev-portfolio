@@ -15,7 +15,7 @@ export type SaveContentResult =
 /** Validates and saves the dashboard's content, then regenerates the static public pages. */
 export async function saveSiteContent(data: unknown): Promise<SaveContentResult> {
   if (!(await isAuthenticated())) {
-    return { ok: false, unauthorized: true, error: "Your session expired — open the dashboard again from the Let’s Talk popup." };
+    return { ok: false, unauthorized: true, error: "Your session expired, open the dashboard again from the Let’s Talk popup." };
   }
   if (JSON.stringify(data ?? null).length > MAX_BYTES) return { ok: false, error: "Content is too large" };
 
@@ -27,12 +27,14 @@ export async function saveSiteContent(data: unknown): Promise<SaveContentResult>
     return {
       ok: false,
       error: process.env.MONGODB_URI
-        ? "Couldn't reach the database. Your edits are still here — try again."
+        ? "Couldn't reach the database. Your edits are still here, try again."
         : "MONGODB_URI isn't set on the server, so changes can't be saved.",
     };
   }
   // Every public page is static; mark them all to regenerate on their next visit.
   revalidatePath("/", "layout");
+  revalidatePath("/icon");
+  revalidatePath("/apple-icon");
   revalidatePath("/feed.xml");
   revalidatePath("/sitemap.xml");
   log.info("content", "Site content saved");

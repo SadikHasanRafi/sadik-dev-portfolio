@@ -215,7 +215,7 @@ export default function DashboardApp({ initial, dbReady }: { initial: SiteConten
             <main className="w-full max-w-5xl px-4 pb-24 pt-8 sm:px-8 lg:px-10">
               <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
                 <div>
-                  <h1 className="font-serif text-[2rem] leading-tight tracking-tight sm:text-[2.4rem]">{section.title}</h1>
+                  <h1 className="font-sans font-light uppercase tracking-[0.07em] text-[1.6rem] leading-[1.25] sm:text-[2rem]">{section.title}</h1>
                   <p className="mt-1 max-w-xl text-[0.9rem] text-muted">{section.description}</p>
                 </div>
                 <div className="flex shrink-0 gap-2">

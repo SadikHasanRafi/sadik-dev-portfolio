@@ -133,7 +133,7 @@ export default async function ContactPage() {
 
           {/* Form */}
           <div className="border border-line bg-paper p-6 sm:p-8 lg:col-span-7 lg:p-10" data-reveal="fade" style={delay(120)}>
-            <h2 className="mb-8 border-b border-line pb-5 font-serif text-[1.6rem] leading-tight text-ink">{page.form.title}</h2>
+            <h2 className="mb-8 border-b border-line pb-5 font-sans font-light uppercase tracking-[0.07em] text-[1.4rem] leading-[1.25] text-ink">{page.form.title}</h2>
             <ContactForm form={page.form} email={contact.email} />
           </div>
         </div>
@@ -147,7 +147,7 @@ export default async function ContactPage() {
           <Ambient variant="band" />
           <div className="container-page relative flex flex-col justify-between gap-8 py-14 md:py-16 lg:flex-row lg:items-center">
             <div className="max-w-2xl" data-reveal>
-              <h2 className="mb-2 font-serif text-[1.9rem] leading-tight text-violet-ink sm:text-headline-lg">{page.fastTrack.title}</h2>
+              <h2 className="mb-2 font-sans font-light uppercase tracking-[0.07em] text-[1.5rem] leading-[1.25] text-violet-ink sm:text-[2rem]">{page.fastTrack.title}</h2>
               <p className="text-body-md text-violet-ink/70">{page.fastTrack.body}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row" data-reveal style={delay(120)}>

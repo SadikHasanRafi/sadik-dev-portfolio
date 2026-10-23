@@ -17,8 +17,8 @@ export default function AboutTeaser({ content }: { content: SiteContent }) {
         {/* Philosophy & signature */}
         <div className="flex flex-col justify-center md:col-span-1 lg:col-span-4" data-reveal>
           {about.eyebrow && <Eyebrow className="mb-5">{about.eyebrow}</Eyebrow>}
-          <h2 className="mb-6 font-serif text-[2rem] leading-[1.18] text-ink sm:text-[2.4rem]">
-            {about.title} <span className="accent-text accent-mint">{about.accent}</span>
+          <h2 className="mb-6 font-sans text-[1.7rem] font-light uppercase leading-[1.2] tracking-[0.07em] text-ink sm:text-[2rem]">
+            {about.title} <span className="accent-text">{about.accent}</span>
           </h2>
           <p className="mb-6 text-body-md text-muted">{about.body}</p>
           {about.signature && (

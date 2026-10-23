@@ -33,14 +33,14 @@ export default async function AboutPage() {
             </div>
           )}
 
-          <h1 className="mb-12 max-w-5xl font-serif text-[2.4rem] leading-[1.1] tracking-tight text-ink min-[400px]:text-[2.7rem] sm:text-display-md md:mb-16">
+          <h1 className="mb-12 max-w-5xl font-sans text-[2rem] font-light uppercase leading-[1.2] tracking-[0.07em] text-ink min-[400px]:text-[2.3rem] sm:text-[3rem] lg:text-[3.6rem] md:mb-16">
             {about.intro.lines.map((line, i) => (
               <span key={`${line}-${i}`} className="anim-rise sm:block" style={delay(80 + i * 90)}>
                 {line}{" "}
               </span>
             ))}
             {about.intro.accent && (
-              <span className="anim-rise inline-block accent-text accent-sunset sm:block" style={delay(80 + about.intro.lines.length * 90)}>
+              <span className="anim-rise inline-block accent-text sm:block" style={delay(80 + about.intro.lines.length * 90)}>
                 {about.intro.accent}
               </span>
             )}
@@ -254,7 +254,7 @@ export default async function AboutPage() {
             {about.achievements.visible && (
               <div className="lg:col-span-5" data-reveal>
                 <Eyebrow className="mb-4">{about.achievements.eyebrow}</Eyebrow>
-                <h2 className="mb-8 font-serif text-[2rem] leading-tight text-ink sm:text-headline-lg">{about.achievements.title}</h2>
+                <h2 className="mb-8 font-sans font-light uppercase tracking-[0.07em] text-[1.6rem] leading-[1.25] text-ink sm:text-[2.2rem]">{about.achievements.title}</h2>
                 <ul className="divide-y divide-line border-y border-line">
                   {about.achievements.items.map((a, i) => (
                     <li key={a} className="flex items-baseline gap-5 py-5">
@@ -268,7 +268,7 @@ export default async function AboutPage() {
             {about.education.visible && (
               <div className="lg:col-span-6 lg:col-start-7" data-reveal style={delay(120)}>
                 <Eyebrow className="mb-4">{about.education.eyebrow}</Eyebrow>
-                <h2 className="mb-8 font-serif text-[2rem] leading-tight text-ink sm:text-headline-lg">{about.education.title}</h2>
+                <h2 className="mb-8 font-sans font-light uppercase tracking-[0.07em] text-[1.6rem] leading-[1.25] text-ink sm:text-[2.2rem]">{about.education.title}</h2>
                 <div className="border border-line bg-paper p-6 sm:p-8">
                   <span className="special-text font-mono text-[0.8rem]">{about.education.detail}</span>
                   <h3 className="mt-2 font-serif text-[1.5rem] leading-tight text-ink">{about.education.degree}</h3>

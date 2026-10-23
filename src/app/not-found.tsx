@@ -30,15 +30,15 @@ export default async function NotFound() {
               style={delay(60)}
             >
               <span className="text-outline">4</span>
-              <span className="animate-float inline-block italic text-violet">0</span>
+              <span className="animate-float inline-block text-violet">0</span>
               <span className="text-outline">4</span>
             </p>
 
             <h1
-              className="anim-rise mt-6 max-w-xl font-serif text-headline-lg leading-tight text-ink sm:text-[2.5rem]"
+              className="anim-rise mt-6 max-w-xl font-sans font-light uppercase tracking-[0.07em] text-[1.8rem] leading-[1.25] text-ink sm:text-[2.5rem]"
               style={delay(160)}
             >
-              This page wandered <span className="accent-wavy">off the map.</span>
+              This page wandered <span className="accent-text accent-sunset">off the map.</span>
             </h1>
             <p className="anim-rise mt-5 max-w-md text-body-md text-muted sm:text-body-lg" style={delay(240)}>
               The link may be broken or the page has moved. Head back home, or jump straight to something useful.

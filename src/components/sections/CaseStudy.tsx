@@ -35,7 +35,7 @@ export default function CaseStudy({ project, index }: { project: Project; index:
           <p className="mb-3 text-body-sm text-muted">
             {[project.eyebrow[1], project.status].filter(Boolean).join(" · ")}
           </p>
-          <h2 className="mb-5 font-serif text-[1.9rem] leading-[1.15] tracking-tight text-ink sm:text-headline-lg">
+          <h2 className="mb-5 font-sans font-light uppercase tracking-[0.07em] text-[1.5rem] leading-[1.25] text-ink sm:text-[2rem]">
             {project.title.lead}
             {project.title.accent && `: ${project.title.accent}`}
             {project.title.tail}

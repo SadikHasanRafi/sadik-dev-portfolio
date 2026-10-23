@@ -71,7 +71,7 @@ export const site = {
 
   footer: {
     statement:
-      "Engineering robust APIs, payment flows and business systems for shops, farms and growing teams — with precision.",
+      "Engineering robust APIs, payment flows and business systems for shops, farms and growing teams, with precision.",
     services: ["API Architecture", "ERP / POS Solutions", "Payment Integration", "LLM Integrations"],
   },
 };

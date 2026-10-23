@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { login } from "@/actions/auth";
 import CopyButton from "@/components/blog/CopyButton";
 import Icon from "@/components/ui/Icon";
+import { tryDashboardLogin } from "@/lib/dashboard-shortcut";
 import type { SiteContent } from "@/types";
 
 const field =
@@ -13,16 +13,6 @@ const field =
 const FOCUSABLE = "a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex='-1'])";
 
 type Props = { open: boolean; onClose: () => void; text: SiteContent["talk"]; email: string };
-
-/** Owner shortcut: when the email field holds a non-email value, ask the server if it's the passcode. */
-async function tryDashboardLogin(email: string) {
-  if (!email || email.includes("@")) return false;
-  try {
-    return (await login(email)).ok;
-  } catch {
-    return false;
-  }
-}
 
 /**
  * "Let's Talk" popup: name, email and a message. Submitting composes an email
@@ -113,7 +103,7 @@ export default function TalkModal({ open, onClose, text, email: inbox }: Props) 
         </button>
 
         <span className="label-caps mb-3 block text-violet">{text.eyebrow}</span>
-        <h2 id="talk-title" className="mb-2 pr-8 font-serif text-[2rem] leading-tight tracking-tight text-ink sm:text-[2.25rem]">
+        <h2 id="talk-title" className="mb-2 pr-8 font-sans font-light uppercase tracking-[0.07em] text-[1.6rem] leading-[1.25] text-ink sm:text-[2rem]">
           {text.title} <span className="accent-text accent-ocean">{text.accent}</span>
         </h2>
         <p className="mb-7 text-body-sm text-muted">{text.body}</p>
@@ -123,7 +113,7 @@ export default function TalkModal({ open, onClose, text, email: inbox }: Props) 
             <p className="mb-1 font-serif text-[1.25rem] text-ink">{text.successTitle}</p>
             <p className="mb-4 text-body-sm text-muted">
               {text.successBody}{" "}
-              <a href={`mailto:${inbox}`} className="font-semibold text-violet underline underline-offset-4">
+              <a href={`mailto:${inbox}`} className="font-semibold text-violet">
                 {inbox}
               </a>
               .

@@ -29,7 +29,7 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>${escape(`${identity.name} — ${blog.seo.title || "Blog"}`)}</title>
+    <title>${escape(`${identity.name} | ${blog.seo.title || "Blog"}`)}</title>
     <link>${new URL("/blog/", siteUrl).toString()}</link>
     <description>${escape(identity.description)}</description>
     <language>en</language>

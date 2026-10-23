@@ -1,8 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import CopyButton from "@/components/blog/CopyButton";
 import Icon from "@/components/ui/Icon";
+import { tryDashboardLogin } from "@/lib/dashboard-shortcut";
 import { cn } from "@/lib/utils";
 import type { SiteContent } from "@/types";
 
@@ -19,13 +21,20 @@ export default function ContactForm({ form, email: inbox }: Props) {
   const [areas, setAreas] = useState<string[]>(form.areas.slice(0, 1));
   const [timeline, setTimeline] = useState<number | null>(null);
   const [draft, setDraft] = useState<string | null>(null);
+  const router = useRouter();
 
   const toggleArea = (a: string) =>
     setAreas((cur) => (cur.includes(a) ? cur.filter((x) => x !== a) : [...cur, a]));
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const data = new FormData(formEl);
+    if (await tryDashboardLogin(String(data.get("email")).trim())) {
+      router.push("/dashboard");
+      return;
+    }
+    if (!formEl.reportValidity()) return;
     const name = String(data.get("name")).trim();
     const chosen = timeline === null ? null : form.timelines[timeline];
     const body = [
@@ -33,21 +42,21 @@ export default function ContactForm({ form, email: inbox }: Props) {
       ``,
       String(data.get("brief")).trim(),
       ``,
-      `— Focus: ${areas.join(", ") || "Not sure yet"}`,
-      `— Timeline: ${chosen ? `${chosen.title} (${chosen.body})` : "Flexible"}`,
-      `— Organization: ${String(data.get("company")).trim() || "—"}`,
+      `- Focus: ${areas.join(", ") || "Not sure yet"}`,
+      `- Timeline: ${chosen ? `${chosen.title} (${chosen.body})` : "Flexible"}`,
+      `- Organization: ${String(data.get("company")).trim() || "-"}`,
       ``,
       `${name}`,
       `${String(data.get("email")).trim()}`,
     ].join("\n");
 
     setDraft(body);
-    const subject = `Project inquiry — ${name}`;
+    const subject = `Project inquiry: ${name}`;
     window.location.href = `mailto:${inbox}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-7">
+    <form onSubmit={onSubmit} noValidate className="flex flex-col gap-7">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         <label className="flex flex-col gap-2">
           <span className="text-body-sm font-medium text-ink">
@@ -149,7 +158,7 @@ export default function ContactForm({ form, email: inbox }: Props) {
         <div className="item-enter border-l-4 border-violet bg-lavender/50 p-5" role="status">
           <p className="mb-3 text-body-sm text-ink">
             {form.successText}{" "}
-            <a href={`mailto:${inbox}`} className="font-semibold text-violet underline underline-offset-4">
+            <a href={`mailto:${inbox}`} className="font-semibold text-violet">
               {inbox}
             </a>
             .

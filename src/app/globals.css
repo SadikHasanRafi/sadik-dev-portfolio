@@ -74,8 +74,8 @@
   --color-alert: var(--t-alert);
   --color-ok: var(--t-ok);
 
-  --font-sans: var(--font-geist), system-ui, sans-serif;
-  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-lato), system-ui, sans-serif;
+  --font-serif: var(--font-bodoni), Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --font-hand: var(--font-caveat), cursive;
 
@@ -115,10 +115,10 @@
   text-transform: uppercase;
 }
 
-/* Italic serif accent words in headlines. Base clips a gradient (--accent-grad) to the text;
-   variants below swap the gradient, and accent-mark / accent-wavy use different treatments. */
+/* Serif accent words in headlines. Base clips a gradient (--accent-grad) to the text;
+   variants below swap the gradient, and accent-mark uses a different treatment. */
 @utility accent-text {
-  font-style: italic;
+  font-weight: 700;
   color: var(--color-violet);
   background-image: var(--accent-grad, linear-gradient(100deg, var(--color-violet) 10%, color-mix(in srgb, var(--color-violet) 50%, #ff5fa8) 90%));
   -webkit-background-clip: text;
@@ -126,7 +126,8 @@
   -webkit-text-fill-color: transparent;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  padding-right: 0.08em; /* italic overhang would otherwise be clipped */
+  padding-right: 0.08em;
+  padding-bottom: 0.15em; /* keep descenders (g, y, p) from being clipped by the gradient */
 }
 
 @utility accent-ocean {
@@ -143,7 +144,7 @@
 
 /* Marker-pen highlight behind upright-ish violet text */
 @utility accent-mark {
-  font-style: italic;
+  font-weight: 700;
   color: var(--color-violet);
   background-image: linear-gradient(transparent 62%, color-mix(in srgb, var(--color-violet) 22%, transparent) 62%);
   box-decoration-break: clone;
@@ -151,41 +152,47 @@
   padding-inline: 0.06em;
 }
 
-/* Violet text with a hand-drawn wavy underline */
-@utility accent-wavy {
-  font-style: italic;
-  color: var(--color-violet);
-  text-decoration: underline wavy color-mix(in srgb, var(--color-violet) 55%, transparent);
-  text-decoration-thickness: 0.06em;
-  text-underline-offset: 0.18em;
-}
-
-/* Inline *emphasis* in body copy: bold violet, with a same-colour underline that draws in on hover */
+/* Inline *emphasis* and small labels: bold violet */
 @utility special-text {
   font-weight: 700;
   color: var(--color-violet);
-  background-image: linear-gradient(currentColor, currentColor);
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: 0% 1.5px;
-  padding-bottom: 0.12em;
-  transition: background-size 0.4s var(--ease-out-soft);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  &:hover {
-    background-size: 100% 1.5px;
-  }
+  letter-spacing: 0.01em;
 }
 
 /* Inline **strong** in body copy: ink text on a soft violet highlighter band */
 @utility strong-text {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-ink);
   background-image: linear-gradient(transparent 58%, color-mix(in srgb, var(--color-violet) 16%, transparent) 58%);
   padding-inline: 0.12em;
   margin-inline: -0.12em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+/* All-caps accent phrases: thin, wide-tracked geometric sans. Keeps the violet gradient;
+   .accent-ink swaps it for plain ink. Plain selectors so they win over the accent-text utilities. */
+.accent-caps.accent-text {
+  font-family: var(--font-jost), var(--font-sans);
+  font-weight: 300;
+  font-size: 0.7em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Hero (h1) accent words are bold violet; section (h2) accents stay light like the heading */
+h1 .accent-text {
+  font-weight: 700;
+}
+
+h2 .accent-text {
+  font-weight: 300;
+}
+
+.accent-caps.accent-ink {
+  color: var(--color-ink);
+  background-image: none;
+  -webkit-text-fill-color: currentColor;
 }
 
 /* 1360px architectural grid with 1.25rem → 4rem margins */

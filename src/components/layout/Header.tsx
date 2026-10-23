@@ -161,7 +161,7 @@ export default function Header({ brand, nav, cta, contact, talk, themeToggle }: 
                     <span
                       className={cn(
                         "font-serif text-[2rem] leading-none tracking-tight transition-colors sm:text-[2.5rem]",
-                        active ? "italic text-violet" : "text-ink group-hover:text-violet",
+                        active ? "text-violet" : "text-ink group-hover:text-violet",
                       )}
                     >
                       {item.label}
